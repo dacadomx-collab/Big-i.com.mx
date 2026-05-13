@@ -11,8 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'BIG-eye | Business Informatics & Geostatistics',
   description: 'Plataforma integral de inteligencia territorial, georreferenciación y análisis estadístico. Transformamos datos espaciales en decisiones estratégicas.',
-  generator: 'v0.app',
-  keywords: ['geoestadística', 'inteligencia territorial', 'georreferenciación', 'análisis estadístico', 'datos espaciales'],
+keywords: ['geoestadística', 'inteligencia territorial', 'georreferenciación', 'análisis estadístico', 'datos espaciales'],
   icons: {
     icon: [
       {
