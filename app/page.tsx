@@ -10,6 +10,6 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <Footer />
-    </main>
+    </main> 
   )
 }
