@@ -90,11 +90,11 @@ export function Footer() {
               <p className="font-medium text-slate-200">Alejandro Javier Lage Suárez</p>
               <div className="mt-2 flex flex-col gap-1">
                 <a
-                  href="mailto:alage@Big-i.com.mx"
+                  href="mailto:alage@big-i.com.mx"
                   className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
                 >
                   <Mail className="h-3.5 w-3.5" />
-                  alage@Big-i.com.mx
+                  alage@big-i.com.mx
                 </a>
                 <a
                   href="tel:+525527194220"
@@ -111,11 +111,11 @@ export function Footer() {
               <p className="font-medium text-slate-200">Jorge Tello Torres</p>
               <div className="mt-2 flex flex-col gap-1">
                 <a
-                  href="mailto:jtello@Big-i.com.mx"
+                  href="mailto:jtello@big-i.com.mx"
                   className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
                 >
                   <Mail className="h-3.5 w-3.5" />
-                  jtello@Big-i.com.mx
+                  jtello@big-i.com.mx
                 </a>
                 <a
                   href="tel:+525551058113"
