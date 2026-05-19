@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contacto | BIG-i Negocios Informática y Geoestadística</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+
+<!-- ═══════════════════════ TOP NAV BAR ═══════════════════════ -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-full bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
+    <div class="flex items-center gap-8">
+        <a class="block" href="index.html">
+            <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-10 w-auto" src="img/logo.png"/>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="index.html">Inicio</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="quienes_somos.html">Quiénes somos</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="equipo.html">Equipo</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="estudios.html">Estudios</a>
+            <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="contacto.html">Contacto</a>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="relative hidden lg:block">
+            <input class="bg-surface-container-high border border-outline-variant rounded px-4 py-1 text-body-md font-body-md focus:border-primary-container outline-none w-48 transition-all" placeholder="Buscar..." type="text"/>
+            <span class="material-symbols-outlined absolute right-2 top-1.5 text-on-surface-variant text-[18px]">search</span>
+        </div>
+        <button class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 rounded font-label-md text-label-md font-bold hover:scale-95 transition-transform">
+            Administrador
+        </button>
+        <button class="md:hidden text-on-surface p-2 focus:outline-none" id="menu-toggle">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══════════════════════ MOBILE MENU ═══════════════════════ -->
+<div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-margin-mobile border-b border-outline-variant shadow-2xl" id="mobile-menu">
+    <div class="flex flex-col gap-6">
+        <a class="text-on-surface-variant font-medium text-headline-md" href="index.html">Inicio</a>
+        <a class="text-on-surface-variant font-medium text-headline-md" href="quienes_somos.html">Quiénes somos</a>
+        <a class="text-on-surface-variant font-medium text-headline-md" href="equipo.html">Equipo</a>
+        <a class="text-on-surface-variant font-medium text-headline-md" href="estudios.html">Estudios</a>
+        <a class="text-primary font-bold text-headline-md" href="contacto.html">Contacto</a>
+        <hr class="border-outline-variant"/>
+        <button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-headline-md">
+            Administrador
+        </button>
+    </div>
+</div>
+
+<main class="flex-grow pt-[64px] flex flex-col md:flex-row">
+
+    <!-- ═══════════════════════ LEFT: GIS NODE ═══════════════════════ -->
+    <section class="w-full md:w-1/2 min-h-[500px] bg-gradient-to-br from-[#0080B7] to-[#1D1D1B] p-12 flex flex-col justify-between relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, #9bcbff 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+        <div class="relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-black/40 border border-[#00ff9d]/30 rounded-full mb-8">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00ff9d] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#00ff9d]"></span>
+                </span>
+                <span class="text-[#00ff9d] font-label-md text-label-sm tracking-widest uppercase">[ Sistema en línea: Central CDMX ]</span>
+            </div>
+            <h1 class="font-display-lg text-display-lg text-white mb-4 leading-tight">Inicia un enlace operativo.</h1>
+            <p class="font-title-lg text-title-lg text-primary-fixed-dim/80 max-w-lg">Conecta con nuestro equipo de inteligencia territorial para estructurar tu próximo proyecto estratégico.</p>
+        </div>
+        <!-- Radar Visual -->
+        <div class="relative h-64 w-64 flex items-center justify-center self-center my-12">
+            <div class="radar-circle h-full w-full"></div>
+            <div class="radar-circle h-full w-full"></div>
+            <div class="radar-circle h-full w-full"></div>
+            <div class="radar-circle h-full w-full"></div>
+            <div class="z-20 flex flex-col items-center">
+                <span class="material-symbols-outlined text-primary text-[48px] animate-pulse">radar</span>
+                <span class="text-primary font-label-md mt-2 tracking-tighter">SIG SCANNING</span>
+            </div>
+        </div>
+        <div class="relative z-10 space-y-6">
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary-fixed-dim bg-white/5 p-3 rounded-lg">location_on</span>
+                <div>
+                    <p class="text-white font-label-md text-label-md opacity-60">Ubicación Estratégica</p>
+                    <p class="text-white font-body-lg">Paseo de las Palmas No. 2070, Col. Lomas de Chapultepec, CDMX.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary-fixed-dim bg-white/5 p-3 rounded-lg">call</span>
+                <div>
+                    <p class="text-white font-label-md text-label-md opacity-60">Terminal Telefónica</p>
+                    <p class="text-white font-body-lg">+52 55 5261 4660</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary-fixed-dim bg-white/5 p-3 rounded-lg">alternate_email</span>
+                <div>
+                    <p class="text-white font-label-md text-label-md opacity-60">Enlace de Datos</p>
+                    <p class="text-white font-body-lg">contacto@big-i.com.mx</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ RIGHT: FORM ═══════════════════════ -->
+    <section class="w-full md:w-1/2 bg-white p-8 md:p-16 flex flex-col justify-center">
+        <div class="max-w-xl mx-auto w-full">
+            <div class="mb-12">
+                <h2 class="font-headline-lg text-headline-lg text-[#131312] mb-2">Protocolo de Conexión</h2>
+                <p class="text-outline text-body-lg">Complete los parámetros técnicos para iniciar la consulta.</p>
+            </div>
+            <form class="space-y-8" onsubmit="event.preventDefault(); alert('Conexión establecida exitosamente.');">
+                <div class="space-y-4">
+                    <p class="font-label-md text-label-md text-[#3f4752] uppercase tracking-widest">Selecciona tu sector estratégico:</p>
+                    <div class="flex flex-wrap gap-3">
+                        <label class="cursor-pointer">
+                            <input class="hidden peer" name="sector" type="radio" value="energia"/>
+                            <span class="px-5 py-2 rounded-full border border-outline-variant text-[#3f4752] font-label-md peer-checked:bg-[#009ffe] peer-checked:border-[#009ffe] peer-checked:text-white transition-all hover:bg-surface-container-low">Energía</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input class="hidden peer" name="sector" type="radio" value="infraestructura"/>
+                            <span class="px-5 py-2 rounded-full border border-outline-variant text-[#3f4752] font-label-md peer-checked:bg-[#009ffe] peer-checked:border-[#009ffe] peer-checked:text-white transition-all hover:bg-surface-container-low">Infraestructura</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input class="hidden peer" name="sector" type="radio" value="desarrollo"/>
+                            <span class="px-5 py-2 rounded-full border border-outline-variant text-[#3f4752] font-label-md peer-checked:bg-[#009ffe] peer-checked:border-[#009ffe] peer-checked:text-white transition-all hover:bg-surface-container-low">Desarrollo Urbano</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input class="hidden peer" name="sector" type="radio" value="riesgos"/>
+                            <span class="px-5 py-2 rounded-full border border-outline-variant text-[#3f4752] font-label-md peer-checked:bg-[#009ffe] peer-checked:border-[#009ffe] peer-checked:text-white transition-all hover:bg-surface-container-low">Riesgos</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input class="hidden peer" name="sector" type="radio" value="otro"/>
+                            <span class="px-5 py-2 rounded-full border border-outline-variant text-[#3f4752] font-label-md peer-checked:bg-[#009ffe] peer-checked:border-[#009ffe] peer-checked:text-white transition-all hover:bg-surface-container-low">Otro</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="relative form-floating-label">
+                        <input class="block w-full px-0 py-2 text-[#131312] bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-[#009ffe] transition-all" id="nombre" placeholder=" " type="text"/>
+                        <label class="absolute top-2 left-0 text-outline pointer-events-none transition-all duration-200 origin-left font-label-md" for="nombre">Nombre completo</label>
+                    </div>
+                    <div class="relative form-floating-label">
+                        <input class="block w-full px-0 py-2 text-[#131312] bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-[#009ffe] transition-all" id="email" placeholder=" " type="email"/>
+                        <label class="absolute top-2 left-0 text-outline pointer-events-none transition-all duration-200 origin-left font-label-md" for="email">Correo corporativo</label>
+                    </div>
+                </div>
+                <div class="relative form-floating-label">
+                    <input class="block w-full px-0 py-2 text-[#131312] bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-[#009ffe] transition-all" id="empresa" placeholder=" " type="text"/>
+                    <label class="absolute top-2 left-0 text-outline pointer-events-none transition-all duration-200 origin-left font-label-md" for="empresa">Empresa / Institución</label>
+                </div>
+                <div class="relative form-floating-label">
+                    <textarea class="block w-full px-0 py-2 text-[#131312] bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-[#009ffe] transition-all resize-none" id="mensaje" placeholder=" " rows="4"></textarea>
+                    <label class="absolute top-2 left-0 text-outline pointer-events-none transition-all duration-200 origin-left font-label-md" for="mensaje">Describe brevemente el alcance de tu proyecto...</label>
+                </div>
+                <button class="w-full bg-[#009FFE] text-white font-bold py-4 rounded-lg flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(0,159,254,0.4)] transition-all transform active:scale-95 group" type="submit">
+                    <span class="font-label-md tracking-widest">ESTABLECER CONEXIÓN ESTRATÉGICA</span>
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="bg-surface-container-lowest text-on-surface pt-20 pb-8 border-t border-outline-variant">
+    <div class="px-margin-desktop max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
+            <div class="flex flex-col gap-4">
+                <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-12 w-auto object-contain" src="img/logo.png"/>
+            </div>
+            <div class="flex flex-col gap-4">
+                <p class="font-body-md text-on-surface-variant">Paseo de las Palmas No. 2070, Col. Lomas de Chapultepec I Secc. Delegación Miguel Hidalgo. Ciudad de México C.P. 11000.</p>
+                <p class="font-label-md font-bold text-electric-blue">+52 55 5261 4660 ext. 3158</p>
+            </div>
+            <div class="flex flex-col gap-3">
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="index.html">Inicio</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="quienes_somos.html">Quiénes somos</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="equipo.html">Equipo</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="estudios.html">Estudios</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="contacto.html">Contacto</a>
+            </div>
+            <div class="flex flex-col gap-2 text-on-surface-variant">
+                <p class="font-label-md">Alejandro Javier Lage Suárez</p>
+                <p class="font-label-md">Dr. Fluvio César Ruíz Alarcón</p>
+                <p class="font-label-md">Mtro. Loreno Mauricio Meyer Falcón</p>
+                <p class="font-label-md">Dante Yamil San Pedro Jacobo</p>
+                <a class="font-label-md text-electric-blue hover:underline" href="equipo.html">Ver más...</a>
+            </div>
+            <div class="flex flex-col gap-3">
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="https://www.big-i.com.mx" target="_blank">www.big-i.com.mx</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="https://www.kab-geo.com.mx" target="_blank">www.kab-geo.com.mx</a>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center py-10 border-y border-outline-variant gap-8 mb-10">
+            <div class="flex flex-wrap justify-center md:justify-start gap-8 items-center text-on-surface-variant font-bold tracking-widest">
+                <span>KG Kab-Geo</span>
+                <span>CENTRAL HOLDING</span>
+                <span>Estevez.Jor</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span class="font-label-md font-bold text-on-surface-variant">Síguenos en:</span>
+                <div class="flex gap-3">
+                    <a class="w-10 h-10 rounded-full bg-electric-blue flex items-center justify-center text-white hover:scale-110 transition-transform" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f text-sm"></i></a>
+                    <a class="w-10 h-10 rounded-full bg-electric-blue flex items-center justify-center text-white hover:scale-110 transition-transform" href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter text-sm"></i></a>
+                    <a class="w-10 h-10 rounded-full bg-electric-blue flex items-center justify-center text-white hover:scale-110 transition-transform" href="https://instagram.com" target="_blank"><i class="fab fa-instagram text-sm"></i></a>
+                    <a class="w-10 h-10 rounded-full bg-electric-blue flex items-center justify-center text-white hover:scale-110 transition-transform" href="https://youtube.com" target="_blank"><i class="fab fa-youtube text-sm"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="font-label-sm text-on-surface-variant text-center md:text-left">Copyright &copy; 2013, Kab Geo S.A. de C.V. Todos los Derechos Reservados.</p>
+            <div class="flex gap-6">
+                <a class="font-label-sm text-on-surface-variant hover:text-electric-blue" href="terminos.html">Términos de Servicio</a>
+                <a class="font-label-sm text-on-surface-variant hover:text-electric-blue" href="privacidad.html">Políticas de Privacidad</a>
+                <a class="font-label-sm text-on-surface-variant hover:text-electric-blue" href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button class="scroll-top-btn fixed bottom-8 right-8 w-12 h-12 bg-electric-blue text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 z-50" id="scrollTopBtn">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

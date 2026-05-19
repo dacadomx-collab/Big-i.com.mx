@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Estudios | BIG-i — Inteligencia Territorial</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-surface-container-lowest text-on-surface">
+
+<!-- ═══════════════════════ TOP NAV BAR ═══════════════════════ -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-full bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
+    <div class="flex items-center gap-8">
+        <a class="block" href="index.html">
+            <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-10 w-auto" src="img/logo.png"/>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="index.html">Inicio</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="quienes_somos.html">Quiénes somos</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="equipo.html">Equipo</a>
+            <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="estudios.html">Estudios</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="contacto.html">Contacto</a>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="relative hidden lg:block">
+            <input class="bg-surface-container-high border border-outline-variant rounded px-4 py-1 text-body-md font-body-md focus:border-primary-container outline-none w-48 transition-all" placeholder="Buscar..." type="text"/>
+            <span class="material-symbols-outlined absolute right-2 top-1.5 text-on-surface-variant text-[18px]">search</span>
+        </div>
+        <button class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 rounded font-label-md text-label-md font-bold hover:scale-95 transition-transform">
+            Administrador
+        </button>
+        <button class="md:hidden text-on-surface p-2 focus:outline-none" id="menu-toggle">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══════════════════════ MOBILE MENU ═══════════════════════ -->
+<div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-margin-mobile border-b border-outline-variant shadow-2xl" id="mobile-menu">
+    <div class="flex flex-col gap-6">
+        <a class="text-on-surface-variant font-medium text-headline-md" href="index.html">Inicio</a>
+        <a class="text-on-surface-variant font-medium text-headline-md" href="quienes_somos.html">Quiénes somos</a>
+        <a class="text-on-surface-variant font-medium text-headline-md" href="equipo.html">Equipo</a>
+        <a class="text-primary font-bold text-headline-md" href="estudios.html">Estudios</a>
+        <a class="text-on-surface-variant font-medium text-headline-md" href="contacto.html">Contacto</a>
+        <hr class="border-outline-variant"/>
+        <button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-headline-md">
+            Administrador
+        </button>
+    </div>
+</div>
+
+<!-- ═══════════════════════ HERO SECTION ═══════════════════════ -->
+<header class="hero-map-bg pt-32 pb-20 px-margin-desktop flex flex-col items-center justify-center text-center">
+    <h1 class="text-white font-display-lg text-display-lg max-w-4xl mb-4">Inteligencia territorial especializada</h1>
+    <p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mb-12">18 líneas estratégicas de análisis geoespacial, infraestructura y toma de decisiones.</p>
+    <div class="w-full max-w-2xl relative group">
+        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+        <input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent text-on-surface placeholder:text-on-surface-variant/50 outline-none transition-all" id="search-study" placeholder="Buscar estudio, industria o solución..." type="text"/>
+    </div>
+</header>
+
+<!-- ═══════════════════════ CONTENT (Light Theme) ═══════════════════════ -->
+<main class="bg-white text-[#1D1D1B] min-h-screen">
+
+    <!-- Sticky Filter Bar -->
+    <div class="sticky top-[73px] z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 px-margin-desktop">
+        <div class="flex flex-wrap items-center justify-center gap-2 max-w-7xl mx-auto">
+            <button class="filter-chip active px-6 py-2 rounded-full border border-gray-200 text-[#1D1D1B] font-label-md text-label-md hover:border-primary transition-all" data-filter="all">Todos</button>
+            <button class="filter-chip px-6 py-2 rounded-full border border-gray-200 text-[#1D1D1B] font-label-md text-label-md hover:border-primary transition-all" data-filter="energia">Energía</button>
+            <button class="filter-chip px-6 py-2 rounded-full border border-gray-200 text-[#1D1D1B] font-label-md text-label-md hover:border-primary transition-all" data-filter="infraestructura">Infraestructura</button>
+            <button class="filter-chip px-6 py-2 rounded-full border border-gray-200 text-[#1D1D1B] font-label-md text-label-md hover:border-primary transition-all" data-filter="territorio">Territorio</button>
+            <button class="filter-chip px-6 py-2 rounded-full border border-gray-200 text-[#1D1D1B] font-label-md text-label-md hover:border-primary transition-all" data-filter="social-seguridad">Social &amp; Seguridad</button>
+            <button class="filter-chip px-6 py-2 rounded-full border border-gray-200 text-[#1D1D1B] font-label-md text-label-md hover:border-primary transition-all" data-filter="tecnologia-mercados">Tecnología &amp; Mercados</button>
+        </div>
+    </div>
+
+    <!-- Intelligence Grid -->
+    <div class="max-w-7xl mx-auto px-margin-desktop py-12">
+        <div class="masonry-grid" id="intelligence-grid">
+            <!-- Card 1 (Featured) -->
+            <div class="study-card card-featured group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="energia">
+                <img class="w-full h-2/3 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL3AE00zvEeebqGyLGtjLkQhm6NTvh-mjcjqjiUcnvQalW04UIYGuJ4wchxL3MsNMBvMALr0JmefFmQa0DY67pRDdiAa-8hbLgO7lmKwWhmWfFpsobOPfxF4dU5FDuLzH0JhHdGiWE4GXDdk-U3yKxoD_G5-j6ldM9OTuOV39tpVVMvo4nNYiSuNheHRIAk3U7ukZkW3gtpZXzXeg5KWtTkye7VjVqjMlu0qwpYFJvKjqdrtX_JZ-a2jFNwvBdg72tDNLBwQ3ubTcy" alt="Estaciones de Servicio"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest block">Energía</span>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-0.5 border border-primary/30 text-primary rounded-full text-[10px] font-bold">[ +120 Variables ]</span>
+                            <span class="px-2 py-0.5 border border-primary/30 text-primary rounded-full text-[10px] font-bold">[ 5 Capas SIG ]</span>
+                            <span class="px-2 py-0.5 border border-primary/30 text-primary rounded-full text-[10px] font-bold">[ Modelos CRE ]</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">Estaciones de Servicio</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Análisis de demanda local</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Cumplimiento normativo CRE</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-gasolineras.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="energia">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaRvwPJr91z7bdPGUJcVTRAFk2w12TZI4BSGCJl6wuKf6zZTfr3mIXPXcCD31uekIvQPURmRmybVirNUnYvB_sbJB-hIRdk-C079g5148fY0hccLsw-bKT9PmEYECdbU1pVcKmtaxCQkVhfL894I3ShrG7Iqfde8Pb3FbYfBvxtC6mZkXuQZCnO_09oxajph3DdZ1ts44omnwvx8FwkLo1pO3j91D_4yxd0O27kG1TfQV8WRJyZ9cQemUR1BVmXdBDAF6UQxX5-6zL" alt="Minería"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Energía</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Minería</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Prospección geológica</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Impacto ambiental</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPCHEh9HprjjOWMZUlABJ6mEzYezGCOaOrTFZQxhhbsiCQAhfU0mtZcxHKaFx6Ysc-HqZfD7PLKRP4Wan59roP0QOis0mV_Y1aQQww9kLu45dpRDbv4tFHOd8Vbn-ly3-8vN2WzOZNCrhM3F1UXMIZDztz5oq1T0wcCR8F0Sq2qkeRYxLSAkM-Ti4oBTH8o5wS3uKEMWr3F6JnPdHDfDP3Gym_CSS2xwsBiEbk0je5vrJ0aUZWV87ThsqclrqERlNxvtA5FPuAVlPg" alt="Diseño e Ingeniería"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Infraestructura</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Diseño e Ingeniería</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Modelado BIM 4D</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Optimización de costos</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 4 (Wide) -->
+            <div class="study-card card-wide group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHbststWG8afpIntjeAWhxNso1ehA8CBJfoyN_jJDoxM3ft6nZ5n6cHzPEKYmA74dscvsD5q1FoFJmp08arpUr16dm_ea3b6snifMbPbf5jiGZO5Qw69Jx0qvsIPOk8hdncEBXXXN3TNDjSH-xsY_Fo9PilKQbmyQpiOh2MYOo20Y66xI-6q1SethQ3dOHbRhj5z8ufX3xGYvcwy_OPTtrTg4Ty5UDIlOO35MFJl-3ww6zfMHTExjcuhf7QvgP11f_kxyyu-eo2hCh" alt="Vialidades y Transporte"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest block">Infraestructura</span>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-0.5 border border-primary/30 text-primary rounded-full text-[10px] font-bold">[ +50 Ciudades ]</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">Vialidades y Transporte</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Análisis de flujo tráfico</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Corredores logísticos</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_6Q5b0JXik9aJM_4ClrN0NDY1nHFbZtCBLsLJYRTqQovcie5Dg9gtHpIH9IcFmvvIxahxRXBvp4CCkRe5XhUQ0M_ylF9ya4efMIKsb0RARw1T-uBsErdHgWlqCJ4gaD_urn0sPCEiPCJy2i7v7ThM9KzHcUEYhbwvZhv5KkWwgQZyJ95wQxZHE5oFaZcwaFYJ1pQ-YIj6Z7bBnjWGUFO4F1B6g9t-crBb4pgxHUIYzR-9eFq2h7bNOL0kREnNcGbr0bFqJc7aS8a" alt="Infraestructura General"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Infraestructura</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Infraestructura General</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Catastro de redes</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Ciclo de vida de activos</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYkWDEZ4lbaAJ2e0N3zZV-zzOPwKqgPfhu0oW2W5BSLEbf2EyKXo3NYRuG2OyUHbxnVwWObYxL7_JqIETSTCzBRXugcQimOKxI6wxTGjhqEN3rgcjruuAjtBeo2OOYTmnC32ThnS0AwpIwCJ7NOyc5qzkI7TTJKTmsX-NiZJ-znbp2d9enxtEz1Mz2p9S6ItlsFZmDBSV8Bf8CfT0p9yppezaT0LkLtMXGG9xM1faejvGRqrgnYCWWlIC6oZy7VEUPFaVZte61mbmW" alt="Agua y Recursos"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Infraestructura</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Agua y Recursos</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Cuencas hidrológicas</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Gestión pluvial inteligente</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 7 (Wide) -->
+            <div class="study-card card-wide group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="territorio">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJJabARA8PILcMPVf15y5S3yDy-V6kAfOaDSwWxgoUCpH7_R9Ty8hggNt6RvNtvnigq4xsOEbbI9LmyFueCPnWNTTGuzx4cp5C022fTvTqeDCLMOFkyQNubF32we8YvEhKwkivbLbpcz_tfok7NOU8b96teuLITTimcJKm7Lr368SPeooqCVTMmz4f82fsXfqOVtZ7n-9x3tmNrNYROJgbgFZeAPWDKTwRIXfhIHHK4_D1IslobQc8sb5IJeGxiihrIYuVTkAq5Y_K" alt="Desarrollo Urbano"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest block">Territorio</span>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-0.5 border border-primary/30 text-primary rounded-full text-[10px] font-bold">[ Smart Cities ]</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">Desarrollo Urbano</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Planes de ordenamiento</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Equipamiento urbano</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2iUgi-2SAYbVjW-c1CipvLLSNlEMIuRJYydtAXad9bDnQ_NGuNXX2h0gE1auqWPA3xPiPEWuIQmc2Dw7izFuSvFqlEp8N_bTyKkgSu1FlIal9HV7knDUXVPAr8kXpxBTPm9mPHQHSpO96OJwt4qemuNMG6OtVy0Gr4OwrnIyJ7bgi_HS6M_w3Zn_loWVg3Y9wmKNddQ8leis1eYatZb4lj7mGCgadd_5DeJj51Aw9bS8SfdjUh7gvPxOey1RN1Z93JKkuVZ9ZlHLU" alt="Gestión de Servicios"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Infraestructura</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Gestión de Servicios</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Servicios integrales</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Mantenimiento predictivo</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="territorio">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv0wd_hcEC5YB-xqocgYzhjEbCZ-uoGxBbiaANB1xAiX9A5HBQ0FllA2UYkbaGZCfg3YVXTe2L2hhxARsU-DVZ9fZbAhUDCYRrSnOn7-_1kgJrwY3GDy1AwcmNej3vV76G3-eaw8ZNGP9aaXN8AWgcnlBEH_jztCg2ROc6IwzP2zTClhquMmKdrBBBs5gg8JxkqknQLVMqDL1SFfUfHxzFLsyf_PSXYOKA0WEkqCZ8dd-DZUN4GrjHRFEe7A88qlZqBL_PEm2hjR44" alt="Movilidad Sustentable"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Territorio</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Movilidad Sustentable</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Huella de carbono</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Accesibilidad universal</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="territorio">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0i3MdNMs3uZ-1eumUwU5yiQbmtSP1x-qTxMuTaj2X5X4lpv217Vi05HXMXZJbp14pprtwzDBeUDlbRcfePoVJDRWqF2P0Y-0zpwYZHKGWoK4dDYF_JrT74y8k-7CGeLO--CNEhGRaZFXNj3h68IV_PDspylMNusy0zfb9j5UHJMnbf3n3asBza6Bme4J2zBwD7trfvvexhqUK7AOSHmavZPWbKd7eYCCPHN4DREt0YFn8ljvX03SahMJCOmkeDoKfNCS2DZwbmWVz" alt="Medio Ambiente"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Territorio</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Medio Ambiente</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Áreas protegidas</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Servicios ecosistémicos</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 11 (Wide) -->
+            <div class="study-card card-wide group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="tecnologia-mercados">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDib7LoWxW0YA-iCOZ13qVuXozEpqxFX8WJOmULmeVDhkSubQbD18kWNfmxvcCOggxLUAMoCQl98gqj7USocAucQjitP-Z-13ndnRSZ5oFXO7i7m2DCPkUAOnyUVemU0G8KzE8fwzQLAHTCYkL8CYoZ4YqHtMfiylFcBYukcvO55DN26RDT_3NGBb9jBGfjfhtfsvfOu57NaGFPdAC0bybWaeFdxPwoMSjT_0R48rpZ7YtabSvy7uXQ_8-BfYm_q37r6Z0rGU4qad4d" alt="Geomarketing"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest block">Tecnología &amp; Mercados</span>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-0.5 border border-primary/30 text-primary rounded-full text-[10px] font-bold">[ Geolocalización Pro ]</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">Geomarketing</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Segmentación espacial</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Canibalización de puntos</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 12 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="territorio">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU2oIPdMyR9siCGW161zx_ta7a5lcL13CSwRuu71HEblnSHgkJBMsSN21V5egBkk9DUMhB7yWVt8jRvWylij8yu016dFMJYl3s5B_RowugDlaSOkloXa1GvHTKeN-wH30ReAQZXEkIJCa30zOpiuGngMhBIE_O_-_FOrZiCbkiwai8nTB62HmQ2zP1sOvTpW9Eh4mcBRBKWO4gyTMl3ol-SCVrfinzxVPoXP2NDvZpuXRljd2Gqkwfqh9pu4cNcTRtB92T4KR2Jikb" alt="Desarrollo Inmobiliario"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Territorio</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Desarrollo Inmobiliario</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Plusvalía proyectada</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Análisis de sitio</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 13 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social-seguridad">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvQnSecwAeqtMggwn3CumMXHy1RXEiVdca6-TJ8zPWwtFOBRggVB9uIbvLCrEIHHbqbnHedjYD62E78PDjasx5AElRXATd6rgL4wFqJA5CgKVZlr_hTmGqIhohHaD3Sf5SSCyLbDsUAGlzEdDEKUCR85RJr1__PjCwjzuG0UjpQ6XRYG6PF7ywxUp11W5HbATn3QcqulILCqVPLqtTyhgujEHohLXGNH5WG6AGSIMA-LlQD6nNY4hKcLKyBB1yWri4d2zmwTtqJi13" alt="Seguridad Pública"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Social &amp; Seguridad</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Seguridad Pública</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Mapas de incidencia</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Patrones delictivos</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 14 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social-seguridad">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNBIqnkMyIhOdNoA3tpZNxRMdqyJ_ZGQ4eVbO5leLKP_lrbsKbLDAQFVasCzkEHbQMAUEbPXh0QwwRSfY9NHRlhkdCzm-3USHuGsMyK3bGN8cINKrRKJ9M4mXzPd7o6p7fnWl8AIpIjcsNJKRtfOKoTH1SzT8ozzCsr2bLKcmJgzMEg-TAAFe3D5CUFRvO_KNWEf-I1Z_jZXCAhdHZM-29XaaeHR1jXtz1aIBmriSSQLPq6gM63qMoaNViObPr_OaavvLG3nTF1PYU" alt="Evaluación de Riesgos"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Social &amp; Seguridad</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Evaluación de Riesgos</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Amenazas naturales</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Vulnerabilidad social</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 15 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social-seguridad">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmGXIyFWNoNXxSYa5Rigqk7oimFeAk26LuH0tawSWGEOpocLQv0bA50Ns-ond8Vk69t7LvkJ_mMAwYz-1i2dCSsF0L6fNsn2NDIQW-BWxKMqWZI8dexzYWb64VXEXPQyT2HrWCXTt8KHyIYkE-sIplRcgaJlLgYwqlFKlx79xK2kSWNdtwxofx1sfvWf430pkIf23BWSlT4On6jFYT7EuUbyZtFHh0mRw94NyOOi0pHmlOusmzs8XFvE4vgS4cm8WrZ1iHjF-TeP6D" alt="Desarrollo Social"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Social &amp; Seguridad</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Desarrollo Social</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Indicadores de bienestar</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Zonas de atención</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 16 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social-seguridad">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHITefFg7CewvP-wA6-ya0b3QgvcrDi5t-sLv-5uQG1iv3pzwcSPtxUNoAAhaBTrrnA7dJMdVJLoL0fA-1lpEj5MZxj94d-P6eUEdS5IpfFKKvUvEORbL37iBzZQlUiaWAmwVD8gQd_h8T-0_lQ06RR2WNg6ep5cQs0WKGZNuvlmvC1jMhvLRLX4-0a_JY_kpGMSu5-FmkdkJsZ2izpOwTw3zcGwKpxyVx6tMG_RaKF_WSHQX92eHHB1wUeDLBRir1qzvnNFoDp3hp" alt="Investigación Social"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Social &amp; Seguridad</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Investigación Social</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Dinámicas comunitarias</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Percepción ciudadana</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 17 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social-seguridad">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Y0qOPKOFYpMrphkstz1b8euIcY5s41oT40KFWuHdx2fxe2CXfIauWJUX3bLh5IHgKlHdU9WaNDK8iB_ei8UHitzH84P4DNQluue7prD25mR3o9Xt50K7_XgW-Ni_5gUkKLBzesxxysU34zhxiy5pooWF8GuBdm2F6cSAsxbO-5zPrkFhlophJujyzqfcH4Hscqs2A-MChjZQR628uwNq6rhMD6W_tbYumhiiSm2ChdJzMcwR35d5RpBvQ4E-e56yeLa0z9QkBBm7" alt="Político Electoral"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Social &amp; Seguridad</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Político Electoral</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Distritación técnica</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Tendencias territoriales</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <!-- Card 18 -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="tecnologia-mercados">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkzOAL8UquYloNyH6d_EJaM2ynsjycbyBAVcp6WazEA03xQjpZwaVPtWEstcF7VrMM_ObOlSnpY3T1rVrb9s3p93QtPGXw0IOQj8VIQzYv3AQ6-Z-tw5997nc2UY2SUMtXKwiPB44DHCfeGytkPW9_V99VPcTaq-xe7Wk65V_1rm3Yb6DDFHp3aVW-lZT_-DgmK4KuRfrxB5V9-8IQB-uaLe8KxnXwDZt09sdMUKm__c5MaV5NehAQAFOj7CwGEFiC5gt0B4cafquM" alt="Sistema SACI"/>
+                <div class="p-6">
+                    <span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-2 block">Tecnología &amp; Mercados</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Sistema SACI</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Autogestión colaborativa</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span> Inteligencia en tiempo real</li>
+                    </ul>
+                    <button class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="bg-surface-container-lowest text-on-surface pt-20 pb-8 border-t border-outline-variant">
+    <div class="px-margin-desktop max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
+            <div class="flex flex-col gap-4">
+                <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-12 w-auto object-contain" src="img/logo.png"/>
+            </div>
+            <div class="flex flex-col gap-4">
+                <p class="font-body-md text-on-surface-variant">Paseo de las Palmas No. 2070, Col. Lomas de Chapultepec I Secc. Delegación Miguel Hidalgo. Ciudad de México C.P. 11000.</p>
+                <p class="font-label-md font-bold text-electric-blue">+52 55 5261 4660 ext. 3158</p>
+            </div>
+            <div class="flex flex-col gap-3">
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="index.html">Inicio</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="quienes_somos.html">Quiénes somos</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="equipo.html">Equipo</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="estudios.html">Estudios</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="contacto.html">Contacto</a>
+            </div>
+            <div class="flex flex-col gap-2 text-on-surface-variant">
+                <p class="font-label-md">Alejandro Javier Lage Suárez</p>
+                <p class="font-label-md">Dr. Fluvio César Ruíz Alarcón</p>
+                <p class="font-label-md">Mtro. Loreno Mauricio Meyer Falcón</p>
+                <p class="font-label-md">Dante Yamil San Pedro Jacobo</p>
+                <a class="font-label-md text-electric-blue hover:underline" href="equipo.html">Ver más...</a>
+            </div>
+            <div class="flex flex-col gap-3">
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="https://www.big-i.com.mx" target="_blank">www.big-i.com.mx</a>
+                <a class="font-label-md hover:text-electric-blue transition-colors" href="https://www.kab-geo.com.mx" target="_blank">www.kab-geo.com.mx</a>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center py-10 border-y border-outline-variant gap-8 mb-10">
+            <div class="flex flex-wrap justify-center md:justify-start gap-8 items-center text-on-surface-variant font-bold tracking-widest">
+                <span>KG Kab-Geo</span>
+                <span>CENTRAL HOLDING</span>
+                <span>Estevez.Jor</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span class="font-label-md font-bold text-on-surface-variant">Síguenos en:</span>
+                <div class="flex gap-3">
+                    <a class="w-10 h-10 rounded-full bg-electric-blue flex items-center justify-center text-white hover:scale-110 transition-transform" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f text-sm"></i></a>
+                    <a class="w-10 h-10 rounded-full bg-electric-blue flex items-center justify-center text-white hover:scale-110 transition-transform" href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter text-sm"></i></a>
+                    <a class="w-10 h-10 rounded-full bg-electric-blue flex items-center justify-center text-white hover:scale-110 transition-transform" href="https://instagram.com" target="_blank"><i class="fab fa-instagram text-sm"></i></a>
+                    <a class="w-10 h-10 rounded-full bg-electric-blue flex items-center justify-center text-white hover:scale-110 transition-transform" href="https://youtube.com" target="_blank"><i class="fab fa-youtube text-sm"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="font-label-sm text-on-surface-variant text-center md:text-left">Copyright &copy; 2013, Kab Geo S.A. de C.V. Todos los Derechos Reservados.</p>
+            <div class="flex gap-6">
+                <a class="font-label-sm text-on-surface-variant hover:text-electric-blue" href="terminos.html">Términos de Servicio</a>
+                <a class="font-label-sm text-on-surface-variant hover:text-electric-blue" href="privacidad.html">Políticas de Privacidad</a>
+                <a class="font-label-sm text-on-surface-variant hover:text-electric-blue" href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button class="scroll-top-btn fixed bottom-8 right-8 w-12 h-12 bg-electric-blue text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 z-50" id="scrollTopBtn">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

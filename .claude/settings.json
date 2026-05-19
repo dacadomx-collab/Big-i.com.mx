@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem \"c:\\\\xampp\\\\htdocs\\\\Big-i.com.mx\\\\Web_Page\" -Depth 0)",
+      "Bash(Select-Object Name, LastWriteTime, Length)"
+    ]
+  }
+}

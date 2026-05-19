@@ -1,0 +1,39 @@
+Big-i.com.mx
+Kabgeo.com.mx
+***************************************
+Servidor: https://www.bluehost.com/my-account/hosting/list
+
+https://github.com/dacadomx-collab/Big-i.com.mx.git
+***************************************
+Correr servidor
+npm run dev
+http://localhost:3000/
+
+buscando errores de TypeScript
+npx tsc --noEmit
+
+Crear Carpeta Out
+npm run build
+***************************************
+FTP
+***************************************
+FTP Username: ftp_user@big-i.com.mx
+Pass: rf[MNiLA=n;y
+FTP server: ftp.big-i.com.mx
+FTP & explicit FTPS port:  21
+***************************************
+Kabgeo.com.mx
+user: kabgeo
+contact: leolage@yahoo.com
+***************************************
+Big-i.com.mx
+user: bigi
+contact: leolage@yahoo.com
+***************************************
+ns1.rhostbh.com
+ns2.rhostbh.com
+***************************************
+
+
+
+***************************************
