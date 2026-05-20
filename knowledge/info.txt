@@ -9,7 +9,7 @@ https://github.com/dacadomx-collab/Big-i.com.mx.git
 ***************************************
 FTP
 ***************************************
-FTP Username: ftp_user@big-i.com.mx
+FTP Username: deploy@big-i.com.mx
 Pass: rf[MNiLA=n;y
 FTP server: ftp.big-i.com.mx
 FTP & explicit FTPS port:  21

@@ -116,49 +116,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ----------------------------------------------------------
-       ESTUDIOS — Filtrado por categoría + búsqueda
+       ESTUDIOS — Búsqueda en el Directorio de Módulos
     ---------------------------------------------------------- */
-    const searchInput      = document.getElementById('search-study');
-    const intelligenceGrid = document.getElementById('intelligence-grid');
-    if (searchInput && intelligenceGrid) {
-        const filterButtons = document.querySelectorAll('[data-filter]');
-        const studyCards    = document.querySelectorAll('.study-card');
+    const searchInput = document.getElementById('search-study');
+    const moduleDir   = document.getElementById('module-directory');
+    if (searchInput && moduleDir) {
+        const dirRows      = moduleDir.querySelectorAll('.dir-row');
+        const sectorGroups = moduleDir.querySelectorAll('.dir-sector-group');
 
-        function filterItems() {
-            const searchTerm  = searchInput.value.toLowerCase();
-            const activeChip  = document.querySelector('.filter-chip.active');
-            const activeFilter = activeChip ? activeChip.getAttribute('data-filter') : 'all';
+        searchInput.addEventListener('input', () => {
+            const term = searchInput.value.toLowerCase().trim();
 
-            studyCards.forEach(card => {
-                const title    = card.querySelector('h3').textContent.toLowerCase();
-                const category = card.getAttribute('data-category');
-                const matchesSearch = title.includes(searchTerm);
-                const matchesFilter = activeFilter === 'all' || category === activeFilter;
+            if (!term) {
+                dirRows.forEach(r => { r.style.display = 'flex'; });
+                sectorGroups.forEach(g => { g.style.display = 'block'; });
+                return;
+            }
 
-                if (matchesSearch && matchesFilter) {
-                    card.style.display = 'block';
-                    setTimeout(() => { card.style.opacity = '1'; }, 50);
-                } else {
-                    card.style.opacity = '0';
-                    setTimeout(() => { card.style.display = 'none'; }, 300);
-                }
+            dirRows.forEach(row => {
+                const name = (row.querySelector('.dir-name')?.textContent || '').toLowerCase();
+                const tag  = (row.querySelector('.dir-tag')?.textContent  || '').toLowerCase();
+                row.style.display = (name.includes(term) || tag.includes(term)) ? 'flex' : 'none';
             });
-        }
 
-        searchInput.addEventListener('input', filterItems);
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                filterItems();
+            sectorGroups.forEach(group => {
+                const visible = [...group.querySelectorAll('.dir-row')].some(r => r.style.display !== 'none');
+                group.style.display = visible ? 'block' : 'none';
             });
-        });
-
-        document.querySelectorAll('button').forEach(btn => {
-            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
-            btn.addEventListener('mouseup',   () => btn.classList.remove('scale-95'));
-            btn.addEventListener('mouseleave',() => btn.classList.remove('scale-95'));
         });
     }
 

@@ -31,7 +31,7 @@ jobs:
         with:
           server: ftp.big-i.com.mx
           port: 21
-          username: ftp_user@big-i.com.mx
+          username: deploy@big-i.com.mx
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: /public_html/

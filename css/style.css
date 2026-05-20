@@ -199,3 +199,175 @@ body {
     transform: translateY(-1.5rem) scale(0.85);
     color: #009ffe;
 }
+
+/* ============================================================
+   ESTUDIOS — Directorio Estratégico de Módulos (v2.1)
+   Panel de navegación estilo GIS Dashboard Enterprise
+   ============================================================ */
+
+/* Etiqueta de sector */
+.dir-sector-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #89919e;
+    text-transform: uppercase;
+    padding: 18px 14px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    font-family: 'Inter', sans-serif;
+}
+
+.dir-sector-label::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #009FFE;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+/* Fila de módulo */
+.dir-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 14px;
+    border-left: 3px solid transparent;
+    border-bottom: 1px solid #f8fafc;
+    text-decoration: none;
+    color: #1D1D1B;
+    transition: border-left-color 0.18s ease,
+                background 0.18s ease,
+                padding-left 0.18s ease;
+    background: white;
+    position: relative;
+}
+
+.dir-row:hover {
+    border-left-color: #009FFE;
+    background: linear-gradient(90deg, rgba(0,159,254,0.055) 0%, rgba(0,159,254,0.01) 55%, transparent 100%);
+    padding-left: 20px;
+}
+
+/* Fila destacada (Flagship) */
+.dir-row.featured {
+    border-left-color: rgba(0,159,254,0.4);
+    background: linear-gradient(90deg, rgba(0,159,254,0.045) 0%, transparent 65%);
+}
+
+.dir-row.featured:hover {
+    border-left-color: #009FFE;
+    background: linear-gradient(90deg, rgba(0,159,254,0.09) 0%, rgba(0,159,254,0.02) 55%, transparent 100%);
+}
+
+/* Número índice */
+.dir-index {
+    font-size: 11px;
+    font-weight: 700;
+    color: #c9d0d8;
+    min-width: 22px;
+    letter-spacing: 0.04em;
+    font-feature-settings: 'tnum';
+    transition: color 0.18s;
+    flex-shrink: 0;
+}
+
+.dir-row:hover .dir-index,
+.dir-row.featured .dir-index {
+    color: #009FFE;
+}
+
+/* Icono de módulo */
+.dir-icon {
+    font-size: 20px !important;
+    color: #009FFE;
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.18s, transform 0.18s ease;
+}
+
+.dir-row:hover .dir-icon {
+    opacity: 1;
+    transform: scale(1.12) rotate(-3deg);
+}
+
+.dir-row.featured .dir-icon {
+    opacity: 0.85;
+}
+
+/* Contenido de texto */
+.dir-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.dir-name {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1D1D1B;
+    transition: color 0.18s;
+    line-height: 1.35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dir-row:hover .dir-name {
+    color: #009FFE;
+}
+
+.dir-tag {
+    display: block;
+    font-size: 10px;
+    color: #aab0ba;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 2px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Flecha de navegación */
+.dir-arrow {
+    font-size: 16px !important;
+    color: #dde3ea;
+    flex-shrink: 0;
+    transition: transform 0.18s ease, color 0.18s;
+}
+
+.dir-row:hover .dir-arrow {
+    transform: translateX(5px);
+    color: #009FFE;
+}
+
+/* Badge (Flagship / Nuevo) */
+.dir-badge {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Grupo de sector (wrapper para ocultar en búsqueda) */
+.dir-sector-group {
+    margin-bottom: 0;
+}
+
+/* Hover en nombre largo: mostrar tooltip nativo vía title */
+@media (max-width: 1024px) {
+    .dir-name,
+    .dir-tag {
+        white-space: normal;
+    }
+}
