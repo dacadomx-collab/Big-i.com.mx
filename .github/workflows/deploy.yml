@@ -11,57 +11,20 @@ concurrency:
   cancel-in-progress: true # Cancela deploy anterior si hay uno en curso
 
 jobs:
-  build-and-deploy:
-    name: Build Next.js → Deploy via FTP
+  deploy-vanilla:
+    name: Deploy Vanilla HTML via FTP
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
 
     steps:
       # ------------------------------------------------------------------ #
-      # 1. CHECKOUT                                                          #
+      # 1. CHECKOUT DEL CÓDIGO                                             #
       # ------------------------------------------------------------------ #
       - name: Checkout repository
         uses: actions/checkout@v4
 
       # ------------------------------------------------------------------ #
-      # 2. SETUP NODE.JS CON CACHÉ                                          #
-      # ------------------------------------------------------------------ #
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      # ------------------------------------------------------------------ #
-      # 3. INSTALAR DEPENDENCIAS                                            #
-      # ------------------------------------------------------------------ #
-      - name: Install dependencies
-        run: npm install
-
-      # ------------------------------------------------------------------ #
-      # 4. BUILD NEXT.JS (genera carpeta /out)                              #
-      # next.config.mjs ya tiene output: 'export' configurado              #
-      # ------------------------------------------------------------------ #
-      - name: Build Next.js static export
-        run: npm run build
-        env:
-          NODE_ENV: production
-
-      # ------------------------------------------------------------------ #
-      # 5. VERIFICAR QUE /out SE GENERÓ CORRECTAMENTE                      #
-      # ------------------------------------------------------------------ #
-      - name: Verify build output exists
-        run: |
-          if [ ! -d "./out" ]; then
-            echo "ERROR: La carpeta /out no fue generada. El build falló."
-            exit 1
-          fi
-          echo "Build OK — Archivos en /out:"
-          ls -la ./out
-
-      # ------------------------------------------------------------------ #
-      # 6. DEPLOY VIA FTP A BLUEHOST (big-i.com.mx)                        #
-      # Credenciales: GitHub Secrets                                        #
+      # 2. DEPLOY VIA FTP A BLUEHOST (big-i.com.mx)                        #
       # ------------------------------------------------------------------ #
       - name: Deploy to production via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -70,24 +33,27 @@ jobs:
           port: 21
           username: ftp_user@big-i.com.mx
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
+          local-dir: ./
           server-dir: /public_html/
-          # Excluir archivos que no deben sobrescribirse en producción:
+          # 🚨 EXCLUSIONES CRÍTICAS (No subir esto al servidor público)
           exclude: |
             **/.git*
             **/.git*/**
-            **/node_modules/**
-            **/.env
+            .github/**
+            knowledge/**
+            Background/**
+            **/.env*
             **/logs/**
+            README.md
 
       # ------------------------------------------------------------------ #
-      # 7. NOTIFICACIÓN DE RESULTADO                                        #
+      # 3. NOTIFICACIÓN DE RESULTADO                                       #
       # ------------------------------------------------------------------ #
       - name: Deploy summary
         if: success()
         run: |
           echo "=========================================="
-          echo "  DEPLOY EXITOSO — big-i.com.mx"
+          echo "  DEPLOY VANILLA EXITOSO — big-i.com.mx"
           echo "  Branch: ${{ github.ref_name }}"
           echo "  Commit: ${{ github.sha }}"
           echo "  Autor:  ${{ github.actor }}"
