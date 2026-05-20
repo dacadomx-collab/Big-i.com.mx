@@ -6,7 +6,7 @@
     <title>Estudios | BIG-i — Inteligencia Territorial</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind.config.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
@@ -30,9 +30,7 @@
             <input class="bg-surface-container-high border border-outline-variant rounded px-4 py-1.5 text-sm focus:border-primary-container outline-none w-44 transition-all" placeholder="Buscar..." type="text"/>
             <span class="material-symbols-outlined absolute right-2 top-1.5 text-on-surface-variant text-[18px]">search</span>
         </div>
-        <button class="hidden md:block bg-primary-container text-on-primary-container px-5 py-2 rounded font-semibold text-sm hover:opacity-90 transition-opacity whitespace-nowrap">
-            Administrador
-        </button>
+        <button class="hidden md:block bg-primary-container text-on-primary-container px-5 py-2 rounded font-semibold text-sm hover:opacity-90 transition-opacity whitespace-nowrap">Administrador</button>
         <button class="md:hidden text-on-surface p-2 focus:outline-none" id="menu-toggle">
             <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
@@ -48,9 +46,7 @@
         <a class="text-primary font-bold text-xl" href="estudios.html">Estudios</a>
         <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="contacto.html">Contacto</a>
         <hr class="border-outline-variant my-1"/>
-        <button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-xl">
-            Administrador
-        </button>
+        <button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-xl">Administrador</button>
     </div>
 </div>
 
@@ -64,256 +60,343 @@
     </div>
 </header>
 
-<!-- ═══════════════════════ DIRECTORIO ESTRATÉGICO ═══════════════════════ -->
+<!-- ═══════════════════════ CONTENT (Light Theme) ═══════════════════════ -->
 <main class="bg-white text-[#1D1D1B] min-h-screen">
-    <div class="max-w-7xl mx-auto px-margin-desktop pt-10 pb-20">
 
-        <!-- Barra de estado -->
-        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-100 pb-8 mb-0">
-            <div class="flex items-center gap-4">
-                <div class="flex items-center gap-2">
-                    <span class="flex h-2.5 w-2.5 relative">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#009FFE] opacity-60"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#009FFE]"></span>
-                    </span>
-                    <span class="font-label-sm text-label-sm text-[#009FFE] tracking-widest uppercase font-bold">Sistema Activo</span>
-                </div>
-                <span class="text-gray-300">|</span>
-                <span class="font-label-sm text-label-sm text-gray-400 tracking-widest uppercase">18 Módulos · 5 Sectores Estratégicos</span>
-            </div>
-            <div class="flex items-center gap-2 text-gray-400">
-                <span class="material-symbols-outlined text-[16px]">map</span>
-                <span class="font-label-sm text-label-sm uppercase tracking-widest">Cobertura Nacional · México</span>
-            </div>
+    <!-- Filtros premium -->
+    <div class="sticky top-[73px] z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 px-margin-desktop">
+        <div class="flex flex-wrap items-center justify-center gap-2 max-w-7xl mx-auto">
+            <button class="filter-chip active px-5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-all" data-filter="all">Todos (18)</button>
+            <button class="filter-chip px-5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-all" data-filter="energia">Energía</button>
+            <button class="filter-chip px-5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-all" data-filter="infraestructura">Infraestructura</button>
+            <button class="filter-chip px-5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-all" data-filter="territorio">Territorio</button>
+            <button class="filter-chip px-5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-all" data-filter="social">Social &amp; Seguridad</button>
+            <button class="filter-chip px-5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-all" data-filter="tecnologia">Tecnología</button>
         </div>
+    </div>
 
-        <!-- ══════════════════ GRID 2 COLUMNAS ══════════════════ -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12" id="module-directory">
+    <!-- ══════ MASONRY GRID ══════ -->
+    <div class="max-w-7xl mx-auto px-margin-desktop py-12">
+        <div class="masonry-grid" id="intelligence-grid">
 
-            <!-- ══ COLUMNA IZQUIERDA (01–09) ══ -->
-            <div>
-
-                <!-- SECTOR: ENERGÍA -->
-                <div class="dir-sector-group">
-                    <div class="dir-sector-label">Energía</div>
-                    <a class="dir-row featured" href="estudio-gasolineras.html">
-                        <span class="dir-index">01</span>
-                        <span class="material-symbols-outlined dir-icon">local_gas_station</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Estaciones de Servicio</span>
-                            <span class="dir-tag">Gasolineras · Hidrocarburos · CRE · +120 Variables</span>
-                        </div>
-                        <span class="dir-badge bg-[#009FFE]/10 text-[#009FFE] border border-[#009FFE]/20">Flagship</span>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">02</span>
-                        <span class="material-symbols-outlined dir-icon">precision_manufacturing</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Minería</span>
-                            <span class="dir-tag">Yacimientos · Prospección Geológica · Impacto Ambiental</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
+            <!-- 01 Desarrollo Urbano (FEATURED) -->
+            <div class="study-card card-featured group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="territorio">
+                <img class="w-full h-[55%] object-cover transition-transform duration-500" src="img/01_DESARROLLO_URBANO/banner.png" alt="Desarrollo Urbano"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="badge-territorio">Territorio</span>
+                        <span class="px-2 py-0.5 border border-emerald-200 text-emerald-600 rounded-full text-[10px] font-bold">Catastro &amp; SIG</span>
+                    </div>
+                    <img src="img/icono-desarrollo-urbano.png" alt="Desarrollo Urbano" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-lg text-headline-lg mb-2 group-hover:text-primary transition-colors">Desarrollo Urbano y Catastro</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Planeación y ordenamiento inteligente del territorio urbano para garantizar la cobertura eficiente de servicios públicos.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Planes de desarrollo urbano</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Actualización catastral</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-desarrollo-urbano.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
                 </div>
-
-                <!-- SECTOR: INFRAESTRUCTURA -->
-                <div class="dir-sector-group">
-                    <div class="dir-sector-label">Infraestructura</div>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">03</span>
-                        <span class="material-symbols-outlined dir-icon">architecture</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Diseño Arquitectónico e Ingeniería</span>
-                            <span class="dir-tag">BIM 4D · Modelado · Optimización de Costos</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">04</span>
-                        <span class="material-symbols-outlined dir-icon">construction</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Infraestructura</span>
-                            <span class="dir-tag">Catastro de Redes · Ciclo de Vida de Activos</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">05</span>
-                        <span class="material-symbols-outlined dir-icon">traffic</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Vialidades y Transporte</span>
-                            <span class="dir-tag">Flujo de Tráfico · Corredores Logísticos · +50 Ciudades</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">06</span>
-                        <span class="material-symbols-outlined dir-icon">water_drop</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Agua y Recursos Hidráulicos</span>
-                            <span class="dir-tag">Cuencas Hidrológicas · Gestión Pluvial Inteligente</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">07</span>
-                        <span class="material-symbols-outlined dir-icon">settings_applications</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Gestión de Servicios Integrales</span>
-                            <span class="dir-tag">Servicios · Mantenimiento Predictivo</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                </div>
-
-                <!-- SECTOR: TERRITORIO -->
-                <div class="dir-sector-group">
-                    <div class="dir-sector-label">Territorio</div>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">08</span>
-                        <span class="material-symbols-outlined dir-icon">location_city</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Desarrollo Urbano</span>
-                            <span class="dir-tag">Smart Cities · Planes de Ordenamiento · Equipamiento</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">09</span>
-                        <span class="material-symbols-outlined dir-icon">electric_car</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Movilidad Sustentable</span>
-                            <span class="dir-tag">Huella de Carbono · Accesibilidad Universal</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                </div>
-
-            </div><!-- /col-izquierda -->
-
-            <!-- ══ COLUMNA DERECHA (10–18) ══ -->
-            <div>
-
-                <!-- SECTOR: TERRITORIO (cont.) -->
-                <div class="dir-sector-group">
-                    <div class="dir-sector-label">Territorio (continuación)</div>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">10</span>
-                        <span class="material-symbols-outlined dir-icon">park</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Medio Ambiente Natural</span>
-                            <span class="dir-tag">Áreas Protegidas · Servicios Ecosistémicos</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">11</span>
-                        <span class="material-symbols-outlined dir-icon">apartment</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Desarrollo Inmobiliario</span>
-                            <span class="dir-tag">Plusvalía Proyectada · Análisis de Sitio</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                </div>
-
-                <!-- SECTOR: SOCIAL & SEGURIDAD -->
-                <div class="dir-sector-group">
-                    <div class="dir-sector-label">Social &amp; Seguridad</div>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">12</span>
-                        <span class="material-symbols-outlined dir-icon">local_police</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Seguridad Pública y Privada</span>
-                            <span class="dir-tag">Mapas de Incidencia · Patrones Delictivos</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">13</span>
-                        <span class="material-symbols-outlined dir-icon">warning</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Evaluación de Riesgos</span>
-                            <span class="dir-tag">Amenazas Naturales · Vulnerabilidad Social</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">14</span>
-                        <span class="material-symbols-outlined dir-icon">groups</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Desarrollo Social y Humano</span>
-                            <span class="dir-tag">Indicadores de Bienestar · Zonas de Atención</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">15</span>
-                        <span class="material-symbols-outlined dir-icon">manage_search</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Investigación Social</span>
-                            <span class="dir-tag">Dinámicas Comunitarias · Percepción Ciudadana</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">16</span>
-                        <span class="material-symbols-outlined dir-icon">how_to_vote</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Político Electoral</span>
-                            <span class="dir-tag">Distritación Técnica · Tendencias Territoriales</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                </div>
-
-                <!-- SECTOR: TECNOLOGÍA & MERCADOS -->
-                <div class="dir-sector-group">
-                    <div class="dir-sector-label">Tecnología &amp; Mercados</div>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">17</span>
-                        <span class="material-symbols-outlined dir-icon">pin_drop</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Geomarketing</span>
-                            <span class="dir-tag">Segmentación Espacial · Canibalización de Puntos · Geolocalización Pro</span>
-                        </div>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                    <a class="dir-row" href="#">
-                        <span class="dir-index">18</span>
-                        <span class="material-symbols-outlined dir-icon">hub</span>
-                        <div class="dir-content">
-                            <span class="dir-name">Sistema de Autogestión Colaborativa Inteligente (SACI)</span>
-                            <span class="dir-tag">Autogestión · Inteligencia en Tiempo Real</span>
-                        </div>
-                        <span class="dir-badge bg-[#89ceff]/10 text-[#89ceff] border border-[#89ceff]/20">Nuevo</span>
-                        <span class="material-symbols-outlined dir-arrow">chevron_right</span>
-                    </a>
-                </div>
-
-            </div><!-- /col-derecha -->
-
-        </div><!-- /#module-directory -->
-
-        <!-- ══ CTA BANNER ══ -->
-        <div class="mt-16 border border-[#009FFE]/15 bg-gradient-to-r from-[#009FFE]/5 via-[#009FFE]/[0.02] to-transparent p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-                <h3 class="font-headline-md text-headline-md text-graphite mb-1">¿Necesitas un estudio personalizado?</h3>
-                <p class="font-body-md text-body-md text-gray-500">Nuestro equipo diseña soluciones geoespaciales a medida para tu sector estratégico.</p>
             </div>
-            <a class="flex-shrink-0 flex items-center gap-2 bg-[#009FFE] text-white font-label-md text-label-md px-8 py-3 hover:shadow-[0_0_24px_rgba(0,159,254,0.4)] transition-all active:scale-95" href="contacto.html">
-                Contactar ahora
-                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-            </a>
-        </div>
 
+            <!-- 02 Gasolineras (FEATURED) -->
+            <div class="study-card card-featured group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="energia">
+                <img class="w-full h-[55%] object-cover transition-transform duration-500" src="img/02_ESTACIONES_SERVICIO/banner.png" alt="Estaciones de Servicio"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="badge-energia">Energía</span>
+                        <span class="px-2 py-0.5 border border-amber-200 text-amber-600 rounded-full text-[10px] font-bold">+120 Variables · CRE</span>
+                    </div>
+                    <img src="img/icono-gasolineras.png" alt="Estaciones de Servicio" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-lg text-headline-lg mb-2 group-hover:text-primary transition-colors">Estaciones de Servicio</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Solución integral para el análisis territorial de infraestructura energética, maximizando rentabilidad y reduciendo riesgos operativos.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Evaluación de apertura e inversión</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Verificación de permisos CRE</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-gasolineras.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 03 Minería -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="energia">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/03_MINERIA/banner.png" alt="Minería"/>
+                <div class="p-6">
+                    <span class="badge-energia mb-3 block">Energía / Recursos</span>
+                    <img src="img/icono-mineria.png" alt="Minería" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Minería</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Inteligencia territorial para todo el ciclo de vida minero, desde la exploración hasta la gestión sostenible de recursos.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Prospección geológica</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Evaluación de impacto ambiental</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-mineria.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 04 Infraestructura (WIDE) -->
+            <div class="study-card card-wide group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/04_INFRAESTRUCTURA/banner.png" alt="Infraestructura"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="badge-infraestructura">Infraestructura</span>
+                        <span class="px-2 py-0.5 border border-blue-200 text-blue-600 rounded-full text-[10px] font-bold">MIA · Obra Pública</span>
+                    </div>
+                    <img src="img/icono-infraestructura.png" alt="Infraestructura Pública" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Infraestructura Pública</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Planeación estratégica y análisis multicriterio para el desarrollo de proyectos de obra pública de gran escala.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Estudios de factibilidad geoespacial</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Manifestación de Impacto Ambiental (MIA)</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-infraestructura.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 05 Movilidad -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="territorio">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/05_MOVILIDAD_SUSTENTABLE/banner.png" alt="Movilidad Sustentable"/>
+                <div class="p-6">
+                    <span class="badge-territorio mb-3 block">Territorio</span>
+                    <img src="img/icono-movilidad-carro.png" alt="Movilidad Sustentable" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Movilidad Sustentable</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Soluciones integrales para optimizar el desplazamiento mediante infraestructura inteligente y conectividad urbana.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Análisis origen-destino</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Planeación de electromovilidad</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-movilidad.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 06 Vialidades -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/06 VIALIDADES_TRANSPORTE/banner.png" alt="Vialidades y Transporte"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="badge-infraestructura">Infraestructura</span>
+                        <span class="px-2 py-0.5 border border-blue-200 text-blue-600 rounded-full text-[10px] font-bold">+50 Ciudades</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Vialidades y Transporte</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Modelos geoespaciales y de tráfico para mejorar la circulación, reducir tiempos y optimizar redes viales.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Ingeniería de tránsito y aforos</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Optimización de intersecciones</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-vialidades.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 07 Seguridad (WIDE) -->
+            <div class="study-card card-wide group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/07_SEGURIDAD_PUBLICA_PRIVADA/banner.png" alt="Seguridad Pública y Privada"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="badge-social">Social &amp; Seguridad</span>
+                        <span class="px-2 py-0.5 border border-rose-200 text-rose-600 rounded-full text-[10px] font-bold">C4/C5 · Prevención</span>
+                    </div>
+                    <img src="img/icono-seguridad.png" alt="Seguridad Pública y Privada" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Seguridad Pública y Privada</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Geointeligencia aplicada para la prevención del delito, monitoreo territorial y protección de derechos ciudadanos.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Mapas de incidencia delictiva</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Diseño de centros C4/C5</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-seguridad.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 08 Agua -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/08_AGUA_RECURSOS_HIDRAULICOS/banner.png" alt="Agua y Recursos Hidráulicos"/>
+                <div class="p-6">
+                    <span class="badge-infraestructura mb-3 block">Infraestructura</span>
+                    <img src="img/icono-agua.png" alt="Agua y Recursos Hidráulicos" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Agua y Recursos Hidráulicos</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Planeación para el aprovechamiento sustentable y gestión del ciclo de vida de ecosistemas hídricos.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Proyectos ejecutivos hidráulicos</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Gestión de cuencas</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-agua.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 09 Medio Ambiente -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="territorio">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/09_MEDIO_AMBIENTE_NATURAL/banner.png" alt="Medio Ambiente Natural"/>
+                <div class="p-6">
+                    <span class="badge-territorio mb-3 block">Territorio</span>
+                    <img src="img/icono-medio-ambiente.png" alt="Medio Ambiente Natural" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Medio Ambiente Natural</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Estudios de impacto y ordenamiento ecológico para proteger, restaurar y aprovechar los recursos naturales.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>MIA y ordenamiento ecológico</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Inventario de recursos naturales</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-medio-ambiente.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 10 Evaluación Riesgos -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/10_EVALUACION_RIESGOS/banner.png" alt="Evaluación de Riesgos"/>
+                <div class="p-6">
+                    <span class="badge-social mb-3 block">Social &amp; Seguridad</span>
+                    <img src="img/icono-evaluacion-riesgos.png" alt="Evaluación de Riesgos" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Evaluación de Riesgos</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Identificación y mitigación de amenazas naturales, antropogénicas y operativas para prevenir desastres.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Atlas de riesgos y protección civil</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Zonificación por riesgo potencial</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-evaluacion-riesgos.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 11 Desarrollo Social -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/11_DESARROLLO_SOCIAL_HUMANO/banner.png" alt="Desarrollo Social y Humano"/>
+                <div class="p-6">
+                    <span class="badge-social mb-3 block">Social &amp; Seguridad</span>
+                    <img src="img/icono-desarrollo-social.png" alt="Desarrollo Social y Humano" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Desarrollo Social y Humano</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Análisis demográfico y cualitativo para entender el bienestar y las dinámicas comunitarias del territorio.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Evaluación de programas sociales</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Cobertura de servicios básicos</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-desarrollo-social.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 12 Inmobiliario (WIDE) -->
+            <div class="study-card card-wide group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="territorio">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/12_DESARROLLO_INMOBILIARIO/banner.png" alt="Desarrollo Inmobiliario"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="badge-territorio">Territorio</span>
+                        <span class="px-2 py-0.5 border border-emerald-200 text-emerald-600 rounded-full text-[10px] font-bold">Plusvalía · Mercado</span>
+                    </div>
+                    <img src="img/icono-inmobiliario.png" alt="Desarrollo Inmobiliario" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Desarrollo Inmobiliario</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Inteligencia territorial aplicada para maximizar la plusvalía y viabilidad de proyectos urbanos y comerciales.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Investigación de mercado y avalúos</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Análisis de plusvalía proyectada</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-inmobiliario.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 13 Geomarketing -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="tecnologia">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/13_GEOMARKETING/banner.png" alt="Geomarketing"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="badge-tecnologia">Tecnología &amp; Mercados</span>
+                        <span class="px-2 py-0.5 border border-violet-200 text-violet-600 rounded-full text-[10px] font-bold">Geolocalización Pro</span>
+                    </div>
+                    <img src="img/icono-geomarketing.png" alt="Geomarketing" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Geomarketing</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Localización inteligente de clientes, puntos de venta y competidores para dominar el mercado.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Segmentación espacial de mercado</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Localización óptima de sucursales</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-geomarketing.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 14 Investigación Social -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/14_INVESTIGACION_SOCIAL/banner.png" alt="Investigación Social"/>
+                <div class="p-6">
+                    <span class="badge-social mb-3 block">Social &amp; Seguridad</span>
+                    <img src="img/icono-investigacion-social.png" alt="Investigación Social" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Investigación Social</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Georreferenciación de percepciones ciudadanas y dinámicas poblacionales para la planeación estratégica.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Bases de datos georreferenciadas</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Simuladores 3D y mapas geoestadísticos</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-investigacion-social.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 15 Político Electoral -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="social">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/15_POLITICO_ELECTORAL/banner.png" alt="Político Electoral"/>
+                <div class="p-6">
+                    <span class="badge-social mb-3 block">Social &amp; Seguridad</span>
+                    <img src="img/icono-politico-electoral.png" alt="Político Electoral" class="w-8 h-8 object-contain mb-2"/>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Político Electoral</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Analítica electoral y segmentación territorial para campañas y plataformas políticas basadas en datos.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Distritación técnica y cartografía</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Marketing electoral-espacial</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-politico-electoral.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 16 SACI (WIDE) -->
+            <div class="study-card card-wide group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="tecnologia">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/16_SISTEMA_AUTOGESTION_COLABORATIVA_INTELIGENTE/banner.png" alt="Sistema SACI"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="badge-tecnologia">Tecnología &amp; Mercados</span>
+                        <span class="px-2 py-0.5 border border-violet-200 text-violet-600 rounded-full text-[10px] font-bold">SaaS · Tiempo Real</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Sistema de Autogestión Colaborativa Inteligente (SACI)</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Plataformas SaaS avanzadas para el monitoreo, colaboración y automatización de procesos territoriales en tiempo real.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Dashboards operativos interactivos</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Automatización de procesos digitales</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-saci.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 17 Diseño Arquitectónico -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/17_DISENHO_ARQUITECTONICO_INGENIERIA/banner.png" alt="Diseño Arquitectónico e Ingeniería"/>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="badge-infraestructura">Infraestructura</span>
+                        <span class="px-2 py-0.5 border border-blue-200 text-blue-600 rounded-full text-[10px] font-bold">BIM · Smart Cities</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Diseño Arquitectónico e Ingeniería</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Soluciones de ingeniería civil y diseño para proyectos preparados para Smart Cities.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Modelado BIM 4D</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Infraestructura IoT y telemetría</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-diseno-arquitectonico.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+            <!-- 18 Gestión Servicios -->
+            <div class="study-card group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl" data-category="infraestructura">
+                <img class="w-full h-48 object-cover transition-transform duration-500" src="img/18_GESTION_DE_SERVICIOS_INTEGRALES/banner.png" alt="Gestión de Servicios Integrales"/>
+                <div class="p-6">
+                    <span class="badge-infraestructura mb-3 block">Infraestructura</span>
+                    <h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Gestión de Servicios Integrales</h3>
+                    <p class="font-body-md text-body-md text-gray-500 mb-4">Coordinación operativa, monitoreo y mantenimiento para asegurar el ciclo de vida de la infraestructura.</p>
+                    <ul class="space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Mantenimiento predictivo</li>
+                        <li class="flex items-center gap-2 font-body-md text-body-md text-gray-600"><span class="material-symbols-outlined text-sm text-primary">layers</span>Evaluación de desempeño operativo</li>
+                    </ul>
+                    <a class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold group-hover:gap-4 transition-all" href="estudio-gestion-servicios.html">Explorar estudio <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+            </div>
+
+        </div><!-- /#intelligence-grid -->
     </div>
 </main>
 
 <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer class="bg-surface-container-lowest text-on-surface pt-20 pb-8 border-t border-outline-variant">
-    <div class="px-margin-desktop max-w-7xl mx-auto">
+    <div class="px-6 md:px-10 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
             <div class="flex flex-col gap-4">
                 <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-12 w-auto object-contain" src="img/logo.png"/>
@@ -343,9 +426,7 @@
         </div>
         <div class="flex flex-col md:flex-row justify-between items-center py-10 border-y border-outline-variant gap-8 mb-10">
             <div class="flex flex-wrap justify-center md:justify-start gap-8 items-center text-on-surface-variant font-bold tracking-widest">
-                <span>KG Kab-Geo</span>
-                <span>CENTRAL HOLDING</span>
-                <span>Estevez.Jor</span>
+                <span>KG Kab-Geo</span><span>CENTRAL HOLDING</span><span>Estevez.Jor</span>
             </div>
             <div class="flex items-center gap-6">
                 <span class="font-label-md font-bold text-on-surface-variant">Síguenos en:</span>
@@ -368,11 +449,9 @@
     </div>
 </footer>
 
-<!-- Scroll to Top -->
 <button class="scroll-top-btn fixed bottom-8 right-8 w-12 h-12 bg-electric-blue text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 z-50" id="scrollTopBtn">
     <i class="fas fa-chevron-up"></i>
 </button>
-
 <script src="js/main.js"></script>
 </body>
 </html>

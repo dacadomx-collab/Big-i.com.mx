@@ -34,6 +34,47 @@ body {
     transform: translateY(0);
 }
 
+/* === HERO SLIDER (index.html) === */
+.hero-slide {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide.is-active {
+    opacity: 1;
+}
+
+.hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.hero-dot.is-active {
+    width: 28px;
+    border-radius: 4px;
+    background: #ffffff;
+}
+
+.hero-arrow {
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+#hero-section:hover .hero-arrow {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .hero-arrow { display: none; }
+}
+
 /* === SCROLL-TO-TOP BUTTON (todas las páginas) === */
 .scroll-top-btn {
     opacity: 0;
@@ -159,10 +200,21 @@ body {
     transform: scale(1.03);
 }
 
+.filter-chip {
+    cursor: pointer;
+}
+
 .filter-chip.active {
-    background-color: #009FFE;
-    color: white;
-    border-color: #009FFE;
+    background-color: #009FFE !important;
+    color: #ffffff !important;
+    border-color: #009FFE !important;
+}
+
+.filter-chip.active:hover {
+    opacity: 0.88;
+    background-color: #009FFE !important;
+    color: #ffffff !important;
+    border-color: #009FFE !important;
 }
 
 .hero-map-bg {
@@ -199,6 +251,16 @@ body {
     transform: translateY(-1.5rem) scale(0.85);
     color: #009ffe;
 }
+
+/* ============================================================
+   BADGES DE CATEGORÍA — Estudios (color por sector)
+   ============================================================ */
+
+.badge-energia        { display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(251,191,36,.12);color:#fbbf24;border:1px solid rgba(251,191,36,.25); }
+.badge-infraestructura{ display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(59,130,246,.12);color:#60a5fa;border:1px solid rgba(59,130,246,.25); }
+.badge-territorio     { display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(16,185,129,.12);color:#34d399;border:1px solid rgba(16,185,129,.25); }
+.badge-social         { display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(244,63,94,.12);color:#fb7185;border:1px solid rgba(244,63,94,.25); }
+.badge-tecnologia     { display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.25); }
 
 /* ============================================================
    NAVBAR — Underline animado + centrado absoluto

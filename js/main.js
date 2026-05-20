@@ -63,7 +63,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ----------------------------------------------------------
-       INDEX — Carousel de servicios
+       INDEX — Hero Slider (crossfade automático)
+    ---------------------------------------------------------- */
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDots   = document.querySelectorAll('.hero-dot');
+    const heroPrev   = document.querySelector('.hero-prev');
+    const heroNext   = document.querySelector('.hero-next');
+
+    if (heroSlides.length > 0) {
+        let current  = 0;
+        let autoPlay = null;
+
+        function goToSlide(n) {
+            heroSlides[current].classList.remove('is-active');
+            heroDots[current]?.classList.remove('is-active');
+            current = (n + heroSlides.length) % heroSlides.length;
+            heroSlides[current].classList.add('is-active');
+            heroDots[current]?.classList.add('is-active');
+        }
+
+        function startAutoPlay() {
+            autoPlay = setInterval(() => goToSlide(current + 1), 5500);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlay);
+            startAutoPlay();
+        }
+
+        startAutoPlay();
+
+        heroDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => { goToSlide(i); resetAutoPlay(); });
+        });
+
+        heroPrev?.addEventListener('click', () => { goToSlide(current - 1); resetAutoPlay(); });
+        heroNext?.addEventListener('click', () => { goToSlide(current + 1); resetAutoPlay(); });
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        const heroSection = document.getElementById('hero-section');
+        heroSection?.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+        heroSection?.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) { goToSlide(diff > 0 ? current + 1 : current - 1); resetAutoPlay(); }
+        }, { passive: true });
+    }
+
+    /* ----------------------------------------------------------
+       INDEX — Carousel de servicios (horizontal scroll)
     ---------------------------------------------------------- */
     const slider  = document.getElementById('slider');
     const nextBtn = document.getElementById('nextBtn');
@@ -116,34 +164,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ----------------------------------------------------------
-       ESTUDIOS — Búsqueda en el Directorio de Módulos
+       ESTUDIOS — Filter chips + Masonry grid search
+       UX: al escribir, busca en TODO (desactiva categoría).
+           Al limpiar, vuelve a mostrar todo.
+           Al hacer click en categoría, limpia el buscador.
     ---------------------------------------------------------- */
-    const searchInput = document.getElementById('search-study');
-    const moduleDir   = document.getElementById('module-directory');
-    if (searchInput && moduleDir) {
-        const dirRows      = moduleDir.querySelectorAll('.dir-row');
-        const sectorGroups = moduleDir.querySelectorAll('.dir-sector-group');
+    const filterChips  = document.querySelectorAll('.filter-chip');
+    const studyCards   = document.querySelectorAll('.study-card');
+    const searchStudy  = document.getElementById('search-study');
 
-        searchInput.addEventListener('input', () => {
-            const term = searchInput.value.toLowerCase().trim();
+    if (filterChips.length > 0 && studyCards.length > 0) {
+        let activeFilter = 'all';
 
-            if (!term) {
-                dirRows.forEach(r => { r.style.display = 'flex'; });
-                sectorGroups.forEach(g => { g.style.display = 'block'; });
-                return;
-            }
+        function applyFilters() {
+            const term = searchStudy ? searchStudy.value.toLowerCase().trim() : '';
 
-            dirRows.forEach(row => {
-                const name = (row.querySelector('.dir-name')?.textContent || '').toLowerCase();
-                const tag  = (row.querySelector('.dir-tag')?.textContent  || '').toLowerCase();
-                row.style.display = (name.includes(term) || tag.includes(term)) ? 'flex' : 'none';
+            studyCards.forEach(card => {
+                const category     = card.dataset.category || '';
+                const title        = (card.querySelector('h3')?.textContent || '').toLowerCase();
+                const description  = (card.querySelector('p')?.textContent  || '').toLowerCase();
+
+                const matchesCat    = activeFilter === 'all' || category === activeFilter;
+                const matchesSearch = !term || title.includes(term) || description.includes(term);
+
+                card.style.display = (matchesCat && matchesSearch) ? '' : 'none';
             });
+        }
 
-            sectorGroups.forEach(group => {
-                const visible = [...group.querySelectorAll('.dir-row')].some(r => r.style.display !== 'none');
-                group.style.display = visible ? 'block' : 'none';
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                filterChips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                activeFilter = chip.dataset.filter || 'all';
+                if (searchStudy) searchStudy.value = '';
+                applyFilters();
             });
         });
+
+        if (searchStudy) {
+            searchStudy.addEventListener('input', () => {
+                const term = searchStudy.value.trim();
+                if (term) {
+                    filterChips.forEach(c => c.classList.remove('active'));
+                    filterChips[0]?.classList.add('active');
+                    activeFilter = 'all';
+                }
+                applyFilters();
+            });
+        }
     }
 
     /* ----------------------------------------------------------

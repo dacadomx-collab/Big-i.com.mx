@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Movilidad Sustentable | BIG-i</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background">
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
+    <a class="block flex-shrink-0 relative z-10" href="index.html"><img alt="BIG-i" class="h-10 w-auto" src="img/logo.png"/></a>
+    <ul class="hidden md:flex items-center gap-7 list-none m-0 p-0 absolute left-1/2 -translate-x-1/2">
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="index.html">Inicio</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="quienes_somos.html">Quiénes somos</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="equipo.html">Equipo</a></li>
+        <li><a class="nav-link nav-active text-primary font-bold text-sm" href="estudios.html">Estudios</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="flex items-center justify-end gap-3 relative z-10">
+        <button class="hidden md:block bg-primary-container text-on-primary-container px-5 py-2 rounded font-semibold text-sm hover:opacity-90">Administrador</button>
+        <button class="md:hidden text-on-surface p-2" id="menu-toggle"><span class="material-symbols-outlined text-3xl">menu</span></button>
+    </div>
+</nav>
+<div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-6 border-b border-outline-variant shadow-2xl" id="mobile-menu">
+    <div class="flex flex-col gap-5">
+        <a class="text-on-surface-variant font-semibold text-xl" href="index.html">Inicio</a>
+        <a class="text-on-surface-variant font-semibold text-xl" href="quienes_somos.html">Quiénes somos</a>
+        <a class="text-on-surface-variant font-semibold text-xl" href="equipo.html">Equipo</a>
+        <a class="text-primary font-bold text-xl" href="estudios.html">Estudios</a>
+        <a class="text-on-surface-variant font-semibold text-xl" href="contacto.html">Contacto</a>
+        <hr class="border-outline-variant"/><button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-xl">Administrador</button>
+    </div>
+</div>
+
+<header class="relative flex items-end overflow-hidden" style="min-height:70vh;padding-top:80px;">
+    <div class="absolute inset-0 z-0">
+        <img src="img/05_MOVILIDAD_SUSTENTABLE/banner.webp" alt="Movilidad Sustentable" class="w-full h-full object-cover opacity-40"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/75 to-background/10"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pb-20 w-full">
+        <a href="estudios.html" class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors text-sm mb-6"><span class="material-symbols-outlined text-[16px]">arrow_back</span>Volver a Estudios</a>
+        <div class="flex items-center gap-3 mb-4"><span class="badge-territorio">Territorio</span></div>
+        <img src="img/icono-movilidad-carro.png" alt="Movilidad Sustentable" class="w-14 h-14 object-contain mb-4 opacity-90"/>
+        <h1 class="font-black leading-none tracking-tighter text-on-background mb-4" style="font-size:clamp(36px,5.5vw,80px);">Movilidad<br>Sustentable</h1>
+        <p class="font-body-lg text-on-surface-variant max-w-2xl">Soluciones integrales para optimizar el desplazamiento mediante infraestructura inteligente y conectividad urbana.</p>
+    </div>
+</header>
+
+<div class="bg-white text-graphite">
+    <section class="py-24 px-6 md:px-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+            <span class="text-primary font-label-md text-label-md tracking-widest uppercase mb-4 block">Descripción</span>
+            <h2 class="font-headline-lg text-headline-lg text-graphite border-l-4 border-emerald-400 pl-6 mb-6">¿Qué hacemos?</h2>
+            <p class="font-body-lg text-graphite/75 leading-relaxed">La movilidad moderna exige una visión ecológica y eficiente. Integramos datos geoespaciales, demográficos y operativos para planear redes de transporte público, ciclovías, electromovilidad y estaciones de carga. Optimizamos rutas buscando reducir la huella de carbono y garantizar accesibilidad universal.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white border border-slate-200 p-6 hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-primary text-3xl mb-3 block">electric_car</span>
+                <h4 class="font-title-lg text-graphite mb-1">Electromovilidad</h4>
+                <p class="text-sm text-graphite/60">Planeación de infraestructura de carga.</p>
+            </div>
+            <div class="bg-white border border-slate-200 p-6 hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-primary text-3xl mb-3 block">directions_transit</span>
+                <h4 class="font-title-lg text-graphite mb-1">Transporte Público</h4>
+                <p class="text-sm text-graphite/60">Análisis origen-destino y rutas.</p>
+            </div>
+            <div class="bg-white border border-slate-200 p-6 hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-primary text-3xl mb-3 block">route</span>
+                <h4 class="font-title-lg text-graphite mb-1">Ciclovías y Peatón</h4>
+                <p class="text-sm text-graphite/60">Diseño de infraestructura no motorizada.</p>
+            </div>
+            <div class="bg-white border border-slate-200 p-6 hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-primary text-3xl mb-3 block">co2</span>
+                <h4 class="font-title-lg text-graphite mb-1">Huella de Carbono</h4>
+                <p class="text-sm text-graphite/60">Reducción de emisiones en movilidad.</p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-slate-50 py-16 px-6 md:px-10 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-headline-md text-headline-md text-graphite mb-8">Evidencia Visual</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <img class="w-full h-64 object-cover rounded-xl" src="img/05_MOVILIDAD_SUSTENTABLE/galeria-01.png" alt="Movilidad 1"/>
+                <img class="w-full h-64 object-cover rounded-xl" src="img/05_MOVILIDAD_SUSTENTABLE/galeria-02.png" alt="Movilidad 2"/>
+                <img class="w-full h-64 object-cover rounded-xl" src="img/05_MOVILIDAD_SUSTENTABLE/galeria-03.png" alt="Movilidad 3"/>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="py-20 border-t border-outline-variant">
+    <div class="max-w-3xl mx-auto px-6 md:px-10 text-center">
+        <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">¿Interesado en este estudio?</h2>
+        <p class="font-body-lg text-on-surface-variant mb-8">Diseñamos la movilidad sustentable de tu ciudad.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a class="bg-primary-container text-on-primary-container px-8 py-3.5 font-bold text-sm flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all" href="contacto.html">Solicitar diagnóstico <span class="material-symbols-outlined text-[18px]">north_east</span></a>
+            <a class="border-2 border-outline-variant text-on-surface-variant px-8 py-3.5 font-semibold text-sm hover:border-primary hover:text-primary transition-all" href="estudios.html">Ver todos los estudios</a>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-surface-container-lowest text-on-surface pt-12 pb-8 border-t border-outline-variant">
+    <div class="px-6 md:px-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div><img alt="BIG-i" class="h-10 w-auto mb-4 object-contain" src="img/logo.png"/><p class="text-sm text-on-surface-variant">Inteligencia Territorial · México</p></div>
+        <div><h4 class="text-secondary font-bold text-xs uppercase tracking-widest mb-4">Navegación</h4><ul class="space-y-2 text-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="index.html">Inicio</a></li><li><a class="hover:text-primary transition-colors" href="estudios.html">Estudios</a></li><li><a class="hover:text-primary transition-colors" href="contacto.html">Contacto</a></li></ul></div>
+        <div><h4 class="text-secondary font-bold text-xs uppercase tracking-widest mb-4">Contacto</h4><p class="text-sm text-on-surface-variant">contacto@big-i.com.mx</p><p class="text-sm text-electric-blue font-bold mt-1">+52 55 5261 4660</p></div>
+        <div><p class="mt-4 text-xs text-on-surface-variant opacity-60">&copy; 2013 Kab Geo S.A. de C.V.</p></div>
+    </div>
+</footer>
+<button class="scroll-top-btn fixed bottom-8 right-8 w-12 h-12 bg-electric-blue text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 z-50" id="scrollTopBtn"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body></html>

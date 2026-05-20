@@ -2,7 +2,19 @@
   "permissions": {
     "allow": [
       "Bash(Get-ChildItem \"c:\\\\xampp\\\\htdocs\\\\Big-i.com.mx\\\\Web_Page\" -Depth 0)",
-      "Bash(Select-Object Name, LastWriteTime, Length)"
+      "Bash(Select-Object Name, LastWriteTime, Length)",
+      "Bash(Select-String \"17\")",
+      "PowerShell(Get-ChildItem \"c:\\\\xampp\\\\htdocs\\\\Big-i.com.mx\\\\Web_Page\\\\img\\\\Slide\" | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,0\\)}})",
+      "Bash(xargs ls -la)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(awk '$1 > 500000 {printf \"%d KB  %s\\\\n\", $1/1024, $2}')",
+      "Bash(awk '$1 > 500000 {sum+=$1; count++} END {printf \"Total: %d images, %.1f MB\\\\n\", count, sum/1024/1024}')",
+      "Bash(cwebp -version)",
+      "Bash(magick --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(ffmpeg -i \"img/Slide/slide-01.png\" -c:v libwebp -quality 82 \"img/Slide/slide-01.webp\" -y -loglevel error)",
+      "Bash(ffmpeg -i \"img/Slide/slide-02.png\" -c:v libwebp -quality 82 \"img/Slide/slide-02.webp\" -y -loglevel error)",
+      "Bash(ffmpeg -i \"img/Slide/slide-03.png\" -c:v libwebp -quality 82 \"img/Slide/slide-03.webp\" -y -loglevel error)"
     ]
   }
 }
