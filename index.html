@@ -6,7 +6,7 @@
     <title>BIG-i | Negocios Informática y Geoestadística</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind.config.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
@@ -14,25 +14,26 @@
 <body class="selection:bg-primary-container selection:text-on-primary-container">
 
 <!-- ═══════════════════════ TOP NAV BAR ═══════════════════════ -->
-<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-full bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
-    <div class="flex items-center gap-8">
-        <a class="block" href="index.html">
-            <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-10 w-auto" src="img/logo.png"/>
-        </a>
-        <div class="hidden md:flex items-center gap-6">
-            <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="index.html">Inicio</a>
-            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="quienes_somos.html">Quiénes somos</a>
-            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="equipo.html">Equipo</a>
-            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="estudios.html">Estudios</a>
-            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="contacto.html">Contacto</a>
-        </div>
-    </div>
-    <div class="flex items-center gap-4">
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
+    <!-- Logo (izquierda) -->
+    <a class="block flex-shrink-0 relative z-10" href="index.html">
+        <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-10 w-auto" src="img/logo.png"/>
+    </a>
+    <!-- Links (centro absoluto) -->
+    <ul class="hidden md:flex items-center gap-7 list-none m-0 p-0 absolute left-1/2 -translate-x-1/2">
+        <li><a class="nav-link nav-active text-primary font-bold text-sm" href="index.html">Inicio</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="quienes_somos.html">Quiénes somos</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="equipo.html">Equipo</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="estudios.html">Estudios</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="contacto.html">Contacto</a></li>
+    </ul>
+    <!-- Derecha: Search + Admin + Hamburger -->
+    <div class="flex items-center justify-end gap-3 relative z-10">
         <div class="relative hidden lg:block">
-            <input class="bg-surface-container-high border border-outline-variant rounded px-4 py-1 text-body-md font-body-md focus:border-primary-container outline-none w-48 transition-all" placeholder="Buscar..." type="text"/>
+            <input class="bg-surface-container-high border border-outline-variant rounded px-4 py-1.5 text-sm focus:border-primary-container outline-none w-44 transition-all" placeholder="Buscar..." type="text"/>
             <span class="material-symbols-outlined absolute right-2 top-1.5 text-on-surface-variant text-[18px]">search</span>
         </div>
-        <button class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 rounded font-label-md text-label-md font-bold hover:scale-95 transition-transform">
+        <button class="hidden md:block bg-primary-container text-on-primary-container px-5 py-2 rounded font-semibold text-sm hover:opacity-90 transition-opacity whitespace-nowrap">
             Administrador
         </button>
         <button class="md:hidden text-on-surface p-2 focus:outline-none" id="menu-toggle">
@@ -43,54 +44,98 @@
 
 <!-- ═══════════════════════ MOBILE MENU ═══════════════════════ -->
 <div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-margin-mobile border-b border-outline-variant shadow-2xl" id="mobile-menu">
-    <div class="flex flex-col gap-6">
-        <a class="text-primary font-bold text-headline-md" href="index.html">Inicio</a>
-        <a class="text-on-surface-variant font-medium text-headline-md" href="quienes_somos.html">Quiénes somos</a>
-        <a class="text-on-surface-variant font-medium text-headline-md" href="equipo.html">Equipo</a>
-        <a class="text-on-surface-variant font-medium text-headline-md" href="estudios.html">Estudios</a>
-        <a class="text-on-surface-variant font-medium text-headline-md" href="contacto.html">Contacto</a>
-        <hr class="border-outline-variant"/>
-        <button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-headline-md">
+    <div class="flex flex-col gap-5">
+        <a class="text-primary font-bold text-xl" href="index.html">Inicio</a>
+        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="quienes_somos.html">Quiénes somos</a>
+        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="equipo.html">Equipo</a>
+        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="estudios.html">Estudios</a>
+        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+        <hr class="border-outline-variant my-1"/>
+        <button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-xl">
             Administrador
         </button>
     </div>
 </div>
 
-<!-- ═══════════════════════ HERO SECTION ═══════════════════════ -->
-<section class="relative min-h-screen pt-32 flex flex-col items-center justify-center px-margin-desktop overflow-hidden">
-    <div class="z-10 text-center max-w-5xl">
-        <h1 class="font-display-lg text-[64px] md:text-[84px] leading-tight font-extrabold text-on-background tracking-tighter mb-8">
-            NEGOCIOS <span class="text-primary-container">INFORMÁTICA</span> Y GEOESTADÍSTICA
+<!-- ═══════════════════════ HERO — SPLIT SCREEN ═══════════════════════ -->
+<section class="relative flex overflow-hidden bg-background" style="min-height: 100vh;">
+
+    <!-- ── LEFT COLUMN: Copywriting ── -->
+    <div class="relative z-10 flex flex-col justify-center w-full lg:w-[52%] px-6 md:px-10 xl:px-16 pt-28 pb-16 bg-background">
+
+        <!-- Eyebrow -->
+        <div class="flex items-center gap-3 mb-8">
+            <span class="flex h-2.5 w-2.5 relative flex-shrink-0">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-60"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span>
+            </span>
+            <span class="font-label-sm text-label-sm text-primary tracking-[0.14em] uppercase font-bold">Inteligencia Territorial · México</span>
+        </div>
+
+        <!-- Headline principal -->
+        <h1 class="font-black leading-none tracking-tighter text-on-background mb-6" style="font-size: clamp(40px, 5.4vw, 84px);">
+            NEGOCIOS<br>
+            <span class="text-primary-container">INFORMÁTICA</span><br>
+            Y GEOESTADÍSTICA
         </h1>
-        <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
-            Transformamos datos complejos en inteligencia geoespacial precisa. La plataforma líder para la toma de decisiones estratégicas basadas en el territorio.
+
+        <!-- Subtítulo -->
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed" style="max-width: 440px;">
+            Transformamos datos complejos en inteligencia geoespacial precisa. La plataforma líder para decisiones estratégicas basadas en el territorio.
         </p>
-        <!-- Laptop Visual -->
-        <div class="relative w-full max-w-4xl mx-auto mt-12 perspective-1000">
-            <div class="relative border-4 border-surface-container-highest rounded-xl overflow-hidden shadow-2xl shadow-primary-container/20">
-                <img alt="Geospatial Dashboard" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3K7h_MAaSj7zDoBchN2rqwSETqLCc6-I8T5gdrtY3S1CrfpLsX3IOGXRGovCZGP0utrbBkqqgjBzNE40dBacUsrykO8yNA40NLH_Nvi01tO7DOFq3gtAESBFEgXZxKpkeP_kIFZIBWJaCJxZy3TrKzzr7Km16EbUXHwlpzIJdC0ViCV7dppHd8ahuUQXurN_FzmGLWHi22L-ZlsK-qUe8lo-4CRT4-ukI3z-MErwiGO31YSZSmDaEC51XbgTxvr2rjwuufjhjk96t"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+
+        <!-- Call to Action -->
+        <div class="flex flex-wrap gap-4 mb-14">
+            <a class="bg-primary-container text-on-primary-container px-8 py-3.5 font-bold text-sm flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all" href="estudios.html">
+                Explorar estudios
+                <span class="material-symbols-outlined text-[18px]">north_east</span>
+            </a>
+            <a class="border-2 border-outline-variant text-on-surface-variant px-8 py-3.5 font-semibold text-sm hover:border-primary hover:text-primary flex items-center gap-2 transition-all" href="contacto.html">
+                Solicitar diagnóstico
+            </a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="flex flex-wrap gap-10 pt-8 border-t border-outline-variant">
+            <div>
+                <p class="text-4xl font-black text-primary-container leading-none">18</p>
+                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mt-2">Líneas de análisis</p>
             </div>
-            <!-- Floating Telemetry -->
-            <div class="absolute -right-8 -top-8 glass-panel p-4 rounded hidden md:block border-primary-container/30 transition-all duration-700 opacity-100 translate-y-0">
-                <div class="flex items-center gap-2 mb-2">
-                    <div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
-                    <span class="font-label-sm text-label-sm text-primary">LIVE DATA SYNC</span>
-                </div>
-                <div class="w-32 h-1 bg-surface-container-highest rounded-full overflow-hidden">
-                    <div class="h-full bg-primary-container w-2/3"></div>
-                </div>
+            <div>
+                <p class="text-4xl font-black text-primary-container leading-none">+25</p>
+                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mt-2">Años de experiencia</p>
+            </div>
+            <div>
+                <p class="text-4xl font-black text-primary-container leading-none">B2B</p>
+                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mt-2">Sector energético</p>
             </div>
         </div>
     </div>
-    <!-- Background decorative elements -->
-    <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary-container/5 blur-[120px] rounded-full"></div>
-    <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary-container/5 blur-[120px] rounded-full"></div>
+
+    <!-- ── RIGHT COLUMN: Dashboard visual (desktop only) ── -->
+    <div class="hidden lg:block absolute right-0 top-0 h-full w-[52%]">
+        <img alt="Dashboard Geoespacial BIG-i" class="w-full h-full object-cover object-left-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3K7h_MAaSj7zDoBchN2rqwSETqLCc6-I8T5gdrtY3S1CrfpLsX3IOGXRGovCZGP0utrbBkqqgjBzNE40dBacUsrykO8yNA40NLH_Nvi01tO7DOFq3gtAESBFEgXZxKpkeP_kIFZIBWJaCJxZy3TrKzzr7Km16EbUXHwlpzIJdC0ViCV7dppHd8ahuUQXurN_FzmGLWHi22L-ZlsK-qUe8lo-4CRT4-ukI3z-MErwiGO31YSZSmDaEC51XbgTxvr2rjwuufjhjk96t"/>
+        <!-- Gradiente de mezcla con fondo oscuro de la izquierda -->
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+        <!-- Floating Telemetry -->
+        <div class="absolute top-1/3 left-8 glass-panel p-4 rounded border border-primary-container/20 shadow-xl">
+            <div class="flex items-center gap-2 mb-2">
+                <div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+                <span class="font-label-sm text-label-sm text-primary">LIVE DATA SYNC</span>
+            </div>
+            <div class="w-32 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+                <div class="h-full bg-primary-container w-2/3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decorative blobs -->
+    <div class="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-primary-container/5 blur-[150px] rounded-full pointer-events-none"></div>
 </section>
 
 <!-- ═══════════════════════ SERVICES SLIDER ═══════════════════════ -->
 <section class="py-24 bg-surface-container-lowest">
-    <div class="px-margin-desktop max-w-7xl mx-auto">
+    <div class="px-6 md:px-10 max-w-7xl mx-auto">
         <div class="flex justify-between items-end mb-12">
             <div>
                 <span class="text-primary font-label-md text-label-md tracking-widest uppercase">Nuestros Servicios</span>
@@ -106,49 +151,29 @@
             </div>
         </div>
         <div class="slider-container flex gap-6 overflow-x-auto pb-8" id="slider">
-            <!-- Card 1 -->
             <div class="min-w-[320px] md:min-w-[400px] glass-panel p-8 card-hover transition-all group duration-700">
                 <span class="material-symbols-outlined text-primary-container text-4xl mb-6">domain</span>
                 <h3 class="font-title-lg text-title-lg mb-4">Desarrollo Urbano</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                    Análisis predictivo de crecimiento poblacional y optimización de infraestructura urbana mediante modelos geoestadísticos avanzados.
-                </p>
-                <a class="flex items-center gap-2 text-primary font-label-md text-label-md hover:gap-4 transition-all" href="estudios.html">
-                    VER LOS ESTUDIOS <span class="material-symbols-outlined text-[16px]">north_east</span>
-                </a>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8">Análisis predictivo de crecimiento poblacional y optimización de infraestructura urbana mediante modelos geoestadísticos avanzados.</p>
+                <a class="flex items-center gap-2 text-primary font-label-md text-label-md hover:gap-4 transition-all" href="estudios.html">VER LOS ESTUDIOS <span class="material-symbols-outlined text-[16px]">north_east</span></a>
             </div>
-            <!-- Card 2 -->
             <div class="min-w-[320px] md:min-w-[400px] glass-panel p-8 card-hover transition-all group duration-700">
                 <span class="material-symbols-outlined text-primary-container text-4xl mb-6">local_gas_station</span>
                 <h3 class="font-title-lg text-title-lg mb-4">Estaciones de Servicio</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                    Estudios de mercado y ubicación estratégica para redes de combustible, analizando flujos de tráfico y competencia en tiempo real.
-                </p>
-                <a class="flex items-center gap-2 text-primary font-label-md text-label-md hover:gap-4 transition-all" href="estudios.html">
-                    VER LOS ESTUDIOS <span class="material-symbols-outlined text-[16px]">north_east</span>
-                </a>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8">Estudios de mercado y ubicación estratégica para redes de combustible, analizando flujos de tráfico y competencia en tiempo real.</p>
+                <a class="flex items-center gap-2 text-primary font-label-md text-label-md hover:gap-4 transition-all" href="estudios.html">VER LOS ESTUDIOS <span class="material-symbols-outlined text-[16px]">north_east</span></a>
             </div>
-            <!-- Card 3 -->
             <div class="min-w-[320px] md:min-w-[400px] glass-panel p-8 card-hover transition-all group duration-700">
                 <span class="material-symbols-outlined text-primary-container text-4xl mb-6">precision_manufacturing</span>
                 <h3 class="font-title-lg text-title-lg mb-4">Minería</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                    Monitoreo geoespacial de yacimientos y gestión de impacto ambiental con precisión milimétrica y datos satelitales.
-                </p>
-                <a class="flex items-center gap-2 text-primary font-label-md text-label-md hover:gap-4 transition-all" href="estudios.html">
-                    VER LOS ESTUDIOS <span class="material-symbols-outlined text-[16px]">north_east</span>
-                </a>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8">Monitoreo geoespacial de yacimientos y gestión de impacto ambiental con precisión milimétrica y datos satelitales.</p>
+                <a class="flex items-center gap-2 text-primary font-label-md text-label-md hover:gap-4 transition-all" href="estudios.html">VER LOS ESTUDIOS <span class="material-symbols-outlined text-[16px]">north_east</span></a>
             </div>
-            <!-- Card 4 -->
             <div class="min-w-[320px] md:min-w-[400px] glass-panel p-8 card-hover transition-all group opacity-0 translate-y-10 duration-700">
                 <span class="material-symbols-outlined text-primary-container text-4xl mb-6">agriculture</span>
                 <h3 class="font-title-lg text-title-lg mb-4">Agroindustria</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                    Optimización de cultivos y logística rural mediante teledetección y análisis de suelos a escala regional.
-                </p>
-                <a class="flex items-center gap-2 text-primary font-label-md text-label-md hover:gap-4 transition-all" href="estudios.html">
-                    VER LOS ESTUDIOS <span class="material-symbols-outlined text-[16px]">north_east</span>
-                </a>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8">Optimización de cultivos y logística rural mediante teledetección y análisis de suelos a escala regional.</p>
+                <a class="flex items-center gap-2 text-primary font-label-md text-label-md hover:gap-4 transition-all" href="estudios.html">VER LOS ESTUDIOS <span class="material-symbols-outlined text-[16px]">north_east</span></a>
             </div>
         </div>
     </div>
@@ -156,7 +181,7 @@
 
 <!-- ═══════════════════════ VISION SECTION ═══════════════════════ -->
 <section class="py-24 overflow-hidden">
-    <div class="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="px-6 md:px-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-5 order-2 lg:order-1">
             <span class="text-secondary font-label-md text-label-md tracking-widest uppercase">Nuestra Visión</span>
             <h2 class="font-display-lg text-[40px] leading-tight font-bold text-on-background mt-4 mb-8">
@@ -202,41 +227,26 @@
 
 <!-- ═══════════════════════ CLIENTS SECTION ═══════════════════════ -->
 <section class="py-16 border-y border-outline-variant">
-    <div class="px-margin-desktop max-w-7xl mx-auto">
+    <div class="px-6 md:px-10 max-w-7xl mx-auto">
         <p class="text-center font-label-md text-label-md text-on-surface-variant mb-12 tracking-widest uppercase">Empresas que confían en nosotros</p>
         <div class="flex flex-wrap justify-center items-center gap-16 opacity-40 grayscale contrast-125">
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-5xl">cloud_done</span>
-                <span class="font-display-lg text-[32px] font-bold">Google</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-5xl">hub</span>
-                <span class="font-display-lg text-[32px] font-bold">Cisco</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-5xl">settings_input_antenna</span>
-                <span class="font-display-lg text-[32px] font-bold">Telefónica</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-5xl">account_balance</span>
-                <span class="font-display-lg text-[32px] font-bold">WorldBank</span>
-            </div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-5xl">cloud_done</span><span class="font-display-lg text-[32px] font-bold">Google</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-5xl">hub</span><span class="font-display-lg text-[32px] font-bold">Cisco</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-5xl">settings_input_antenna</span><span class="font-display-lg text-[32px] font-bold">Telefónica</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-5xl">account_balance</span><span class="font-display-lg text-[32px] font-bold">WorldBank</span></div>
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer class="bg-surface-container-lowest text-on-surface pt-20 pb-8 border-t border-outline-variant">
-    <div class="px-margin-desktop max-w-7xl mx-auto">
-        <!-- Top Section (5 Columns) -->
+    <div class="px-6 md:px-10 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
             <div class="flex flex-col gap-4">
                 <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-12 w-auto object-contain" src="img/logo.png"/>
             </div>
             <div class="flex flex-col gap-4">
-                <p class="font-body-md text-on-surface-variant">
-                    Paseo de las Palmas No. 2070, Col. Lomas de Chapultepec I Secc. Delegación Miguel Hidalgo. Ciudad de México C.P. 11000.
-                </p>
+                <p class="font-body-md text-on-surface-variant">Paseo de las Palmas No. 2070, Col. Lomas de Chapultepec I Secc. Delegación Miguel Hidalgo. Ciudad de México C.P. 11000.</p>
                 <p class="font-label-md font-bold text-electric-blue">+52 55 5261 4660 ext. 3158</p>
             </div>
             <div class="flex flex-col gap-3">
@@ -258,7 +268,6 @@
                 <a class="font-label-md hover:text-electric-blue transition-colors" href="https://www.kab-geo.com.mx" target="_blank">www.kab-geo.com.mx</a>
             </div>
         </div>
-        <!-- Middle Section -->
         <div class="flex flex-col md:flex-row justify-between items-center py-10 border-y border-outline-variant gap-8 mb-10">
             <div class="flex flex-wrap justify-center md:justify-start gap-8 items-center text-on-surface-variant font-bold tracking-widest">
                 <span>KG Kab-Geo</span>
@@ -275,11 +284,8 @@
                 </div>
             </div>
         </div>
-        <!-- Bottom Section -->
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="font-label-sm text-on-surface-variant text-center md:text-left">
-                Copyright &copy; 2013, Kab Geo S.A. de C.V. Todos los Derechos Reservados.
-            </p>
+            <p class="font-label-sm text-on-surface-variant text-center md:text-left">Copyright &copy; 2013, Kab Geo S.A. de C.V. Todos los Derechos Reservados.</p>
             <div class="flex gap-6">
                 <a class="font-label-sm text-on-surface-variant hover:text-electric-blue" href="terminos.html">Términos de Servicio</a>
                 <a class="font-label-sm text-on-surface-variant hover:text-electric-blue" href="privacidad.html">Políticas de Privacidad</a>

@@ -14,25 +14,23 @@
 <body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
 
 <!-- ═══════════════════════ TOP NAV BAR ═══════════════════════ -->
-<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-full bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
-    <div class="flex items-center gap-8">
-        <a class="block" href="index.html">
-            <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-10 w-auto" src="img/logo.png"/>
-        </a>
-        <div class="hidden md:flex items-center gap-6">
-            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="index.html">Inicio</a>
-            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="quienes_somos.html">Quiénes somos</a>
-            <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="equipo.html">Equipo</a>
-            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="estudios.html">Estudios</a>
-            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-md text-label-md" href="contacto.html">Contacto</a>
-        </div>
-    </div>
-    <div class="flex items-center gap-4">
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
+    <a class="block flex-shrink-0 relative z-10" href="index.html">
+        <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-10 w-auto" src="img/logo.png"/>
+    </a>
+    <ul class="hidden md:flex items-center gap-7 list-none m-0 p-0 absolute left-1/2 -translate-x-1/2">
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="index.html">Inicio</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="quienes_somos.html">Quiénes somos</a></li>
+        <li><a class="nav-link nav-active text-primary font-bold text-sm" href="equipo.html">Equipo</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="estudios.html">Estudios</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="flex items-center justify-end gap-3 relative z-10">
         <div class="relative hidden lg:block">
-            <input class="bg-surface-container-high border border-outline-variant rounded px-4 py-1 text-body-md font-body-md focus:border-primary-container outline-none w-48 transition-all" placeholder="Buscar..." type="text"/>
+            <input class="bg-surface-container-high border border-outline-variant rounded px-4 py-1.5 text-sm focus:border-primary-container outline-none w-44 transition-all" placeholder="Buscar..." type="text"/>
             <span class="material-symbols-outlined absolute right-2 top-1.5 text-on-surface-variant text-[18px]">search</span>
         </div>
-        <button class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 rounded font-label-md text-label-md font-bold hover:scale-95 transition-transform">
+        <button class="hidden md:block bg-primary-container text-on-primary-container px-5 py-2 rounded font-semibold text-sm hover:opacity-90 transition-opacity whitespace-nowrap">
             Administrador
         </button>
         <button class="md:hidden text-on-surface p-2 focus:outline-none" id="menu-toggle">
@@ -43,14 +41,14 @@
 
 <!-- ═══════════════════════ MOBILE MENU ═══════════════════════ -->
 <div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-margin-mobile border-b border-outline-variant shadow-2xl" id="mobile-menu">
-    <div class="flex flex-col gap-6">
-        <a class="text-on-surface-variant font-medium text-headline-md" href="index.html">Inicio</a>
-        <a class="text-on-surface-variant font-medium text-headline-md" href="quienes_somos.html">Quiénes somos</a>
-        <a class="text-primary font-bold text-headline-md" href="equipo.html">Equipo</a>
-        <a class="text-on-surface-variant font-medium text-headline-md" href="estudios.html">Estudios</a>
-        <a class="text-on-surface-variant font-medium text-headline-md" href="contacto.html">Contacto</a>
-        <hr class="border-outline-variant"/>
-        <button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-headline-md">
+    <div class="flex flex-col gap-5">
+        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="index.html">Inicio</a>
+        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="quienes_somos.html">Quiénes somos</a>
+        <a class="text-primary font-bold text-xl" href="equipo.html">Equipo</a>
+        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="estudios.html">Estudios</a>
+        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+        <hr class="border-outline-variant my-1"/>
+        <button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-xl">
             Administrador
         </button>
     </div>

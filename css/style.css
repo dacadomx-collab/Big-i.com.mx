@@ -201,6 +201,35 @@ body {
 }
 
 /* ============================================================
+   NAVBAR — Underline animado + centrado absoluto
+   ============================================================ */
+
+.nav-link {
+    position: relative;
+    padding-bottom: 3px;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #009FFE;
+    border-radius: 1px;
+    transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.nav-active::after {
+    width: 100%;
+}
+
+/* ============================================================
    ESTUDIOS — Directorio Estratégico de Módulos (v2.1)
    Panel de navegación estilo GIS Dashboard Enterprise
    ============================================================ */
