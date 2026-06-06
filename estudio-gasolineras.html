@@ -26,7 +26,8 @@
         <button class="md:hidden text-on-surface p-2" id="menu-toggle"><span class="material-symbols-outlined text-3xl">menu</span></button>
     </div>
 </nav>
-<div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-6 border-b border-outline-variant shadow-2xl" id="mobile-menu">
+
+<div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-6 border-b border-outline-variant shadow-2xl" id="mobile-menu" style="display: none;">
     <div class="flex flex-col gap-5">
         <a class="text-on-surface-variant font-semibold text-xl" href="index.html">Inicio</a>
         <a class="text-on-surface-variant font-semibold text-xl" href="quienes_somos.html">Quiénes somos</a>
@@ -37,81 +38,355 @@
     </div>
 </div>
 
-<!-- HERO: Dark GIS style -->
-<header class="relative flex items-end overflow-hidden" style="min-height:75vh;padding-top:80px;">
-    <div class="absolute inset-0 z-0">
-        <img src="img/Estudios/portada-estaciones-de-servicio-y-combustible.webp" alt="Estaciones de Servicio" class="w-full h-full object-cover opacity-45"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-background/50 to-transparent"></div>
-    </div>
-    <!-- Floating data card -->
-    <div class="absolute top-1/4 right-10 glass-panel p-5 rounded-xl hidden lg:block border border-amber-500/20 shadow-xl">
-        <p class="font-label-sm text-label-sm text-amber-400 tracking-widest uppercase mb-3">Indicadores Clave</p>
-        <div class="space-y-2">
-            <div class="flex justify-between gap-6 text-sm"><span class="text-on-surface-variant">Variables analizadas</span><span class="text-amber-400 font-bold">+120</span></div>
-            <div class="flex justify-between gap-6 text-sm"><span class="text-on-surface-variant">Capas SIG</span><span class="text-amber-400 font-bold">5</span></div>
-            <div class="flex justify-between gap-6 text-sm"><span class="text-on-surface-variant">Modelos regulatorios</span><span class="text-amber-400 font-bold">CRE</span></div>
+<main class="bg-[#1d1d1b] text-gray-300">
+    <!-- Hero Section -->
+    <header class="relative flex items-end overflow-hidden border-b border-gray-700" style="min-height:75vh;padding-top:80px;">
+        <div class="absolute inset-0 z-0">
+            <img src="img/Estudios/portada-estaciones-de-servicio-y-combustible.webp" alt="Estaciones de Servicio" class="w-full h-full object-cover opacity-30 mix-blend-overlay"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1d1d1b] via-[#1d1d1b]/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#1d1d1b] to-transparent"></div>
         </div>
-    </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pb-20 w-full">
-        <a href="estudios.html" class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors text-sm mb-6"><span class="material-symbols-outlined text-[16px]">arrow_back</span>Volver a Estudios</a>
-        <div class="flex items-center gap-3 mb-4">
-            <span class="badge-energia">Energía</span>
-            <span class="badge-energia">Hidrocarburos · CRE</span>
+        
+        <!-- Indicadores Clave -->
+        <div class="absolute top-1/4 right-10 bg-white/5 backdrop-blur-md p-5 rounded-xl hidden lg:block border border-[#009FFE]/30 shadow-2xl">
+            <p class="font-label-sm text-sm text-[#009FFE] tracking-widest uppercase mb-3 font-bold">Indicadores Clave</p>
+            <div class="space-y-2">
+                <div class="flex justify-between gap-8 text-sm"><span class="text-gray-300">Variables analizadas</span><span class="text-[#009FFE] font-bold">+120</span></div>
+                <div class="flex justify-between gap-8 text-sm"><span class="text-gray-300">Regulación</span><span class="text-[#009FFE] font-bold">CRE</span></div>
+                <div class="flex justify-between gap-8 text-sm"><span class="text-gray-300">Modelo</span><span class="text-[#009FFE] font-bold">SaaS / GIS</span></div>
+            </div>
         </div>
-        <img src="img/icono-gasolineras.png" alt="Estaciones de Servicio" class="w-14 h-14 object-contain mb-4 opacity-90"/>
-        <h1 class="font-black leading-none tracking-tighter text-on-background mb-4" style="font-size:clamp(36px,5.5vw,80px);">Estaciones de<br>Servicio</h1>
-        <p class="font-body-lg text-on-surface-variant max-w-2xl">Solución integral para el análisis territorial de infraestructura energética, maximizando rentabilidad y reduciendo riesgos operativos.</p>
-    </div>
-</header>
 
-<!-- OVERVIEW: Dark GIS -->
-<section class="py-20 border-t border-outline-variant">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <div>
-            <span class="text-primary font-label-md text-label-md tracking-widest uppercase mb-4 block">Descripción del Estudio</span>
-            <h2 class="font-headline-lg text-headline-lg text-on-background mb-6">¿Qué hacemos?</h2>
-            <p class="font-body-lg text-on-surface-variant leading-relaxed">Las gasolineras representan el punto final de la cadena energética, donde el análisis territorial es clave. Evaluamos la ubicación, competencia, demanda potencial, flujo vehicular, perfil socioeconómico y cumplimiento normativo (CRE) para identificar oportunidades estratégicas y optimizar el desempeño de cada estación o red logística.</p>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pb-20 w-full">
+            <a href="estudios.html" class="inline-flex items-center gap-1.5 text-gray-400 hover:text-[#009FFE] transition-colors text-sm mb-6"><span class="material-symbols-outlined text-[16px]">arrow_back</span>Volver a Estudios</a>
+            
+            <div class="flex items-center gap-3 mb-4">
+                <span class="inline-flex items-center gap-2 padding px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#0080b7]/20 text-[#009FFE] border border-[#009FFE]/30">Energía</span>
+                <span class="inline-flex items-center gap-2 padding px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#0080b7]/20 text-[#009FFE] border border-[#009FFE]/30">Gasolineras · Hidrocarburos</span>
+            </div>
+            
+            <img src="img/icono-gasolineras.png" alt="Estaciones de Servicio" class="w-14 h-14 object-contain mb-4 opacity-90"/>
+            <h1 class="font-black leading-none tracking-tighter text-white mb-4" style="font-size:clamp(36px,5.5vw,80px);">Estaciones de Servicio<br><span class="text-[#009FFE]">de Combustibles</span></h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">Solución integral para el análisis territorial de infraestructura energética, maximizando rentabilidad y reduciendo riesgos operativos.</p>
         </div>
-        <div class="glass-panel p-8 rounded-xl">
-            <h3 class="font-title-lg text-title-lg text-primary mb-6 flex items-center gap-3"><span class="material-symbols-outlined">checklist</span>Servicios Clave</h3>
-            <ul class="space-y-4">
-                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-amber-400 text-[20px] flex-shrink-0 mt-0.5">local_gas_station</span><span class="text-on-surface-variant">Evaluación de apertura e inversión</span></li>
-                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-amber-400 text-[20px] flex-shrink-0 mt-0.5">receipt_long</span><span class="text-on-surface-variant">Verificación de permisos CRE</span></li>
-                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-amber-400 text-[20px] flex-shrink-0 mt-0.5">speed</span><span class="text-on-surface-variant">Calculadora de rentabilidad operativa</span></li>
-                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-amber-400 text-[20px] flex-shrink-0 mt-0.5">location_on</span><span class="text-on-surface-variant">Logística y distribución de hidrocarburos</span></li>
-            </ul>
+        <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 max-w-4xl mt-6">
+            <h3 class="text-lg font-bold text-[#009Ffe3] mb-2 uppercase tracking-widest">Inteligencia de negocio y viabilidad</h3>
+            <p class="text-sm md:text-base text-gray-200 leading-relaxed">
+                La inversión en la apertura, adquisición u operación de estaciones de servicio de combustibles y complementarios exige una precisión absoluta para garantizar la rentabilidad y el cumplimiento normativo. En BIG-i, fusionamos la ciencia de datos con el análisis territorial, integrando variables geoespaciales, demográficas, económicas y de movilidad. Desarrollamos estudios estratégicos de mercado y localización que minimizan el riesgo financiero y maximizan el éxito comercial de sus activos energéticos.
+            </p>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- Gallery -->
-<section class="bg-surface-container-lowest py-16 border-t border-outline-variant">
-    <div class="max-w-7xl mx-auto px-6 md:px-10">
-        <div class="flex justify-between items-center mb-8">
-            <h2 class="font-headline-md text-headline-md text-on-background">Evidencia Visual</h2>
-            <span class="badge-energia">Flagship Study</span>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <img class="w-full h-48 object-cover rounded-lg" src="img/01_Estaciones de_servicio_de combustibles/1-estaciones-de-servicio.webp" alt="Gasolineras 1"/>
-            <img class="w-full h-48 object-cover rounded-lg" src="img/01_Estaciones de_servicio_de combustibles/2-estaciones-de-servicio.webp" alt="Gasolineras 2"/>
-            <img class="w-full h-48 object-cover rounded-lg" src="img/01_Estaciones de_servicio_de combustibles/3.estaciones-de-servicio.webp" alt="Gasolineras 3"/>
-            <img class="w-full h-48 object-cover rounded-lg" src="img/01_Estaciones de_servicio_de combustibles/4-estaciones-de-servicio.webp" alt="Gasolineras 4"/>
-        </div>
-    </div>
-</section>
+    <!-- Dirigido a -->
+    <section class="py-20 border-b border-gray-700 relative">
+        <!-- Glow ambiental -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#009FFE]/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <span class="text-[#009FFE] text-sm font-bold tracking-widest uppercase mb-4 block">Enfoque del Estudio</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase">Dirigido a <span class="text-[#0080b7]">Gasolineras e Hidrocarburos</span></h2>
+                <p class="text-gray-300 text-lg leading-relaxed">Análisis territorial para la toma de decisiones en toda la cadena de valor energética. Integramos información geoespacial, demográfica, económica y regulatoria para minimizar el riesgo financiero y maximizar el éxito comercial de sus activos.</p>
+            </div>
 
-<!-- CTA -->
-<section class="py-20 border-t border-outline-variant">
-    <div class="max-w-3xl mx-auto px-6 md:px-10 text-center">
-        <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">¿Interesado en este estudio?</h2>
-        <p class="font-body-lg text-on-surface-variant mb-8">Contáctanos para una evaluación integral de tu estación o red de distribución.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a class="bg-primary-container text-on-primary-container px-8 py-3.5 font-bold text-sm flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all" href="contacto.html">Solicitar diagnóstico <span class="material-symbols-outlined text-[18px]">north_east</span></a>
-            <a class="border-2 border-outline-variant text-on-surface-variant px-8 py-3.5 font-semibold text-sm hover:border-primary hover:text-primary transition-all" href="estudios.html">Ver todos los estudios</a>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Gasolineras -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 border-t-4 border-t-[#009FFE] hover:bg-white/10 transition-colors">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20">
+                            <span class="material-symbols-outlined text-[#009FFE] text-2xl">local_gas_station</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Gasolineras</h3>
+                    </div>
+                    <p class="text-[#009FFE] font-bold mb-4 uppercase text-sm tracking-wider">Puntos de consumo y rentabilidad</p>
+                    <p class="text-gray-300 mb-8 leading-relaxed">Evaluamos ubicaciones estratégicas para estaciones de servicio considerando demanda, competencia, tráfico, perfil socioeconómico y regulación para maximizar la rentabilidad.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-[#009FFE] text-[20px]">check_circle</span><span class="text-gray-200">Apertura de nuevas estaciones</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-[#009FFE] text-[20px]">check_circle</span><span class="text-gray-200">Evaluación de inversión</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-[#009FFE] text-[20px]">check_circle</span><span class="text-gray-200">Optimización de red existente</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-[#009FFE] text-[20px]">check_circle</span><span class="text-gray-200">Estrategia comercial</span></li>
+                    </ul>
+                </div>
+
+                <!-- Hidrocarburos -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 border-t-4 border-t-[#0080b7] hover:bg-white/10 transition-colors">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-[#0080b7]/10 flex items-center justify-center rounded-lg border border-[#0080b7]/20">
+                            <span class="material-symbols-outlined text-[#0080b7] text-2xl">oil_barrel</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Hidrocarburos</h3>
+                    </div>
+                    <p class="text-[#0080b7] font-bold mb-4 uppercase text-sm tracking-wider">Infraestructura, logística y distribución</p>
+                    <p class="text-gray-300 mb-8 leading-relaxed">Analizamos la infraestructura que permite el transporte, almacenamiento y distribución de hidrocarburos para mejorar la eficiencia operativa y mitigar riesgos.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-[#0080b7] text-[20px]">check_circle</span><span class="text-gray-200">Planeación de infraestructura</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-[#0080b7] text-[20px]">check_circle</span><span class="text-gray-200">Evaluación de riesgos</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-[#0080b7] text-[20px]">check_circle</span><span class="text-gray-200">Optimización logística</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-[#0080b7] text-[20px]">check_circle</span><span class="text-gray-200">Análisis territorial estratégico</span></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Simulador de Dashboard GIS -->
+    <section class="py-20 border-b border-gray-700 bg-[#171717]">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold text-white uppercase">Análisis Territorial <span class="text-[#009FFE]">Integrado</span></h2>
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#009FFE]/10 text-[#009FFE] border border-[#009FFE]/30">Simulador GIS</span>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-6 bg-white/5 p-4 rounded-xl shadow-2xl border border-gray-700">
+                <!-- Filtros -->
+                <div class="w-full lg:w-1/4 bg-[#1d1d1b] p-6 rounded-lg border border-gray-700">
+                    <div class="flex items-center justify-between mb-6 border-b border-gray-700 pb-4">
+                        <h3 class="text-white text-sm font-bold uppercase tracking-widest">Filtros Espaciales</h3>
+                        <span class="material-symbols-outlined text-[#009FFE]">filter_list</span>
+                    </div>
+                    
+                    <div class="space-y-5">
+                        <div>
+                            <label class="block mb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Estado / Municipio</label>
+                            <select class="w-full bg-[#131312] border border-gray-600 rounded-lg p-2.5 text-sm text-white focus:border-[#009FFE] focus:ring-1 focus:ring-[#009FFE] outline-none transition-colors">
+                                <option>Todos</option>
+                                <option>Monterrey</option>
+                                <option>Estado de México</option>
+                                <option>Jalisco</option>
+                                <option>Veracruz</option>
+                                <option>Guanajuato</option>
+                                <option>Nuevo León</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Marca</label>
+                            <select class="w-full bg-[#131312] border border-gray-600 rounded-lg p-2.5 text-sm text-white focus:border-[#009FFE] focus:ring-1 focus:ring-[#009FFE] outline-none transition-colors">
+                                <option>Todas</option>
+                                <option>Pemex</option>
+                                <option>BP</option>
+                                <option>Shell</option>
+                                <option>Oxxo Gas</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Tipo de combustible</label>
+                            <select class="w-full bg-[#131312] border border-gray-600 rounded-lg p-2.5 text-sm text-white focus:border-[#009FFE] focus:ring-1 focus:ring-[#009FFE] outline-none transition-colors">
+                                <option>Todos</option>
+                                <option>Magna / Regular</option>
+                                <option>Premium</option>
+                                <option>Diésel</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Volumen estimado</label>
+                            <select class="w-full bg-[#131312] border border-gray-600 rounded-lg p-2.5 text-sm text-white focus:border-[#009FFE] focus:ring-1 focus:ring-[#009FFE] outline-none transition-colors">
+                                <option>Todos</option>
+                                <option>Bajo (&lt; 100k L/mes)</option>
+                                <option>Medio (100k - 300k L/mes)</option>
+                                <option>Alto (&gt; 300k L/mes)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Radio de análisis</label>
+                            <select class="w-full bg-[#131312] border border-gray-600 rounded-lg p-2.5 text-sm text-white focus:border-[#009FFE] focus:ring-1 focus:ring-[#009FFE] outline-none transition-colors">
+                                <option>1 km</option>
+                                <option>5 km</option>
+                                <option>10 km</option>
+                                <option>20 km</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full mt-8 bg-[#009FFE] text-[#131312] font-bold py-3 px-4 rounded-lg hover:bg-[#0080b7] hover:text-white transition-colors flex items-center justify-center gap-2">
+                        Aplicar filtros <span class="material-symbols-outlined text-[18px]">search</span>
+                    </button>
+                </div>
+
+                <!-- Mapa -->
+                <div class="w-full lg:w-3/4 relative rounded-lg overflow-hidden border border-gray-700 min-h-[450px] flex items-center justify-center bg-[#121212]">
+                    <img src="img/02_ESTACIONES_SERVICIO/galeria-01.png" alt="Mapa GIS de demanda potencial" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen" onerror="this.src='img/Estudios/portada-estaciones-de-servicio-y-combustible.webp'"/>
+                    
+                    <!-- Overlay tech -->
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9zdmc+')] opacity-50 pointer-events-none"></div>
+
+                    <!-- Leyenda flotante -->
+                    <div class="absolute bottom-6 right-6 bg-[#1d1d1b]/90 backdrop-blur-md border border-gray-700 p-5 rounded-xl text-xs text-white shadow-2xl">
+                        <p class="font-bold mb-4 uppercase tracking-widest text-[#009FFE] text-[11px] border-b border-gray-700 pb-2">Capa: Demanda potencial</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3"><div class="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]"></div> <span class="font-medium text-gray-300">Muy Alta</span></div>
+                            <div class="flex items-center gap-3"><div class="w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.8)]"></div> <span class="font-medium text-gray-300">Alta</span></div>
+                            <div class="flex items-center gap-3"><div class="w-3 h-3 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.8)]"></div> <span class="font-medium text-gray-300">Media</span></div>
+                            <div class="flex items-center gap-3"><div class="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div> <span class="font-medium text-gray-300">Baja / Muy baja</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Qué analizamos? -->
+    <section class="py-20 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white uppercase">¿Qué <span class="text-[#009FFE]">analizamos?</span></h2>
+                <p class="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Variables críticas integradas en nuestro modelo espacial.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#009FFE] hover:bg-white/10 transition-all group">
+                    <span class="material-symbols-outlined text-[#009FFE] mb-4 text-4xl group-hover:scale-110 transition-transform">monitoring</span>
+                    <h4 class="font-bold text-white text-lg mb-2">Demanda potencial</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Estimamos el consumo actual y proyectado de combustibles en la zona de interés.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#009FFE] hover:bg-white/10 transition-all group">
+                    <span class="material-symbols-outlined text-[#009FFE] mb-4 text-4xl group-hover:scale-110 transition-transform">storefront</span>
+                    <h4 class="font-bold text-white text-lg mb-2">Competencia</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Identificamos estaciones existentes y su área de influencia comercial y logística.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#009FFE] hover:bg-white/10 transition-all group">
+                    <span class="material-symbols-outlined text-[#009FFE] mb-4 text-4xl group-hover:scale-110 transition-transform">commute</span>
+                    <h4 class="font-bold text-white text-lg mb-2">Movilidad y tráfico</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Analizamos flujos vehiculares, aforos direccionales y conectividad vial primaria.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#009FFE] hover:bg-white/10 transition-all group">
+                    <span class="material-symbols-outlined text-[#009FFE] mb-4 text-4xl group-hover:scale-110 transition-transform">groups</span>
+                    <h4 class="font-bold text-white text-lg mb-2">Demografía</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Perfil socioeconómico, poder adquisitivo y densidad poblacional del área de impacto.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#009FFE] hover:bg-white/10 transition-all group">
+                    <span class="material-symbols-outlined text-[#009FFE] mb-4 text-4xl group-hover:scale-110 transition-transform">gavel</span>
+                    <h4 class="font-bold text-white text-lg mb-2">Regulación</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Verificamos viabilidad de permisos CRE, uso de suelo y normativas aplicables.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#009FFE] hover:bg-white/10 transition-all group">
+                    <span class="material-symbols-outlined text-[#009FFE] mb-4 text-4xl group-hover:scale-110 transition-transform">add_road</span>
+                    <h4 class="font-bold text-white text-lg mb-2">Accesibilidad</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Evaluamos radios de giro, accesos, visibilidad y facilidad de maniobra.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#009FFE] hover:bg-white/10 transition-all group">
+                    <span class="material-symbols-outlined text-[#009FFE] mb-4 text-4xl group-hover:scale-110 transition-transform">payments</span>
+                    <h4 class="font-bold text-white text-lg mb-2">Rentabilidad</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Calculamos indicadores clave financieros para estimar el retorno de inversión y TIR.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#009FFE] hover:bg-white/10 transition-all group">
+                    <span class="material-symbols-outlined text-[#009FFE] mb-4 text-4xl group-hover:scale-110 transition-transform">warning</span>
+                    <h4 class="font-bold text-white text-lg mb-2">Riesgos</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Identificamos riesgos naturales, antropogénicos y restricciones de operación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos y Soluciones Integrales -->
+    <section class="py-20 bg-[#171717]">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            <!-- Productos y Servicios -->
+            <div>
+                <h2 class="text-2xl font-bold text-white uppercase mb-8 border-b-2 border-[#009FFE] inline-block pb-2">Productos y Servicios</h2>
+                <p class="text-gray-300 mb-8 leading-relaxed">Geomarketing, análisis de sitio y soporte técnico para hidrocarburos. A través de herramientas avanzadas de inteligencia artificial, Sistemas de Información Geográfica (SIG) y modelos de análisis predictivo, ofrecemos soluciones integrales en cada etapa del proyecto.</p>
+                
+                <div class="space-y-6">
+                    <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg">
+                        <h4 class="text-[#009FFE] font-bold text-lg mb-2">Estudios de Localización Óptima y Geomarketing</h4>
+                        <p class="text-sm text-gray-400">Análisis de tráfico, flujos vehiculares y accesibilidad vial para identificar los puntos con mayor potencial de venta y captación de mercado.</p>
+                    </div>
+                    <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg">
+                        <h4 class="text-[#009FFE] font-bold text-lg mb-2">Estudios de Impacto Urbano, Ambiental y de Movilidad</h4>
+                        <p class="text-sm text-gray-400">Elaboración de la documentación técnica y cartográfica requerida por las autoridades reguladoras para la obtención de licencias de construcción y operación.</p>
+                    </div>
+                    <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg">
+                        <h4 class="text-[#009FFE] font-bold text-lg mb-2">Análisis de Competencia y Canibalización</h4>
+                        <p class="text-sm text-gray-400">Reestructuración de la cartografía propiedad por propiedad, vinculación multifinalitaria de datos fiscales y jurídicos, e implementación de sistemas de información geográfica catastral.</p>
+                    </div>
+                    <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg">
+                        <h4 class="text-[#009FFE] font-bold text-lg mb-2">Análisis Socioeconómico y Demográfico</h4>
+                        <p class="text-sm text-gray-400">Caracterización del entorno de la estación (densidad, niveles socioeconómicos y hábitos de consumo) para optimizar la oferta de servicios complementarios.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Soluciones Integrales -->
+            <div>
+                <h2 class="text-2xl font-bold text-white uppercase mb-8 border-b-2 border-[#0080b7] inline-block pb-2">Soluciones Integrales</h2>
+                <p class="text-gray-300 mb-8 leading-relaxed">Nuestros servicios están dirigidos a los actores clave de la cadena de distribución y venta al por menor de combustibles.</p>
+                
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-gray-700 space-y-8">
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-[#009FFE]/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-[#009FFE]/20">
+                            <span class="material-symbols-outlined text-[#009FFE]">corporate_fare</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg mb-1">Grupos Gasolineros y Franquicias</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Expansión estratégica de redes de estaciones de servicio, evaluación de nuevas ubicaciones y optimización de carteras de activos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-[#0080b7]/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-[#0080b7]/30">
+                            <span class="material-symbols-outlined text-[#0080b7]">account_balance</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg mb-1">Inversionistas y Fondos de Capital</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Auditoría territorial y análisis de riesgo antes de la adquisición, fusión o compra de estaciones de servicio en operación.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-[#009FFE]/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-[#009FFE]/20">
+                            <span class="material-symbols-outlined text-[#009FFE]">store</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg mb-1">Infraestructura Comercial</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Proyectos de usos mixtos que integren estaciones de servicio con centros logísticos, paradores viales o plazas comerciales.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-[#0080b7]/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-[#0080b7]/30">
+                            <span class="material-symbols-outlined text-[#0080b7]">local_shipping</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg mb-1">Distribuidores y Mayoristas</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Optimización de rutas de suministro, análisis de zonas de cobertura logística y localización estratégica.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-[#009FFE]/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-[#009FFE]/20">
+                            <span class="material-symbols-outlined text-[#009FFE]">electric_car</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg mb-1">Nuevas Energías y Multimodal</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Estudios de viabilidad territorial para transición o integración de electrolineras e infraestructura de combustibles alternativos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-[#0080b7]/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-[#0080b7]/30">
+                            <span class="material-symbols-outlined text-[#0080b7]">gavel</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg mb-1">Consultores y Firmas Legales</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Soporte cartográfico y técnico especializado para respaldar trámites regulatorios, litigios de derechos de vía o cumplimiento de distancias mínimas normativas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 border-t border-gray-700 bg-[#1d1d1b]">
+        <div class="max-w-3xl mx-auto px-6 md:px-10 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6 uppercase">¿Interesado en este <span class="text-[#009FFE]">estudio?</span></h2>
+            <p class="text-lg text-gray-300 mb-10 leading-relaxed">Garantizamos la viabilidad y éxito comercial de tus inversiones en infraestructura energética con datos precisos.</p>
+            <div class="flex flex-wrap justify-center gap-5">
+                <a class="bg-[#009FFE] text-[#131312] px-8 py-4 font-bold text-sm flex items-center gap-2 hover:bg-[#0080b7] hover:text-white active:scale-95 transition-all rounded-lg shadow-[0_0_15px_rgba(0,159,254,0.3)]" href="contacto.html">
+                    Solicitar diagnóstico <span class="material-symbols-outlined text-[18px]">north_east</span>
+                </a>
+                <a class="border-2 border-gray-600 text-gray-300 px-8 py-4 font-bold text-sm hover:border-[#009FFE] hover:text-[#009FFE] active:scale-95 transition-all rounded-lg" href="estudios.html">
+                    Ver todos los estudios
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer class="bg-surface-container-lowest text-on-surface pt-12 pb-8 border-t border-outline-variant">
     <div class="px-6 md:px-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -123,4 +398,5 @@
 </footer>
 <button class="scroll-top-btn fixed bottom-8 right-8 w-12 h-12 bg-electric-blue text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 z-50" id="scrollTopBtn"><i class="fas fa-chevron-up"></i></button>
 <script src="js/main.js"></script>
-</body></html>
+</body>
+</html>
