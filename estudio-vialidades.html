@@ -10,95 +10,206 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-background">
-<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
+<body class="bg-[#1d1d1b] text-gray-300">
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 bg-[#1d1d1b]/90 backdrop-blur-md border-b border-gray-700 transition-all duration-300" id="top-nav">
     <a class="block flex-shrink-0 relative z-10" href="index.html"><img alt="BIG-i" class="h-10 w-auto" src="img/logo.png"/></a>
     <ul class="hidden md:flex items-center gap-7 list-none m-0 p-0 absolute left-1/2 -translate-x-1/2">
-        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="index.html">Inicio</a></li>
-        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="quienes_somos.html">Quiénes somos</a></li>
-        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="equipo.html">Equipo</a></li>
-        <li><a class="nav-link nav-active text-primary font-bold text-sm" href="estudios.html">Estudios</a></li>
-        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="contacto.html">Contacto</a></li>
+        <li><a class="nav-link text-gray-400 font-medium text-sm hover:text-[#009FFE] transition-colors" href="index.html">Inicio</a></li>
+        <li><a class="nav-link text-gray-400 font-medium text-sm hover:text-[#009FFE] transition-colors" href="quienes_somos.html">Quiénes somos</a></li>
+        <li><a class="nav-link text-gray-400 font-medium text-sm hover:text-[#009FFE] transition-colors" href="equipo.html">Equipo</a></li>
+        <li><a class="nav-link nav-active text-[#009FFE] font-bold text-sm" href="estudios.html">Estudios</a></li>
+        <li><a class="nav-link text-gray-400 font-medium text-sm hover:text-[#009FFE] transition-colors" href="contacto.html">Contacto</a></li>
     </ul>
     <div class="flex items-center justify-end gap-3 relative z-10">
-        <button class="hidden md:block bg-primary-container text-on-primary-container px-5 py-2 rounded font-semibold text-sm hover:opacity-90">Administrador</button>
-        <button class="md:hidden text-on-surface p-2" id="menu-toggle"><span class="material-symbols-outlined text-3xl">menu</span></button>
+        <button class="hidden md:block bg-[#009FFE] text-[#131312] px-5 py-2 rounded font-semibold text-sm hover:opacity-90">Administrador</button>
+        <button class="md:hidden text-white p-2" id="menu-toggle"><span class="material-symbols-outlined text-3xl">menu</span></button>
     </div>
 </nav>
-<div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-6 border-b border-outline-variant shadow-2xl" id="mobile-menu">
+<div class="fixed top-0 left-0 w-full h-fit bg-[#1d1d1b] z-[45] md:hidden pt-20 pb-8 px-6 border-b border-gray-700 shadow-2xl" id="mobile-menu" style="display: none;">
     <div class="flex flex-col gap-5">
-        <a class="text-on-surface-variant font-semibold text-xl" href="index.html">Inicio</a>
-        <a class="text-on-surface-variant font-semibold text-xl" href="quienes_somos.html">Quiénes somos</a>
-        <a class="text-on-surface-variant font-semibold text-xl" href="equipo.html">Equipo</a>
-        <a class="text-primary font-bold text-xl" href="estudios.html">Estudios</a>
-        <a class="text-on-surface-variant font-semibold text-xl" href="contacto.html">Contacto</a>
-        <hr class="border-outline-variant"/><button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-xl">Administrador</button>
+        <a class="text-gray-400 font-semibold text-xl hover:text-[#009FFE]" href="index.html">Inicio</a>
+        <a class="text-gray-400 font-semibold text-xl hover:text-[#009FFE]" href="quienes_somos.html">Quiénes somos</a>
+        <a class="text-gray-400 font-semibold text-xl hover:text-[#009FFE]" href="equipo.html">Equipo</a>
+        <a class="text-[#009FFE] font-bold text-xl" href="estudios.html">Estudios</a>
+        <a class="text-gray-400 font-semibold text-xl hover:text-[#009FFE]" href="contacto.html">Contacto</a>
+        <hr class="border-gray-700"/><button class="bg-[#009FFE] text-[#131312] w-full py-4 rounded font-bold text-xl">Administrador</button>
     </div>
 </div>
 
-<header class="relative flex items-end overflow-hidden" style="min-height:70vh;padding-top:80px;">
-    <div class="absolute inset-0 z-0">
-        <img src="img/Estudios/portada-vialidades-transporte.webp" alt="Vialidades" class="w-full h-full object-cover opacity-40"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/75 to-background/10"></div>
-    </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pb-20 w-full">
-        <a href="estudios.html" class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors text-sm mb-6"><span class="material-symbols-outlined text-[16px]">arrow_back</span>Volver a Estudios</a>
-        <div class="flex items-center gap-3 mb-4"><span class="badge-infraestructura">Infraestructura</span><span class="badge-infraestructura">+50 Ciudades</span></div>
-        <h1 class="font-black leading-none tracking-tighter text-on-background mb-4" style="font-size:clamp(36px,5.5vw,80px);">Vialidades<br>y Transporte</h1>
-        <p class="font-body-lg text-on-surface-variant max-w-2xl">Modelos geoespaciales y de tráfico para mejorar la circulación, reducir tiempos y optimizar redes viales metropolitanas.</p>
-    </div>
-</header>
-
-<section class="py-20 border-t border-outline-variant">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <div>
-            <span class="text-primary font-label-md text-label-md tracking-widest uppercase mb-4 block">Descripción</span>
-            <h2 class="font-headline-lg text-headline-lg text-on-background mb-6">¿Qué hacemos?</h2>
-            <p class="font-body-lg text-on-surface-variant leading-relaxed">Desarrollamos estudios de ingeniería de tránsito para apoyar la planeación y operación de sistemas viales inteligentes. A través de aforos vehiculares, simulación de tráfico y análisis de intersecciones, proporcionamos soluciones para la gestión metropolitana y corredores logísticos.</p>
+<main class="bg-[#1d1d1b] text-gray-300">
+    <!-- Hero Section -->
+    <header class="relative flex items-end overflow-hidden border-b border-gray-700" style="min-height:75vh;padding-top:80px;">
+        <div class="absolute inset-0 z-0">
+            <img src="img/Estudios/portada-vialidades-transporte.webp" alt="Vialidades y Transporte" class="w-full h-full object-cover opacity-30 mix-blend-overlay"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1d1d1b] via-[#1d1d1b]/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#1d1d1b] to-transparent"></div>
         </div>
-        <div class="glass-panel p-8 rounded-xl">
-            <h3 class="font-title-lg text-title-lg text-primary mb-6 flex items-center gap-3"><span class="material-symbols-outlined">checklist</span>Servicios Clave</h3>
-            <ul class="space-y-4">
-                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-blue-400 text-[20px] flex-shrink-0 mt-0.5">traffic</span><span class="text-on-surface-variant">Ingeniería de tránsito y aforos vehiculares</span></li>
-                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-blue-400 text-[20px] flex-shrink-0 mt-0.5">route</span><span class="text-on-surface-variant">Optimización de intersecciones</span></li>
-                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-blue-400 text-[20px] flex-shrink-0 mt-0.5">analytics</span><span class="text-on-surface-variant">Evaluación de capacidad vial</span></li>
-                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-blue-400 text-[20px] flex-shrink-0 mt-0.5">directions_car</span><span class="text-on-surface-variant">Selección de rutas y corredores logísticos</span></li>
-            </ul>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pb-20 w-full">
+            <a href="estudios.html" class="inline-flex items-center gap-1.5 text-gray-400 hover:text-[#009FFE] transition-colors text-sm mb-6"><span class="material-symbols-outlined text-[16px]">arrow_back</span>Volver a Estudios</a>
+            
+            <div class="flex items-center gap-3 mb-4">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#0080b7]/20 text-[#009FFE] border border-[#009FFE]/30">Infraestructura</span>
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#0080b7]/20 text-[#009FFE] border border-[#009FFE]/30">Movilidad</span>
+            </div>
+            
+            <h1 class="font-black leading-none tracking-tighter text-white mb-4 uppercase" style="font-size:clamp(36px,5.5vw,80px);">VIALIDADES Y<br><span class="text-[#009FFE]">TRANSPORTE</span></h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">Modelos geoespaciales y de tráfico para mejorar la circulación, reducir tiempos y optimizar redes viales.</p>
+            
+            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 max-w-4xl mt-8 shadow-2xl">
+                <h3 class="text-lg font-bold text-[#009FFE] mb-2 uppercase tracking-widest">Ingeniería de transporte e infraestructura vial para la conectividad estratégica</h3>
+                <p class="text-sm md:text-base text-gray-200 leading-relaxed mb-4">La eficiencia económica de las regiones y la calidad de vida en las urbes están directamente vinculadas a la fluidez de sus redes de transporte y a la resiliencia de su infraestructura vial.</p>
+                <p class="text-sm md:text-base text-gray-200 leading-relaxed">En BIG-i desarrollamos estudios de ingeniería de tránsito, transporte masivo y logística de distribución de alta especialización. Fusionamos el análisis territorial y la modelación predictiva de flujos para optimizar la movilidad vial, diseñar corredores de transporte eficientes, mitigar la congestión urbana y garantizar la conectividad segura y sostenible de personas y mercancías.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<section class="bg-surface-container-lowest py-16 border-t border-outline-variant">
-    <div class="max-w-7xl mx-auto px-6 md:px-10">
-        <h2 class="font-headline-md text-headline-md text-on-background mb-8">Evidencia Visual</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <img class="w-full h-64 object-cover rounded-xl" src="img/06_Vialidades_y_transporte/1-vialidades-y-transporte.webp" alt="Vialidades 1"/>
-            <img class="w-full h-64 object-cover rounded-xl" src="img/06_Vialidades_y_transporte/2-vialidades-y-transporte.webp" alt="Vialidades 2"/>
-            <img class="w-full h-64 object-cover rounded-xl" src="img/06_Vialidades_y_transporte/3-vialidades-y-transporte.webp" alt="Vialidades 3"/>
-            <img class="w-full h-64 object-cover rounded-xl" src="img/06_Vialidades_y_transporte/4-vialidades-y-transporte.webp" alt="Vialidades 4"/>
+    <!-- Productos y Servicios -->
+    <section class="py-20 border-b border-gray-700 relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#009FFE]/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+            <div class="text-center mb-16 max-w-4xl mx-auto">
+                <span class="text-[#009FFE] text-sm font-bold tracking-widest uppercase mb-4 block">Productos y Servicios</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase">Planificación multimodal, simulación de tráfico y <span class="text-[#0080b7]">auditorías de infraestructura</span></h2>
+                <p class="text-gray-300 text-lg leading-relaxed">A través del uso de herramientas tecnológicas avanzadas, modelos analíticos de demanda y Sistemas de Información Geográfica —SIG—, transformamos la infraestructura vial con soluciones técnicas de precisión.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Tarjeta 1 -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 border-t-4 border-t-[#009FFE] hover:bg-white/10 transition-colors">
+                    <div class="w-12 h-12 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6">
+                        <span class="material-symbols-outlined text-[#009FFE] text-2xl">traffic</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Estudios de Tránsito e Ingeniería de Vías</h3>
+                    <p class="text-gray-300 leading-relaxed">Planificación, aforo vehicular y análisis macro y micro de flujos de tránsito, matrices origen-destino y niveles de servicio para optimizar la geometría y capacidad de vialidades urbanas, autopistas y carreteras.</p>
+                </div>
+                
+                <!-- Tarjeta 2 -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 border-t-4 border-t-[#0080b7] hover:bg-white/10 transition-colors">
+                    <div class="w-12 h-12 bg-[#0080b7]/10 flex items-center justify-center rounded-lg border border-[#0080b7]/20 mb-6">
+                        <span class="material-symbols-outlined text-[#0080b7] text-2xl">minor_crash</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Dictámenes de Impacto Vial y Mitigación Urbana</h3>
+                    <p class="text-gray-300 leading-relaxed">Evaluación analítica del impacto generado por desarrollos inmobiliarios, comerciales, industriales o de infraestructura sobre la red vial circundante, proponiendo soluciones geométricas y de control efectivas.</p>
+                </div>
+                
+                <!-- Tarjeta 3 -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 border-t-4 border-t-[#009FFE] hover:bg-white/10 transition-colors">
+                    <div class="w-12 h-12 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6">
+                        <span class="material-symbols-outlined text-[#009FFE] text-2xl">directions_bus</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Modelación y Planificación de Sistemas de Transporte</h3>
+                    <p class="text-gray-300 leading-relaxed">Estudios de factibilidad, origen-destino y asignación de demanda para estructurar redes de transporte público masivo, rutas de personal institucional y sistemas de transporte de carga de gran escala.</p>
+                </div>
+                
+                <!-- Tarjeta 4 -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 border-t-4 border-t-[#0080b7] hover:bg-white/10 transition-colors">
+                    <div class="w-12 h-12 bg-[#0080b7]/10 flex items-center justify-center rounded-lg border border-[#0080b7]/20 mb-6">
+                        <span class="material-symbols-outlined text-[#0080b7] text-2xl">health_and_safety</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Auditorías de Seguridad Vial y Trazado Geométrico</h3>
+                    <p class="text-gray-300 leading-relaxed">Identificación espacial de puntos negros de siniestralidad —hotspots viales— y propuestas técnicas de rediseño de intersecciones, golas, incorporaciones y señalética para garantizar una circulación segura.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="py-20 border-t border-outline-variant">
-    <div class="max-w-3xl mx-auto px-6 md:px-10 text-center">
-        <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">¿Interesado en este estudio?</h2>
-        <p class="font-body-lg text-on-surface-variant mb-8">Optimizamos la red vial de tu ciudad o corredor logístico.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a class="bg-primary-container text-on-primary-container px-8 py-3.5 font-bold text-sm flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all" href="contacto.html">Solicitar diagnóstico <span class="material-symbols-outlined text-[18px]">north_east</span></a>
-            <a class="border-2 border-outline-variant text-on-surface-variant px-8 py-3.5 font-semibold text-sm hover:border-primary hover:text-primary transition-all" href="estudios.html">Ver todos los estudios</a>
+    <!-- Soluciones Integrales -->
+    <section class="py-20 bg-[#171717]">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white uppercase border-b-2 border-[#009FFE] inline-block pb-2">Soluciones Integrales</h2>
+                <p class="mt-4 text-gray-300 text-lg max-w-3xl mx-auto">Nuestros servicios en ingeniería vial, ordenamiento de tránsito y transporte están diseñados para responder a las demandas operativas, logísticas y normativas de los actores clave del sector.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg">
+                    <span class="material-symbols-outlined text-[#009FFE] text-3xl mb-3">account_balance</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Secretarías de Obras Públicas, Comunicaciones y Transportes</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Planes de Movilidad y Transporte —PIMUS—, reingeniería de sentidos de circulación, optimización de redes de semáforos y diseño de corredores de flujo continuo.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#0080b7] border border-gray-800 shadow-lg">
+                    <span class="material-symbols-outlined text-[#0080b7] text-3xl mb-3">construction</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Empresas Constructoras y Firmas de Ingeniería Civil</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Provisión de estudios ejecutivos de tránsito, análisis de capacidad vial, estudios de derechos de vía y planos de señalización necesarios para la validación y entrega de obras.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg">
+                    <span class="material-symbols-outlined text-[#009FFE] text-3xl mb-3">toll</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Concesionarias de Autopistas y Peajes</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Monitoreo espacio-temporal de flujos vehiculares, análisis de demanda para proyección de tarifas, auditorías de seguridad vial en carretera y diseño de planes de contingencia viales.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#0080b7] border border-gray-800 shadow-lg">
+                    <span class="material-symbols-outlined text-[#0080b7] text-3xl mb-3">local_shipping</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Operadores de Transporte Masivo y Logística de Carga</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Modelos de ruteo óptimo basados en la geometría vial, restricciones de tráfico pesado, horarios de circulación, flujos de congestión urbana y optimización de terminales.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg">
+                    <span class="material-symbols-outlined text-[#009FFE] text-3xl mb-3">location_city</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Desarrolladores Inmobiliarios, Comerciales e Industriales</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Elaboración de estudios de impacto vial indispensables para la obtención de licencias de construcción, accesos viales integrados y diseño de estacionamientos de alta eficiencia.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#0080b7] border border-gray-800 shadow-lg">
+                    <span class="material-symbols-outlined text-[#0080b7] text-3xl mb-3">monitor</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Centros de Monitoreo Urbano y Control de Tráfico —C2, C4 y C5—</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Arquitectura e integración de datos vehiculares en tiempo real para la optimización de los centros de control de tráfico, gestión de semáforos inteligentes y atención inmediata de incidentes.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="bg-surface-container-lowest text-on-surface pt-12 pb-8 border-t border-outline-variant">
+    <!-- Evidencia Visual -->
+    <section class="py-20 bg-[#171717] border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-white uppercase border-b-2 border-[#009FFE] inline-block pb-2 mb-2">Evidencia Visual</h2>
+                    <p class="text-gray-400 text-sm">Proyectos, diagnósticos y levantamientos territoriales.</p>
+                </div>
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#009FFE]/10 text-[#009FFE] border border-[#009FFE]/30">Galería de Estudio</span>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-xl border border-gray-800 group">
+                    <img class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" src="img/06_Vialidades_y_transporte/1-vialidades-y-transporte.webp" alt="Evidencia Vialidades 1"/>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-800 group">
+                    <img class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" src="img/06_Vialidades_y_transporte/2-vialidades-y-transporte.webp" alt="Evidencia Vialidades 2"/>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-800 group">
+                    <img class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" src="img/06_Vialidades_y_transporte/3-vialidades-y-transporte.webp" alt="Evidencia Vialidades 3"/>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-800 group">
+                    <img class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" src="img/06_Vialidades_y_transporte/4-vialidades-y-transporte.webp" alt="Evidencia Vialidades 4"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 border-t border-gray-700 bg-[#1d1d1b]">
+        <div class="max-w-3xl mx-auto px-6 md:px-10 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6 uppercase">¿Interesado en este <span class="text-[#009FFE]">estudio?</span></h2>
+            <p class="text-lg text-gray-300 mb-10 leading-relaxed">Optimizamos la red vial de tu ciudad o corredor logístico.</p>
+            <div class="flex flex-wrap justify-center gap-5">
+                <a class="bg-[#009FFE] text-[#131312] px-8 py-4 font-bold text-sm flex items-center gap-2 hover:bg-[#0080b7] hover:text-white active:scale-95 transition-all rounded-lg shadow-[0_0_15px_rgba(0,159,254,0.3)]" href="contacto.html">
+                    Solicitar diagnóstico <span class="material-symbols-outlined text-[18px]">north_east</span>
+                </a>
+                <a class="border-2 border-gray-600 text-gray-300 px-8 py-4 font-bold text-sm hover:border-[#009FFE] hover:text-[#009FFE] active:scale-95 transition-all rounded-lg" href="estudios.html">
+                    Ver todos los estudios
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-[#131312] text-gray-300 pt-12 pb-8 border-t border-gray-700">
     <div class="px-6 md:px-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div><img alt="BIG-i" class="h-10 w-auto mb-4 object-contain" src="img/logo.png"/><p class="text-sm text-on-surface-variant">Inteligencia Territorial · México</p></div>
-        <div><h4 class="text-secondary font-bold text-xs uppercase tracking-widest mb-4">Navegación</h4><ul class="space-y-2 text-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="index.html">Inicio</a></li><li><a class="hover:text-primary transition-colors" href="estudios.html">Estudios</a></li><li><a class="hover:text-primary transition-colors" href="contacto.html">Contacto</a></li></ul></div>
-        <div><h4 class="text-secondary font-bold text-xs uppercase tracking-widest mb-4">Contacto</h4><p class="text-sm text-on-surface-variant">contacto@big-i.com.mx</p><p class="text-sm text-electric-blue font-bold mt-1">+52 55 5261 4660</p></div>
-        <div><p class="mt-4 text-xs text-on-surface-variant opacity-60">&copy; 2013 Kab Geo S.A. de C.V.</p></div>
+        <div><img alt="BIG-i" class="h-10 w-auto mb-4 object-contain" src="img/logo.png"/><p class="text-sm text-gray-500">Inteligencia Territorial · México</p></div>
+        <div><h4 class="text-[#009FFE] font-bold text-xs uppercase tracking-widest mb-4">Navegación</h4><ul class="space-y-2 text-sm text-gray-400"><li><a class="hover:text-[#009FFE] transition-colors" href="index.html">Inicio</a></li><li><a class="hover:text-[#009FFE] transition-colors" href="estudios.html">Estudios</a></li><li><a class="hover:text-[#009FFE] transition-colors" href="contacto.html">Contacto</a></li></ul></div>
+        <div><h4 class="text-[#009FFE] font-bold text-xs uppercase tracking-widest mb-4">Contacto</h4><p class="text-sm text-gray-400">contacto@big-i.com.mx</p><p class="text-sm text-[#009FFE] font-bold mt-1">+52 55 5261 4660</p></div>
+        <div><p class="mt-4 text-xs text-gray-500 opacity-60">&copy; 2013 Kab Geo S.A. de C.V.</p></div>
     </div>
 </footer>
-<button class="scroll-top-btn fixed bottom-8 right-8 w-12 h-12 bg-electric-blue text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 z-50" id="scrollTopBtn"><i class="fas fa-chevron-up"></i></button>
+<button class="scroll-top-btn fixed bottom-8 right-8 w-12 h-12 bg-[#009FFE] text-[#131312] rounded-full shadow-lg flex items-center justify-center hover:scale-110 z-50" id="scrollTopBtn"><i class="fas fa-chevron-up"></i></button>
 <script src="js/main.js"></script>
 </body></html>
