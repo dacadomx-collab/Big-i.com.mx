@@ -11,44 +11,40 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<body class="bg-[#1d1d1b] text-gray-300">
 
 <!-- ═══════════════════════ TOP NAV BAR ═══════════════════════ -->
-<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 bg-[#1d1d1b]/90 backdrop-blur-md border-b border-gray-700 transition-all duration-300" id="top-nav">
     <a class="block flex-shrink-0 relative z-10" href="index.html">
-        <img alt="BIG-i Business Informatics &amp; Geostatistics" class="h-10 w-auto" src="img/logo.png"/>
+        <img alt="BIG-i" class="h-10 w-auto" src="img/logo.png"/>
     </a>
     <ul class="hidden md:flex items-center gap-7 list-none m-0 p-0 absolute left-1/2 -translate-x-1/2">
-        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="index.html">Inicio</a></li>
-        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="quienes_somos.html">Quiénes somos</a></li>
-        <li><a class="nav-link nav-active text-primary font-bold text-sm" href="equipo.html">Equipo</a></li>
-        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="estudios.html">Estudios</a></li>
-        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="contacto.html">Contacto</a></li>
+        <li><a class="nav-link text-gray-400 font-medium text-sm hover:text-[#009FFE] transition-colors" href="index.html">Inicio</a></li>
+        <li><a class="nav-link text-gray-400 font-medium text-sm hover:text-[#009FFE] transition-colors" href="quienes_somos.html">Quiénes somos</a></li>
+        <li><a class="nav-link nav-active text-[#009FFE] font-bold text-sm" href="equipo.html">Equipo</a></li>
+        <li><a class="nav-link text-gray-400 font-medium text-sm hover:text-[#009FFE] transition-colors" href="estudios.html">Estudios</a></li>
+        <li><a class="nav-link text-gray-400 font-medium text-sm hover:text-[#009FFE] transition-colors" href="contacto.html">Contacto</a></li>
     </ul>
     <div class="flex items-center justify-end gap-3 relative z-10">
-        <div class="relative hidden lg:block">
-            <input class="bg-surface-container-high border border-outline-variant rounded px-4 py-1.5 text-sm focus:border-primary-container outline-none w-44 transition-all" placeholder="Buscar..." type="text"/>
-            <span class="material-symbols-outlined absolute right-2 top-1.5 text-on-surface-variant text-[18px]">search</span>
-        </div>
-        <button class="hidden md:block bg-primary-container text-on-primary-container px-5 py-2 rounded font-semibold text-sm hover:opacity-90 transition-opacity whitespace-nowrap">
+        <button class="hidden md:block bg-[#009FFE] text-[#131312] px-5 py-2 rounded font-semibold text-sm hover:opacity-90 transition-opacity">
             Administrador
         </button>
-        <button class="md:hidden text-on-surface p-2 focus:outline-none" id="menu-toggle">
+        <button class="md:hidden text-white p-2 focus:outline-none" id="menu-toggle">
             <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
     </div>
 </nav>
 
 <!-- ═══════════════════════ MOBILE MENU ═══════════════════════ -->
-<div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-margin-mobile border-b border-outline-variant shadow-2xl" id="mobile-menu">
+<div class="fixed top-0 left-0 w-full h-fit bg-[#1d1d1b] z-[45] md:hidden pt-20 pb-8 px-6 border-b border-gray-700 shadow-2xl" id="mobile-menu" style="display: none;">
     <div class="flex flex-col gap-5">
-        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="index.html">Inicio</a>
-        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="quienes_somos.html">Quiénes somos</a>
-        <a class="text-primary font-bold text-xl" href="equipo.html">Equipo</a>
-        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="estudios.html">Estudios</a>
-        <a class="text-on-surface-variant font-semibold text-xl hover:text-primary transition-colors" href="contacto.html">Contacto</a>
-        <hr class="border-outline-variant my-1"/>
-        <button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-xl">
+        <a class="text-gray-400 font-semibold text-xl hover:text-[#009FFE] transition-colors" href="index.html">Inicio</a>
+        <a class="text-gray-400 font-semibold text-xl hover:text-[#009FFE] transition-colors" href="quienes_somos.html">Quiénes somos</a>
+        <a class="text-[#009FFE] font-bold text-xl" href="equipo.html">Equipo</a>
+        <a class="text-gray-400 font-semibold text-xl hover:text-[#009FFE] transition-colors" href="estudios.html">Estudios</a>
+        <a class="text-gray-400 font-semibold text-xl hover:text-[#009FFE] transition-colors" href="contacto.html">Contacto</a>
+        <hr class="border-gray-700 my-1"/>
+        <button class="bg-[#009FFE] text-[#131312] w-full py-4 rounded font-bold text-xl">
             Administrador
         </button>
     </div>
@@ -57,75 +53,85 @@
 <main class="pt-20">
 
     <!-- ═══════════════════════ HERO SECTION ═══════════════════════ -->
-    <section class="relative h-[409px] flex items-center px-margin-desktop overflow-hidden">
+    <section class="relative h-[409px] flex items-center overflow-hidden border-b border-gray-700">
         <div class="absolute inset-0 z-0">
-            <img alt="High-tech business environment" class="w-full h-full object-cover opacity-30 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABw4CSEA3kkgKHSnt0fqlHfnkWwCejttKWs9wE_MNG5V5fDqUej416akTkXgOyCBRuKFK024qq12dffAA1jBPbjyy3Q2_rGa8CcKvXTzaajc7bSV17V7vVnPfjuLI9FMw1B3bliXK0_7uitVr5Td7mMmeOyYHRTIRkV-VRBQXgEziVA557xuy1Ujm48hqcOh1vGAqIiYM5CPtCx1lIliKkjS_T8gqFduWb9eMyyWGB4pucRnME1MocPFN0wWV-UvdPlT8d9_IWO1-x"/>
-            <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+            <img alt="High-tech business environment" class="w-full h-full object-cover opacity-30 grayscale mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABw4CSEA3kkgKHSnt0fqlHfnkWwCejttKWs9wE_MNG5V5fDqUej416akTkXgOyCBRuKFK024qq12dffAA1jBPbjyy3Q2_rGa8CcKvXTzaajc7bSV17V7vVnPfjuLI9FMw1B3bliXK0_7uitVr5Td7mMmeOyYHRTIRkV-VRBQXgEziVA557xuy1Ujm48hqcOh1vGAqIiYM5CPtCx1lIliKkjS_T8gqFduWb9eMyyWGB4pucRnME1MocPFN0wWV-UvdPlT8d9_IWO1-x"/>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#1d1d1b] via-[#1d1d1b]/80 to-transparent"></div>
         </div>
-        <div class="relative z-10 max-w-3xl">
-            <h1 class="font-display-lg text-display-lg font-bold text-primary mb-4">Equipo estratégico</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full">
+            <h1 class="font-black leading-none tracking-tighter text-white mb-4 uppercase" style="font-size:clamp(36px,5.5vw,80px);">Equipo <span class="text-[#009FFE]">estratégico</span></h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
                 Contamos con un equipo multidisciplinario de especialistas en energía, regulación, geointeligencia, finanzas, infraestructura y vinculación institucional.
             </p>
         </div>
     </section>
 
     <!-- ═══════════════════════ MAIN CONTENT (Light Theme) ═══════════════════════ -->
-    <section class="grid grid-cols-1 md:grid-cols-[320px_1fr] gap-0 border-t border-gray-200 bg-white">
+    <section class="grid grid-cols-1 md:grid-cols-[340px_1fr] gap-0 border-t border-gray-200 bg-white">
 
         <!-- Left Sidebar: Team List -->
-        <aside class="border-r border-gray-200 bg-white h-full min-h-[800px]">
-            <div class="sticky top-20 overflow-y-auto max-h-[calc(100vh-80px)]">
+        <aside class="border-r border-gray-200 bg-slate-50 h-full min-h-[800px]">
+            <div class="sticky top-[80px] overflow-y-auto max-h-[calc(100vh-80px)]">
                 <!-- Active Card -->
-                <a class="bg-primary-container p-panel-padding flex items-center gap-3 cursor-pointer group active" href="equipo.html">
-                    <div class="w-10 h-10 rounded-full border border-white/20 overflow-hidden flex-shrink-0">
-                        <img alt="Avatar Alejandro Lage" class="w-full h-full object-cover" src="img/Equipo/perfil-alejandro-javier-lage-suarez.webp"/>
+                <a class="bg-[#009FFE] p-6 flex items-center gap-3 cursor-pointer group active transition-colors" href="equipo.html">
+                    <div class="w-12 h-12 rounded-full border-2 border-white/30 overflow-hidden flex-shrink-0 bg-white">
+                        <img alt="Alejandro Javier Lage Suarez" class="w-full h-full object-cover" src="img/Equipo/perfil-alejandro-javier-lage-suarez.webp" onerror="this.src='img/logo.png'"/>
                     </div>
                     <div class="flex-grow min-w-0">
-                        <h3 class="font-label-md text-label-md font-bold text-white truncate">Alejandro Javier Lage Suárez</h3>
-                        <p class="text-[10px] text-white/80 uppercase tracking-wider font-semibold">Director Estratégico</p>
+                        <h3 class="text-sm font-bold text-[#131312] truncate">Econ. Alejandro Javier Lage Suarez</h3>
+                        <p class="text-[10px] text-[#131312]/80 uppercase tracking-wider font-bold">Director General / Head of PMO</p>
                     </div>
-                    <span class="material-symbols-outlined text-white">chevron_right</span>
+                    <span class="material-symbols-outlined text-[#131312]">chevron_right</span>
                 </a>
                 <!-- Inactive Cards -->
-                <div class="divide-y divide-gray-100">
-                    <a class="p-panel-padding flex items-center gap-3 hover:bg-gray-50 transition-all cursor-pointer group" href="equipo.html">
-                        <div class="w-10 h-10 rounded-full border border-gray-200 overflow-hidden flex-shrink-0">
-                            <img alt="Avatar Fluvio Ruiz" class="w-full h-full object-cover grayscale" src="img/Equipo/perfil-fluvio-cesar-ruiz-alarcon.webp"/>
+                <div class="divide-y divide-gray-200">
+                    <a class="p-6 flex items-center gap-3 hover:bg-white transition-all cursor-pointer group" href="equipo.html">
+                        <div class="w-12 h-12 rounded-full border border-gray-300 overflow-hidden flex-shrink-0 bg-white">
+                            <img alt="Lorenzo Mauricio Meyer Falcón" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="img/Equipo/perfil-lorenzo-meyer.webp" onerror="this.src='img/logo.png'"/>
                         </div>
                         <div class="flex-grow min-w-0">
-                            <h3 class="font-label-md text-label-md font-medium text-graphite truncate">Dr. Fluvio César Ruiz Alarcón</h3>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-medium">Asesor Senior Energía</p>
+                            <h3 class="text-sm font-bold text-gray-700 group-hover:text-[#009FFE] truncate transition-colors">Econ. Lorenzo Mauricio Meyer Falcón</h3>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-bold truncate">Director de Regulación y Vinculación</p>
                         </div>
                         <span class="material-symbols-outlined text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
                     </a>
-                    <a class="p-panel-padding flex items-center gap-3 hover:bg-gray-50 transition-all cursor-pointer group" href="equipo.html">
-                        <div class="w-10 h-10 rounded-full border border-gray-200 overflow-hidden flex-shrink-0">
-                            <img alt="Avatar Loreno Meyer" class="w-full h-full object-cover grayscale" src="img/Equipo/perfil-lorenzo-meyer.webp"/>
+                    <a class="p-6 flex items-center gap-3 hover:bg-white transition-all cursor-pointer group" href="equipo.html">
+                        <div class="w-12 h-12 rounded-full border border-gray-300 overflow-hidden flex-shrink-0 bg-white">
+                            <img alt="Fluvio César Ruíz Alarcón" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="img/Equipo/perfil-fluvio-cesar-ruiz-alarcon.webp" onerror="this.src='img/logo.png'"/>
                         </div>
                         <div class="flex-grow min-w-0">
-                            <h3 class="font-label-md text-label-md font-medium text-graphite truncate">Mtro. Loreno Mauricio Meyer Falcón</h3>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-medium">Inteligencia Territorial</p>
+                            <h3 class="text-sm font-bold text-gray-700 group-hover:text-[#009FFE] truncate transition-colors">Econ. Fluvio César Ruíz Alarcón</h3>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-bold truncate">Director Técnico y de Estrategia</p>
                         </div>
                         <span class="material-symbols-outlined text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
                     </a>
-                    <a class="p-panel-padding flex items-center gap-3 hover:bg-gray-50 transition-all cursor-pointer group" href="equipo.html">
-                        <div class="w-10 h-10 rounded-full border border-gray-200 overflow-hidden flex-shrink-0">
-                            <img alt="Avatar Dante San Pedro" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK2qACUwt4-CpLby9R-1_HAk7V34d5pKL0tf-634CUh7alF4djqS6LOUYbiJYigghqOC5Rr9ligCvle7wHqEeeb0_yu4q-IQ9uqiJFIvCsBul0aoqMrXPD4FMpx2Lv19SPs_5hgGsllBGAo-LNoE2RXjiUYEKu3B6iU5wNpGeXsLTbp9RmkWxJLR2r-9q3COSHl2MXegxSHvH99f1C6YbOI-dN6IIe5XCXUF0Bn1-z033UwUYIehDaVlaCe3XaRq4O9ShhavrodhJ9"/>
+                    <a class="p-6 flex items-center gap-3 hover:bg-white transition-all cursor-pointer group" href="equipo.html">
+                        <div class="w-12 h-12 rounded-full border border-gray-300 overflow-hidden flex-shrink-0 bg-white">
+                            <img alt="Joel Ayala Bracho" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="img/Equipo/perfil-joel-ayala.webp" onerror="this.src='img/logo.png'"/>
                         </div>
                         <div class="flex-grow min-w-0">
-                            <h3 class="font-label-md text-label-md font-medium text-graphite truncate">Dante Yamil San Pedro Jacobo</h3>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-medium">Derecho Energético</p>
+                            <h3 class="text-sm font-bold text-gray-700 group-hover:text-[#009FFE] truncate transition-colors">Admin. Joel Ayala Bracho</h3>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-bold truncate">Gerente de Operaciones de Campo</p>
                         </div>
                         <span class="material-symbols-outlined text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
                     </a>
-                    <a class="p-panel-padding flex items-center gap-3 hover:bg-gray-50 transition-all cursor-pointer group" href="equipo.html">
-                        <div class="w-10 h-10 rounded-full border border-gray-200 overflow-hidden flex-shrink-0">
-                            <img alt="Avatar Joel Ayala" class="w-full h-full object-cover grayscale" src="img/Equipo/perfil-joel-ayala.webp"/>
+                    <a class="p-6 flex items-center gap-3 hover:bg-white transition-all cursor-pointer group" href="equipo.html">
+                        <div class="w-12 h-12 rounded-full border border-gray-300 overflow-hidden flex-shrink-0 bg-white">
+                            <img alt="Leslie Staines Formoso" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="img/Equipo/perfil-leslie-staines-formoso.webp" onerror="this.src='img/logo.png'"/>
                         </div>
                         <div class="flex-grow min-w-0">
-                            <h3 class="font-label-md text-label-md font-medium text-graphite truncate">Joel Ayala Bracho</h3>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-medium">Gestión Operativa</p>
+                            <h3 class="text-sm font-bold text-gray-700 group-hover:text-[#009FFE] truncate transition-colors">Admin. Leslie Staines Formoso</h3>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-bold truncate">Directora de Asuntos Públicos</p>
+                        </div>
+                        <span class="material-symbols-outlined text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+                    </a>
+                    <a class="p-6 flex items-center gap-3 hover:bg-white transition-all cursor-pointer group" href="equipo.html">
+                        <div class="w-12 h-12 rounded-full border border-gray-300 overflow-hidden flex-shrink-0 bg-white">
+                            <img alt="Mauricio Bárbara De Parres" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="img/Equipo/perfil-mauricio-barbara.webp" onerror="this.src='img/logo.png'"/>
+                        </div>
+                        <div class="flex-grow min-w-0">
+                            <h3 class="text-sm font-bold text-gray-700 group-hover:text-[#009FFE] truncate transition-colors">Admin. Mauricio Bárbara De Parres</h3>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-bold truncate">Director de Admón. y Servicios</p>
                         </div>
                         <span class="material-symbols-outlined text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
                     </a>
@@ -134,20 +140,20 @@
         </aside>
 
         <!-- Right Profile Area -->
-        <article class="p-margin-desktop bg-white">
+        <article class="p-8 md:p-12 bg-white">
             <!-- Profile Header -->
-            <header class="flex flex-col md:flex-row items-center md:items-start gap-gutter mb-12 bg-white">
-                <div class="w-48 h-48 rounded-full border-4 border-gray-100 p-1">
-                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-primary shadow-lg">
-                        <img alt="Alejandro Lage" class="w-full h-full object-cover" src="img/Equipo/perfil-alejandro-javier-lage-suarez.webp"/>
+            <header class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12 bg-white">
+                <div class="w-48 h-48 rounded-full border-4 border-gray-100 p-1 flex-shrink-0">
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#009FFE] shadow-lg">
+                        <img alt="Economista Alejandro Javier Lage Suarez" class="w-full h-full object-cover bg-white" src="img/Equipo/perfil-alejandro-javier-lage-suarez.webp" onerror="this.src='img/logo.png'"/>
                     </div>
                 </div>
-                <div class="text-center md:text-left pt-4">
-                    <h2 class="font-display-lg text-headline-lg text-graphite mb-2">Alejandro Javier Lage Suárez</h2>
-                    <h3 class="font-title-lg text-title-lg text-primary-container mb-4">Dirección estratégica e Inteligencia Territorial</h3>
+                <div class="text-center md:text-left pt-4 flex-grow">
+                    <h2 class="text-3xl md:text-4xl font-black text-[#1d1d1b] mb-2 uppercase leading-tight">Economista Alejandro Javier Lage Suarez</h2>
+                    <h3 class="text-xl font-bold text-[#009FFE] mb-4">Director General / Head of PMO</h3>
                     <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                        <span class="bg-gray-100 border border-gray-200 px-3 py-1 rounded-full text-label-md font-medium text-gray-600 flex items-center gap-2">
-                            <span class="material-symbols-outlined text-primary text-[18px]">workspace_premium</span>
+                        <span class="bg-slate-50 border border-gray-200 px-4 py-2 rounded-full text-sm font-bold text-gray-600 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[#009FFE] text-[20px]">workspace_premium</span>
                             Senior Managing Partner
                         </span>
                     </div>
@@ -159,32 +165,32 @@
                 <!-- Left Data Col -->
                 <div class="space-y-10">
                     <div class="space-y-4">
-                        <h4 class="font-label-md text-label-sm uppercase tracking-widest text-gray-400">Contacto Directo</h4>
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 border-b border-gray-100 pb-2">Contacto Directo</h4>
                         <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-gray-600 hover:text-primary transition-colors cursor-pointer">
+                            <div class="flex items-center gap-3 text-gray-600 hover:text-[#009FFE] transition-colors cursor-pointer">
                                 <span class="material-symbols-outlined">mail</span>
-                                <span class="font-body-md">alage@big-i.com.mx</span>
+                                <span class="text-sm font-medium">alage@big-i.com.mx</span>
                             </div>
-                            <div class="flex items-center gap-3 text-gray-600 hover:text-primary transition-colors cursor-pointer">
+                            <div class="flex items-center gap-3 text-gray-600 hover:text-[#009FFE] transition-colors cursor-pointer">
                                 <span class="material-symbols-outlined">phone_iphone</span>
-                                <span class="font-body-md">55 2719 4220</span>
+                                <span class="text-sm font-medium">55 2719 4220</span>
                             </div>
                         </div>
                     </div>
                     <div class="space-y-4">
-                        <h4 class="font-label-md text-label-sm uppercase tracking-widest text-gray-400">Especialidades Clave</h4>
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 border-b border-gray-100 pb-2">Especialidades Clave</h4>
                         <div class="grid grid-cols-1 gap-4">
-                            <div class="flex items-center gap-4 p-3 border border-gray-200 bg-gray-50">
-                                <span class="material-symbols-outlined text-primary">public</span>
-                                <span class="font-label-md text-graphite">Inteligencia Territorial</span>
+                            <div class="flex items-center gap-4 p-4 border border-gray-200 bg-slate-50 rounded-lg group hover:border-[#009FFE] transition-colors">
+                                <span class="material-symbols-outlined text-[#009FFE] group-hover:scale-110 transition-transform">public</span>
+                                <span class="text-sm font-bold text-gray-700">Inteligencia Territorial</span>
                             </div>
-                            <div class="flex items-center gap-4 p-3 border border-gray-200 bg-gray-50">
-                                <span class="material-symbols-outlined text-primary">location_city</span>
-                                <span class="font-label-md text-graphite">Economía Urbana</span>
+                            <div class="flex items-center gap-4 p-4 border border-gray-200 bg-slate-50 rounded-lg group hover:border-[#009FFE] transition-colors">
+                                <span class="material-symbols-outlined text-[#009FFE] group-hover:scale-110 transition-transform">location_city</span>
+                                <span class="text-sm font-bold text-gray-700">Economía Urbana</span>
                             </div>
-                            <div class="flex items-center gap-4 p-3 border border-gray-200 bg-gray-50">
-                                <span class="material-symbols-outlined text-primary">account_tree</span>
-                                <span class="font-label-md text-graphite">Vinculación Gubernamental</span>
+                            <div class="flex items-center gap-4 p-4 border border-gray-200 bg-slate-50 rounded-lg group hover:border-[#009FFE] transition-colors">
+                                <span class="material-symbols-outlined text-[#009FFE] group-hover:scale-110 transition-transform">account_tree</span>
+                                <span class="text-sm font-bold text-gray-700">Vinculación Gubernamental</span>
                             </div>
                         </div>
                     </div>
@@ -192,23 +198,25 @@
                 <!-- Right Data Col -->
                 <div class="space-y-10">
                     <div class="space-y-4">
-                        <h4 class="font-label-md text-label-sm uppercase tracking-widest text-gray-400">Resumen Ejecutivo</h4>
-                        <p class="font-body-md text-graphite leading-relaxed">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 border-b border-gray-100 pb-2">Resumen Ejecutivo</h4>
+                        <p class="text-gray-600 leading-relaxed text-sm">
                             Economista y estratega público con más de 25 años de experiencia en la intersección de la regulación energética, el desarrollo territorial y la inteligencia de datos. Ha liderado proyectos nacionales de gran envergadura enfocados en la sustentabilidad y el cumplimiento normativo.
                         </p>
                     </div>
                     <div class="space-y-6">
-                        <h4 class="font-label-md text-label-sm uppercase tracking-widest text-gray-400">Trayectoria Destacada</h4>
-                        <div class="relative pl-6 space-y-8">
-                            <div class="relative timeline-bullet timeline-line">
-                                <h5 class="font-title-lg text-graphite text-[16px] font-bold">BIG-i Negocios Informática</h5>
-                                <p class="font-label-md text-primary">Director General &amp; Fundador</p>
-                                <p class="text-gray-500 text-[13px] mt-1 italic">Liderazgo de proyectos de inteligencia territorial y consultoría estratégica para el sector energético.</p>
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 border-b border-gray-100 pb-2">Trayectoria Destacada</h4>
+                        <div class="relative pl-6 space-y-8 border-l-2 border-gray-200 ml-3">
+                            <div class="relative">
+                                <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-white border-4 border-[#009FFE]"></div>
+                                <h5 class="text-[#1d1d1b] text-base font-bold">BIG-i Negocios Informática</h5>
+                                <p class="text-xs font-bold text-[#009FFE] uppercase tracking-wider mb-1">Director General &amp; Fundador</p>
+                                <p class="text-gray-500 text-sm leading-relaxed">Liderazgo de proyectos de inteligencia territorial y consultoría estratégica para el sector energético.</p>
                             </div>
-                            <div class="relative timeline-bullet last-timeline-item">
-                                <h5 class="font-title-lg text-graphite text-[16px] font-bold">Cámara de Diputados</h5>
-                                <p class="font-label-md text-primary">Asesor de Comisiones Estratégicas</p>
-                                <p class="text-gray-500 text-[13px] mt-1">Diseño y análisis de impacto legislativo en materia de infraestructura y sustentabilidad.</p>
+                            <div class="relative">
+                                <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-white border-4 border-gray-300"></div>
+                                <h5 class="text-[#1d1d1b] text-base font-bold">Cámara de Diputados</h5>
+                                <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Asesor de Comisiones Estratégicas</p>
+                                <p class="text-gray-500 text-sm leading-relaxed">Diseño y análisis de impacto legislativo en materia de infraestructura y sustentabilidad.</p>
                             </div>
                         </div>
                     </div>
@@ -216,51 +224,59 @@
             </div>
 
             <!-- Strategic Value Block -->
-            <div class="bg-[#F0F4F8] border border-gray-200 p-10 mb-16 rounded-lg">
-                <h4 class="font-headline-md text-headline-md text-primary-container mb-8">Valor estratégico para BIG-i</h4>
+            <div class="bg-slate-50 border border-gray-200 p-10 mb-16 rounded-xl">
+                <h4 class="text-xl font-bold text-[#1d1d1b] mb-8 uppercase border-b-2 border-[#009FFE] inline-block pb-2">Valor estratégico para BIG-i</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="space-y-2">
-                        <img src="img/perfil-legal.png" alt="Blindaje Jurídico" class="w-10 h-10 object-contain"/>
-                        <h5 class="font-label-md text-graphite font-bold">Blindaje Jurídico</h5>
-                        <p class="text-[12px] text-gray-600">Garantía de cumplimiento normativo y anticipación a cambios regulatorios.</p>
+                    <div class="space-y-3 bg-white p-5 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-[#009FFE]/10 rounded flex items-center justify-center border border-[#009FFE]/20">
+                            <span class="material-symbols-outlined text-[#009FFE]">gavel</span>
+                        </div>
+                        <h5 class="text-sm text-[#1d1d1b] font-bold">Blindaje Jurídico</h5>
+                        <p class="text-xs text-gray-600 leading-relaxed">Garantía de cumplimiento normativo y anticipación a cambios regulatorios.</p>
                     </div>
-                    <div class="space-y-2">
-                        <img src="img/perfil-inteligencia.png" alt="Inteligencia Territorial" class="w-10 h-10 object-contain"/>
-                        <h5 class="font-label-md text-graphite font-bold">Inteligencia Territorial</h5>
-                        <p class="text-[12px] text-gray-600">Puente estratégico entre proyectos de infraestructura y el territorio.</p>
+                    <div class="space-y-3 bg-white p-5 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-[#009FFE]/10 rounded flex items-center justify-center border border-[#009FFE]/20">
+                            <span class="material-symbols-outlined text-[#009FFE]">map</span>
+                        </div>
+                        <h5 class="text-sm text-[#1d1d1b] font-bold">Inteligencia Territorial</h5>
+                        <p class="text-xs text-gray-600 leading-relaxed">Puente estratégico entre proyectos de infraestructura y el territorio.</p>
                     </div>
-                    <div class="space-y-2">
-                        <img src="img/perfil-sustentable.png" alt="Visión Sustentable" class="w-10 h-10 object-contain"/>
-                        <h5 class="font-label-md text-graphite font-bold">Visión Sustentable</h5>
-                        <p class="text-[12px] text-gray-600">Integración de objetivos ESG en la arquitectura de cada proyecto.</p>
+                    <div class="space-y-3 bg-white p-5 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-[#009FFE]/10 rounded flex items-center justify-center border border-[#009FFE]/20">
+                            <span class="material-symbols-outlined text-[#009FFE]">eco</span>
+                        </div>
+                        <h5 class="text-sm text-[#1d1d1b] font-bold">Visión Sustentable</h5>
+                        <p class="text-xs text-gray-600 leading-relaxed">Integración de objetivos ESG en la arquitectura de cada proyecto.</p>
                     </div>
-                    <div class="space-y-2">
-                        <img src="img/perfil-liderazgo.png" alt="Liderazgo" class="w-10 h-10 object-contain"/>
-                        <h5 class="font-label-md text-graphite font-bold">Liderazgo</h5>
-                        <p class="text-[12px] text-gray-600">Capacidad probada para transformar datos en acciones de impacto real.</p>
+                    <div class="space-y-3 bg-white p-5 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-[#009FFE]/10 rounded flex items-center justify-center border border-[#009FFE]/20">
+                            <span class="material-symbols-outlined text-[#009FFE]">military_tech</span>
+                        </div>
+                        <h5 class="text-sm text-[#1d1d1b] font-bold">Liderazgo</h5>
+                        <p class="text-xs text-gray-600 leading-relaxed">Capacidad probada para transformar datos en acciones de impacto real.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Affiliations -->
             <div>
-                <h4 class="font-label-md text-label-sm uppercase tracking-widest text-gray-400 mb-8 text-center">Afiliaciones y participaciones relevantes</h4>
-                <div class="flex flex-wrap justify-center items-center gap-12 grayscale opacity-40 hover:opacity-100 transition-opacity duration-500">
-                    <div class="flex flex-col items-center gap-2">
-                        <span class="material-symbols-outlined text-graphite text-[48px]">public</span>
-                        <span class="font-label-sm font-bold text-graphite">ONU</span>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8 text-center border-b border-gray-100 pb-2">Afiliaciones y participaciones relevantes</h4>
+                <div class="flex flex-wrap justify-center items-center gap-12 grayscale opacity-50 hover:opacity-100 transition-opacity duration-500">
+                    <div class="flex flex-col items-center gap-2 group">
+                        <span class="material-symbols-outlined text-gray-600 text-[40px] group-hover:text-[#009FFE] transition-colors">public</span>
+                        <span class="text-xs font-bold text-gray-500 group-hover:text-[#1d1d1b] transition-colors">ONU</span>
                     </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <span class="material-symbols-outlined text-graphite text-[48px]">account_balance</span>
-                        <span class="font-label-sm font-bold text-graphite">FCBG</span>
+                    <div class="flex flex-col items-center gap-2 group">
+                        <span class="material-symbols-outlined text-gray-600 text-[40px] group-hover:text-[#009FFE] transition-colors">account_balance</span>
+                        <span class="text-xs font-bold text-gray-500 group-hover:text-[#1d1d1b] transition-colors">FCBG</span>
                     </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <span class="material-symbols-outlined text-graphite text-[48px]">groups</span>
-                        <span class="font-label-sm font-bold text-graphite">Cámara</span>
+                    <div class="flex flex-col items-center gap-2 group">
+                        <span class="material-symbols-outlined text-gray-600 text-[40px] group-hover:text-[#009FFE] transition-colors">groups</span>
+                        <span class="text-xs font-bold text-gray-500 group-hover:text-[#1d1d1b] transition-colors">Cámara</span>
                     </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <span class="material-symbols-outlined text-graphite text-[48px]">corporate_fare</span>
-                        <span class="font-label-sm font-bold text-graphite">KG BIG-i</span>
+                    <div class="flex flex-col items-center gap-2 group">
+                        <span class="material-symbols-outlined text-gray-600 text-[40px] group-hover:text-[#009FFE] transition-colors">corporate_fare</span>
+                        <span class="text-xs font-bold text-gray-500 group-hover:text-[#1d1d1b] transition-colors">KG BIG-i</span>
                     </div>
                 </div>
             </div>
