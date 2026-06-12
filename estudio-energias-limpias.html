@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Energías Limpias | BIG-i</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background">
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300" id="top-nav">
+    <a class="block flex-shrink-0 relative z-10" href="index.html"><img alt="BIG-i" class="h-10 w-auto" src="img/logo.png"/></a>
+    <ul class="hidden md:flex items-center gap-7 list-none m-0 p-0 absolute left-1/2 -translate-x-1/2">
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="index.html">Inicio</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="quienes_somos.html">Quiénes somos</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="equipo.html">Equipo</a></li>
+        <li><a class="nav-link nav-active text-primary font-bold text-sm" href="estudios.html">Estudios</a></li>
+        <li><a class="nav-link text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="flex items-center justify-end gap-3 relative z-10">
+        <button class="hidden md:block bg-primary-container text-on-primary-container px-5 py-2 rounded font-semibold text-sm hover:opacity-90">Administrador</button>
+        <button class="md:hidden text-on-surface p-2" id="menu-toggle"><span class="material-symbols-outlined text-3xl">menu</span></button>
+    </div>
+</nav>
+<div class="fixed top-0 left-0 w-full h-fit bg-surface-container-highest z-[45] md:hidden pt-20 pb-8 px-6 border-b border-outline-variant shadow-2xl" id="mobile-menu">
+    <div class="flex flex-col gap-5">
+        <a class="text-on-surface-variant font-semibold text-xl" href="index.html">Inicio</a>
+        <a class="text-on-surface-variant font-semibold text-xl" href="quienes_somos.html">Quiénes somos</a>
+        <a class="text-on-surface-variant font-semibold text-xl" href="equipo.html">Equipo</a>
+        <a class="text-primary font-bold text-xl" href="estudios.html">Estudios</a>
+        <a class="text-on-surface-variant font-semibold text-xl" href="contacto.html">Contacto</a>
+        <hr class="border-outline-variant"/><button class="bg-primary-container text-on-primary-container w-full py-4 rounded font-bold text-xl">Administrador</button>
+    </div>
+</div>
+
+<main class="bg-[#1d1d1b] text-gray-300">
+    <!-- Hero Section -->
+    <header class="relative flex items-end overflow-hidden border-b border-gray-700" style="min-height:75vh;padding-top:80px;">
+        <div class="absolute inset-0 z-0">
+            <img src="img/Estudios/portada-energias-limpias.webp" alt="Energías Limpias" class="w-full h-full object-cover opacity-30 mix-blend-overlay"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1d1d1b] via-[#1d1d1b]/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#1d1d1b] to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pb-20 w-full">
+            <a href="estudios.html" class="inline-flex items-center gap-1.5 text-gray-400 hover:text-[#009FFE] transition-colors text-sm mb-6"><span class="material-symbols-outlined text-[16px]">arrow_back</span>Volver a Estudios</a>
+            
+            <div class="flex items-center gap-3 mb-4">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#0080b7]/20 text-[#009FFE] border border-[#009FFE]/30">Energía</span>
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#0080b7]/20 text-[#009FFE] border border-[#009FFE]/30">Sustentabilidad</span>
+            </div>
+            
+            <h1 class="font-black leading-none tracking-tighter text-white mb-4 uppercase" style="font-size:clamp(36px,5.5vw,80px);">ENERGÍAS<br><span class="text-[#009FFE]">LIMPIAS</span></h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">Inteligencia territorial y geoespacial para la planeación y viabilidad de proyectos energéticos sustentables.</p>
+            
+            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-gray-700 max-w-4xl mt-8 shadow-2xl">
+                <h3 class="text-lg font-bold text-[#009FFE] mb-2 uppercase tracking-widest">Soluciones energéticas sustentables para la transición y resiliencia territorial</h3>
+                <p class="text-sm md:text-base text-gray-200 leading-relaxed">La transición energética global exige proyectos sostenibles, eficientes y territorialmente viables que permitan reducir el impacto ambiental y fortalecer la seguridad energética. En BIG-i desarrollamos estudios especializados y soluciones estratégicas para proyectos de energías limpias, integrando análisis territorial, inteligencia geoespacial y tecnologías avanzadas para optimizar la planeación, localización, viabilidad y operación de infraestructura energética sustentable.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Productos y Servicios -->
+    <section class="py-20 border-b border-gray-700 relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#009FFE]/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+            <div class="text-center mb-16 max-w-4xl mx-auto">
+                <span class="text-[#009FFE] text-sm font-bold tracking-widest uppercase mb-4 block">Productos y Servicios</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase">Modelación territorial y <span class="text-[#0080b7]">análisis geoespacial</span></h2>
+                <p class="text-gray-300 text-lg leading-relaxed">A través de herramientas de inteligencia artificial y Sistemas de Información Geográfica (SIG), evaluamos variables ambientales, climáticas, sociales, regulatorias y de conectividad para garantizar proyectos energéticos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 hover:border-[#009FFE] transition-colors group">
+                    <div class="w-12 h-12 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-[#009FFE] text-2xl">nature_people</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Estudios de Impacto Ambiental y Social</h3>
+                    <p class="text-gray-300 leading-relaxed">Evaluación integral de impactos ecológicos, paisajísticos y comunitarios para garantizar el cumplimiento regulatorio, la sostenibilidad territorial y la aceptación social del proyecto.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 hover:border-[#009FFE] transition-colors group">
+                    <div class="w-12 h-12 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-[#009FFE] text-2xl">electric_bolt</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Planeación de Infraestructura y Redes Energéticas</h3>
+                    <p class="text-gray-300 leading-relaxed">Optimización geoespacial para líneas de transmisión, subestaciones, almacenamiento energético, electrolineras y sistemas de distribución inteligente.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 hover:border-[#009FFE] transition-colors group">
+                    <div class="w-12 h-12 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-[#009FFE] text-2xl">co2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Diagnóstico de Huella de Carbono y Sustentabilidad</h3>
+                    <p class="text-gray-300 leading-relaxed">Análisis de emisiones, eficiencia energética y estrategias de transición energética para proyectos públicos, industriales y urbanos.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 hover:border-[#009FFE] transition-colors group">
+                    <div class="w-12 h-12 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-[#009FFE] text-2xl">sensors</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Monitoreo Inteligente y Gestión Operativa</h3>
+                    <p class="text-gray-300 leading-relaxed">Integración de sensores IoT, plataformas de monitoreo y sistemas inteligentes para supervisión energética, mantenimiento predictivo y control operativo en tiempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soluciones Integrales -->
+    <section class="py-20 bg-[#171717]">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white uppercase border-b-2 border-[#009FFE] inline-block pb-2">Soluciones Integrales para Sectores Estratégicos</h2>
+                <p class="mt-4 text-gray-300 text-lg max-w-3xl mx-auto">Nuestros servicios de inteligencia territorial y planeación energética están diseñados para impulsar proyectos sostenibles en sectores clave.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg hover:-translate-y-1 transition-transform">
+                    <span class="material-symbols-outlined text-[#009FFE] text-3xl mb-3">account_balance</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Agencias Energéticas</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Planeación territorial energética, transición energética y desarrollo de infraestructura sustentable.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#0080b7] border border-gray-800 shadow-lg hover:-translate-y-1 transition-transform">
+                    <span class="material-symbols-outlined text-[#0080b7] text-3xl mb-3">solar_power</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Empresas de Energía Renovable</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Estudios de factibilidad, modelación territorial y optimización operativa para parques solares y eólicos.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg hover:-translate-y-1 transition-transform">
+                    <span class="material-symbols-outlined text-[#009FFE] text-3xl mb-3">factory</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Industria y Manufactura</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Estrategias de eficiencia energética, reducción de emisiones y transición hacia energías limpias.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#0080b7] border border-gray-800 shadow-lg hover:-translate-y-1 transition-transform">
+                    <span class="material-symbols-outlined text-[#0080b7] text-3xl mb-3">location_city</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Desarrolladores Inmobiliarios y Smart Cities</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Integración de infraestructura energética inteligente y soluciones urbanas sostenibles.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#009FFE] border border-gray-800 shadow-lg hover:-translate-y-1 transition-transform">
+                    <span class="material-symbols-outlined text-[#009FFE] text-3xl mb-3">agriculture</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Sector Agroindustrial</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Evaluación de biomasa, aprovechamiento energético y optimización de recursos naturales.</p>
+                </div>
+                <div class="bg-[#1d1d1b] p-6 rounded-xl border-l-4 border-l-[#0080b7] border border-gray-800 shadow-lg hover:-translate-y-1 transition-transform">
+                    <span class="material-symbols-outlined text-[#0080b7] text-3xl mb-3">monitoring</span>
+                    <h4 class="text-white font-bold text-lg mb-2">Fondos de Inversión y Consultoras</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Auditorías territoriales, análisis de riesgo y validación técnica para proyectos energéticos sostenibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evidencia Visual -->
+    <section class="py-20 bg-[#171717] border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-white uppercase border-b-2 border-[#009FFE] inline-block pb-2 mb-2">Evidencia Visual</h2>
+                    <p class="text-gray-400 text-sm">Proyectos, diagnósticos y levantamientos territoriales.</p>
+                </div>
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#009FFE]/10 text-[#009FFE] border border-[#009FFE]/30">Galería de Estudio</span>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-xl border border-gray-800 group">
+                    <img class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" src="img/19_Energías_limpias/1-energias-limpias.webp" alt="Evidencia Energías 1"/>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-800 group">
+                    <img class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" src="img/19_Energías_limpias/2-energias-limpias.webp" alt="Evidencia Energías 2"/>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-800 group">
+                    <img class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" src="img/19_Energías_limpias/3-energias-limpias.webp" alt="Evidencia Energías 3"/>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-800 group">
+                    <img class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" src="img/19_Energías_limpias/4-energias-limpias.webp" alt="Evidencia Energías 4"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 border-t border-gray-700 bg-[#1d1d1b]">
+        <div class="max-w-3xl mx-auto px-6 md:px-10 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6 uppercase">¿Interesado en este <span class="text-[#009FFE]">estudio?</span></h2>
+            <p class="text-lg text-gray-300 mb-10 leading-relaxed">Transformamos datos espaciales y ambientales en proyectos energéticos rentables y sustentables.</p>
+            <div class="flex flex-wrap justify-center gap-5">
+                <a class="bg-[#009FFE] text-[#131312] px-8 py-4 font-bold text-sm flex items-center gap-2 hover:bg-[#0080b7] hover:text-white active:scale-95 transition-all rounded-lg shadow-[0_0_15px_rgba(0,159,254,0.3)]" href="contacto.html">
+                    Solicitar diagnóstico <span class="material-symbols-outlined text-[18px]">north_east</span>
+                </a>
+                <a class="border-2 border-gray-600 text-gray-300 px-8 py-4 font-bold text-sm hover:border-[#009FFE] hover:text-[#009FFE] active:scale-95 transition-all rounded-lg" href="estudios.html">
+                    Ver todos los estudios
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ==================== FOOTER CORPORATIVO ==================== -->
+<footer class="bg-[#171717] border-t border-gray-800 pt-16 pb-8 text-gray-300">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+            
+            <!-- Columna 1: Branding y Dirección -->
+            <div class="lg:col-span-2">
+                <img src="img/logo.png" alt="BIG-i" class="h-12 w-auto mb-4 object-contain"/>
+                <p class="text-[#009FFE] font-bold text-sm uppercase tracking-widest mb-4">Inteligencia Territorial · México</p>
+                <p class="text-sm leading-relaxed text-gray-400 mb-6">
+                    Javier Barros 540,<br>
+                    Santa Fe, Alcaldia Álvaro Obregon.<br>
+                    Park Plaza 1, Piso 8 Oficina 803 Central Holding.<br>
+                    Ciudad de México, C.P. 01219.
+                </p>
+            </div>
+
+            <!-- Columna 2: Enlaces Rápidos -->
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Enlaces</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-[#009FFE] transition-colors">Inicio</a></li>
+                    <li><a href="quienes_somos.html" class="hover:text-[#009FFE] transition-colors">¿Quiénes somos?</a></li>
+                    <li><a href="estudios.html" class="hover:text-[#009FFE] transition-colors">Estudios</a></li>
+                    <li><a href="contacto.html" class="hover:text-[#009FFE] transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Directorio -->
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Directorio</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li>Alejandro Javier Lage Suárez</li>
+                    <li>Dr. Fluvio César Ruíz Alarcón</li>
+                    <li>Mtro. Loreno Mauricio Meyer Falcón</li>
+                    <li>Dante Yamil San Pedro Jacobo</li>
+                    <li><a href="equipo-estrategico.html" class="text-[#009FFE] font-semibold hover:text-white transition-colors mt-2 inline-block">Ver más...</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Contacto y Sitios Web -->
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Contacto</h4>
+                <p class="text-[#009FFE] font-bold text-lg mb-6">+52 55 5261 4660 <span class="text-sm font-normal text-gray-400 block mt-1">ext. 3158</span></p>
+                
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-4">Sitios Web</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="https://www.big-i.com.mx" target="_blank" class="hover:text-[#009FFE] transition-colors">www.big-i.com.mx</a></li>
+                    <li><a href="https://www.kab-geo.com.mx" target="_blank" class="hover:text-[#009FFE] transition-colors">www.kab-geo.com.mx</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer: Legales y Copyright -->
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-gray-500">Copyright © 2013, BIG-i Operado por Kab Geo S.A. de C.V.
+Todos los derechos reservados.</p>
+            <div class="flex items-center gap-4 text-xs text-gray-500">
+                <a href="terminos.html" class="hover:text-[#009FFE] transition-colors">Términos de Servicio</a>
+                <span>·</span>
+                <a href="privacidad.html" class="hover:text-[#009FFE] transition-colors">Políticas de Privacidad</a>
+                <span>·</span>
+                <a href="contacto.html" class="hover:text-[#009FFE] transition-colors">Contacto</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button class="scroll-top-btn fixed bottom-8 right-8 w-12 h-12 bg-electric-blue text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 z-50" id="scrollTopBtn"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body></html>
