@@ -57,146 +57,180 @@
 <main class="pt-[72px]">
 
     <!-- ═══════════════════════ HERO SECTION ═══════════════════════ -->
-    <section class="relative h-[614px] flex items-center justify-center px-margin-desktop overflow-hidden">
-    <div class="absolute inset-0 z-0">
-        <img alt="High-tech business environment" class="w-full h-full object-cover opacity-30 grayscale" src="img/Quiénes_somos/imagen-quienes somos.webp"/>
-    </div>
-    <div class="relative z-10 max-w-3xl w-full flex flex-col items-center text-center">
-        <h1 class="font-display-lg text-display-lg font-bold text-primary mb-4 uppercase">¡SOMOS BIG-I!</h1>
-        
-        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-            Especialistas en estudios con referente territorial.
-        </p>
+    <section class="relative h-[614px] flex items-center justify-center px-6 md:px-10 overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-[#131312]">
+            <img alt="High-tech business environment" class="w-full h-full object-cover opacity-30 grayscale" src="img/Quiénes_somos/imagen-quienes somos.webp"/>
+            <div class="absolute inset-0 bg-[#1d1d1b]/70 mix-blend-multiply"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl w-full flex flex-col items-center text-center">
+            <h1 class="text-5xl md:text-7xl font-black text-[#009FFE] mb-6 uppercase drop-shadow-2xl tracking-tighter leading-none">¡SOMOS BIG-I!</h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl">
+                Especialistas en estudios con referente territorial.
+            </p>
+            <div class="w-20 h-1.5 bg-[#009FFE] mt-8"></div>
+        </div>
+    </section>
 
-        <div class="w-16 h-1 bg-primary mt-8 opacity-80"></div>
-    </div>
-</section>
+    <!-- ═══════════════════════ DESCRIPCIÓN Y VALOR (Sec 1) ═══════════════════════ -->
+    <section class="py-24 px-6 md:px-10 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+            <div class="space-y-6">
+                <h2 class="text-3xl md:text-4xl font-black text-[#1d1d1b] border-l-4 border-[#009FFE] pl-6 uppercase">¿Quiénes Somos?</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    En BIG-i somos una firma especializada en el diseño y desarrollo de proyectos con un enfoque integral en el análisis territorial. Acompañamos a nuestros clientes en todo el ciclo de vida del proyecto: desde el diagnóstico inicial y el diseño estratégico, hasta la ejecución, supervisión, evaluación y control de la puesta en marcha. Contamos con una sólida capacidad operativa e infraestructura técnica para desarrollar proyectos de gran escala, implementando metodologías y estándares de calidad reconocidos a nivel internacional para garantizar que cada solución supere las expectativas del mercado.
+                </p>
+            </div>
+            <div class="space-y-6">
+                <h2 class="text-3xl md:text-4xl font-black text-[#1d1d1b] border-l-4 border-[#0080b7] pl-6 uppercase">Nuestra Propuesta de Valor y Valores</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Nuestro pilar fundamental es la gestión del conocimiento. Consolidamos un equipo multidisciplinario de expertos de primer nivel que, mediante la integración de herramientas tecnológicas inteligentes, proveen información segura, veraz, exacta y de alto valor estratégico para optimizar la toma de decisiones complejas.
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <!-- ═══════════════════════ CONTENT (Light Theme) ═══════════════════════ -->
-    <div class="bg-white text-graphite">
-
-        <!-- Description & Value Proposition -->
-        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-                <div class="space-y-6">
-                    <h2 class="font-headline-lg text-headline-lg text-graphite border-l-4 border-secondary pl-6">¿Quiénes Somos?</h2>
-                    <p class="font-body-lg text-body-lg text-graphite/80 leading-relaxed">
-                        En BIG-i somos una firma especializada en el diseño y desarrollo de proyectos con un enfoque integral en el análisis territorial. Acompañamos a nuestros clientes en todo el ciclo de vida del proyecto: desde el diagnóstico inicial y el diseño estratégico, hasta la ejecución, supervisión, evaluación y control de la puesta en marcha.
-                    </p>
+    <!-- ═══════════════════════ ¿QUÉ HACEMOS EN BIG-i? (Sec 2) ═══════════════════════ -->
+    <section class="py-24 bg-[#1d1d1b] border-y border-gray-800 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#009FFE]/5 blur-[160px] rounded-full pointer-events-none z-0"></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-white uppercase mb-6">¿Qué hacemos en <span class="text-[#009FFE]">BIG-i?</span></h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">Transformamos el análisis territorial en proyectos de desarrollo de alto impacto. Nuestra capacidad técnica nos permite ofrecer un acompañamiento transversal e ilimitado en todas las etapas y fases de un proyecto.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 01 -->
+                <div class="relative bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 hover:border-[#009FFE] transition-colors group overflow-hidden min-h-[260px] flex flex-col justify-center">
+                    <span class="absolute -right-4 -bottom-6 text-[140px] font-black text-white/5 group-hover:text-[#009FFE]/10 transition-colors pointer-events-none select-none leading-none">01</span>
+                    <h3 class="text-2xl font-bold text-white mb-3 relative z-10 uppercase tracking-wide border-b border-gray-600/50 pb-3">Diagnóstico y Planificación</h3>
+                    <p class="text-gray-300 relative z-10 text-lg">Análisis territorial de precisión.</p>
                 </div>
-                <div class="space-y-6">
-                    <h2 class="font-headline-lg text-headline-lg text-graphite border-l-4 border-primary pl-6">Propuesta de Valor</h2>
-                    <p class="font-body-lg text-body-lg text-graphite/80 leading-relaxed">
-                        Nuestro pilar fundamental es la gestión del conocimiento. Consolidamos un equipo multidisciplinario de expertos de primer nivel que, mediante la integración de herramientas tecnológicas inteligentes, proveen información segura, veraz, exacta y de alto valor estratégico para optimizar la toma de decisiones complejas.
-                    </p>
+                <!-- Card 02 -->
+                <div class="relative bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 hover:border-[#009FFE] transition-colors group overflow-hidden min-h-[260px] flex flex-col justify-center">
+                    <span class="absolute -right-4 -bottom-6 text-[140px] font-black text-white/5 group-hover:text-[#009FFE]/10 transition-colors pointer-events-none select-none leading-none">02</span>
+                    <h3 class="text-2xl font-bold text-white mb-3 relative z-10 uppercase tracking-wide border-b border-gray-600/50 pb-3">Ejecución y Gestión</h3>
+                    <p class="text-gray-300 relative z-10 text-lg">Implementación con rigor operativo.</p>
+                </div>
+                <!-- Card 03 -->
+                <div class="relative bg-white/5 backdrop-blur-md p-8 rounded-xl border border-gray-700 hover:border-[#009FFE] transition-colors group overflow-hidden min-h-[260px] flex flex-col justify-center">
+                    <span class="absolute -right-4 -bottom-6 text-[140px] font-black text-white/5 group-hover:text-[#009FFE]/10 transition-colors pointer-events-none select-none leading-none">03</span>
+                    <h3 class="text-2xl font-bold text-white mb-3 relative z-10 uppercase tracking-wide border-b border-gray-600/50 pb-3">Evaluación y Control</h3>
+                    <p class="text-gray-300 relative z-10 text-lg">Garantía de continuidad y optimización de procesos.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Features Section -->
-        <section class="bg-slate-50 py-20 px-margin-mobile md:px-margin-desktop border-y border-slate-200">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white border border-slate-200 p-8 transition-all hover:shadow-lg group">
-                    <div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined text-3xl">public</span>
+    <!-- ═══════════════════════ ¿POR QUÉ ELEGIRNOS? (Sec 3) ═══════════════════════ -->
+    <section class="py-24 bg-slate-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <h2 class="text-3xl md:text-4xl font-black text-[#1d1d1b] uppercase text-center mb-16">¿Por qué <span class="text-[#009FFE]">elegirnos?</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-xl hover:border-[#009FFE]/30 transition-all group">
+                    <div class="w-16 h-16 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6 group-hover:bg-[#009FFE] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-[#009FFE] group-hover:text-white transition-colors">public</span>
                     </div>
-                    <h3 class="font-title-lg text-title-lg text-graphite mb-2">Estándares Internacionales</h3>
-                    <p class="font-label-md text-label-md text-graphite/60">Calidad global aplicada al contexto local.</p>
+                    <h3 class="font-bold text-[17px] text-[#1d1d1b] mb-4 uppercase tracking-wide leading-snug">Estándares Internacionales</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Productos y servicios diseñados bajo los más estrictos criterios de calidad global.</p>
                 </div>
-                <div class="bg-white border border-slate-200 p-8 transition-all hover:shadow-lg group">
-                    <div class="w-12 h-12 bg-secondary/10 flex items-center justify-center border border-secondary/30 mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined text-3xl">memory</span>
+                <!-- Feature 2 -->
+                <div class="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-xl hover:border-[#009FFE]/30 transition-all group">
+                    <div class="w-16 h-16 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6 group-hover:bg-[#009FFE] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-[#009FFE] group-hover:text-white transition-colors">memory</span>
                     </div>
-                    <h3 class="font-title-lg text-title-lg text-graphite mb-2">Inclusión Tecnológica Inteligente</h3>
-                    <p class="font-label-md text-label-md text-graphite/60">Herramientas de vanguardia para análisis preciso.</p>
+                    <h3 class="font-bold text-[17px] text-[#1d1d1b] mb-4 uppercase tracking-wide leading-snug">Inclusión Tecnológica Inteligente</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Potenciamos el conocimiento de nuestros especialistas con herramientas tecnológicas avanzadas.</p>
                 </div>
-                <div class="bg-white border border-slate-200 p-8 transition-all hover:shadow-lg group">
-                    <div class="w-12 h-12 bg-tertiary/10 flex items-center justify-center border border-tertiary/30 mb-6 group-hover:bg-tertiary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined text-3xl">monitoring</span>
+                <!-- Feature 3 -->
+                <div class="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-xl hover:border-[#009FFE]/30 transition-all group">
+                    <div class="w-16 h-16 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6 group-hover:bg-[#009FFE] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-[#009FFE] group-hover:text-white transition-colors">monitoring</span>
                     </div>
-                    <h3 class="font-title-lg text-title-lg text-graphite mb-2">Información para la Acción</h3>
-                    <p class="font-label-md text-label-md text-graphite/60">Datos transformados en decisiones estratégicas.</p>
+                    <h3 class="font-bold text-[17px] text-[#1d1d1b] mb-4 uppercase tracking-wide leading-snug">Información para la Acción</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Entregamos datos seguros, veraces y exactos que mitigan el riesgo y aseguran el éxito en la toma de decisiones.</p>
                 </div>
-                <div class="bg-white border border-slate-200 p-8 transition-all hover:shadow-lg group">
-                    <div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined text-3xl">support_agent</span>
+                <!-- Feature 4 -->
+                <div class="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-xl hover:border-[#009FFE]/30 transition-all group">
+                    <div class="w-16 h-16 bg-[#009FFE]/10 flex items-center justify-center rounded-lg border border-[#009FFE]/20 mb-6 group-hover:bg-[#009FFE] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-[#009FFE] group-hover:text-white transition-colors">support_agent</span>
                     </div>
-                    <h3 class="font-title-lg text-title-lg text-graphite mb-2">Orientación al Cliente</h3>
-                    <p class="font-label-md text-label-md text-graphite/60">Acompañamiento cercano en cada fase.</p>
+                    <h3 class="font-bold text-[17px] text-[#1d1d1b] mb-4 uppercase tracking-wide leading-snug">Orientación al Cliente</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Diseñamos soluciones a la medida con el firme propósito de superar cada una de sus expectativas.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Equipo Estratégico -->
-        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
-            <h2 class="font-headline-lg text-headline-lg text-graphite mb-12">Equipo Estratégico</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 mb-16">
-                <div class="bg-white border border-slate-200 p-6 flex flex-col items-center text-center hover:border-primary transition-colors group shadow-sm">
-                    <img alt="Alejandro Javier Lage Suarez" class="w-24 h-24 rounded-full object-cover mb-6 border-2 border-slate-100 group-hover:border-primary" src="img/Equipo/perfil-alejandro-javier-lage-suarez.webp"/>
-                    <h3 class="font-title-lg text-[16px] text-graphite leading-tight mb-2">Alejandro Javier Lage Suarez</h3>
-                    <p class="font-label-sm text-primary uppercase mb-4 font-semibold">Dirección estratégica</p>
-                    <p class="font-body-md text-[12px] text-graphite/70 mb-6 flex-grow">Economista y estratega político con más de 25 años de experiencia en proyectos de alto impacto.</p>
-                    <a class="font-label-md text-primary font-bold hover:underline transition-all" href="equipo.html">Ver perfil &gt;</a>
+    <!-- ═══════════════════════ NUESTROS ESTUDIOS (Sec 4) ═══════════════════════ -->
+    <section class="py-24 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-[#1d1d1b] uppercase mb-12">Nuestros Estudios / <span class="text-[#009FFE]">Sectores Estratégicos</span></h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <a href="estudio-desarrollo-urbano.html" class="px-6 py-3 border-2 border-gray-200 rounded-full font-bold text-gray-600 hover:border-[#009FFE] hover:text-[#009FFE] transition-colors">Desarrollo Urbano</a>
+                <a href="estudio-gasolineras.html" class="px-6 py-3 border-2 border-gray-200 rounded-full font-bold text-gray-600 hover:border-[#009FFE] hover:text-[#009FFE] transition-colors">Estaciones de servicio de combustibles</a>
+                <a href="estudio-infraestructura.html" class="px-6 py-3 border-2 border-gray-200 rounded-full font-bold text-gray-600 hover:border-[#009FFE] hover:text-[#009FFE] transition-colors">Infraestructura</a>
+                <a href="estudio-mineria.html" class="px-6 py-3 border-2 border-gray-200 rounded-full font-bold text-gray-600 hover:border-[#009FFE] hover:text-[#009FFE] transition-colors">Minería</a>
+                <a href="estudio-diseno-arquitectonico.html" class="px-6 py-3 border-2 border-gray-200 rounded-full font-bold text-gray-600 hover:border-[#009FFE] hover:text-[#009FFE] transition-colors">Diseño Arquitectónico e Ingeniería</a>
+            </div>
+            <a href="estudios.html" class="inline-flex items-center gap-2 bg-[#009FFE] text-white px-10 py-4 font-black rounded-lg hover:bg-[#0080b7] transition-all transform active:scale-95 shadow-[0_0_15px_rgba(0,159,254,0.3)]">
+                Ver todos los estudios
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ EQUIPO ESTRATÉGICO (Sec 5) ═══════════════════════ -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <h2 class="text-3xl md:text-4xl font-black text-[#1d1d1b] uppercase text-center mb-16">Equipo <span class="text-[#009FFE]">Estratégico</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+                <!-- Alejandro -->
+                <div class="bg-slate-50 border border-gray-200 p-6 rounded-xl flex flex-col items-center text-center hover:border-[#009FFE] transition-all group shadow-sm hover:shadow-md">
+                    <img alt="Economista Alejandro Javier Lage Suarez" class="w-24 h-24 rounded-full object-cover mb-5 border-4 border-white shadow-md group-hover:border-[#009FFE] transition-colors bg-white" src="img/Equipo/perfil-alejandro-javier-lage-suarez.webp" onerror="this.src='img/logo.png'"/>
+                    <h3 class="text-[13px] font-black text-[#1d1d1b] mb-2 uppercase leading-snug">Economista Alejandro Javier Lage Suarez</h3>
+                    <p class="text-[10px] text-[#009FFE] font-bold uppercase tracking-widest leading-relaxed">Director General / Head of PMO</p>
                 </div>
-                <div class="bg-white border border-slate-200 p-6 flex flex-col items-center text-center hover:border-primary transition-colors group shadow-sm">
-                    <img alt="Dr. Fluvio César Ruiz Alarcón" class="w-24 h-24 rounded-full object-cover mb-6 border-2 border-slate-100 group-hover:border-primary" src="img/Equipo/perfil-fluvio-cesar-ruiz-alarcon.webp"/>
-                    <h3 class="font-title-lg text-[16px] text-graphite leading-tight mb-2">Dr. Fluvio César Ruiz Alarcón</h3>
-                    <p class="font-label-sm text-primary uppercase mb-4 font-semibold">Economía Energética</p>
-                    <p class="font-body-md text-[12px] text-graphite/70 mb-6 flex-grow">Experto en política energética con amplia trayectoria en regulación y desarrollo sectorial.</p>
-                    <a class="font-label-md text-primary font-bold hover:underline transition-all" href="equipo.html">Ver perfil &gt;</a>
+                <!-- Lorenzo -->
+                <div class="bg-slate-50 border border-gray-200 p-6 rounded-xl flex flex-col items-center text-center hover:border-[#009FFE] transition-all group shadow-sm hover:shadow-md">
+                    <img alt="Economista Lorenzo Mauricio Meyer Falcón" class="w-24 h-24 rounded-full object-cover mb-5 border-4 border-white shadow-md group-hover:border-[#009FFE] transition-colors bg-white" src="img/Equipo/perfil-lorenzo-meyer.webp" onerror="this.src='img/logo.png'"/>
+                    <h3 class="text-[13px] font-black text-[#1d1d1b] mb-2 uppercase leading-snug">Economista Lorenzo Mauricio Meyer Falcón</h3>
+                    <p class="text-[10px] text-[#009FFE] font-bold uppercase tracking-widest leading-relaxed">Director de Regulación y Vinculación Institucional</p>
                 </div>
-                <div class="bg-white border border-slate-200 p-6 flex flex-col items-center text-center hover:border-primary transition-colors group shadow-sm">
-                    <img alt="Mtro. Loreno Mauricio Meyer Falcón" class="w-24 h-24 rounded-full object-cover mb-6 border-2 border-slate-100 group-hover:border-primary" src="img/Equipo/perfil-lorenzo-meyer.webp"/>
-                    <h3 class="font-title-lg text-[16px] text-graphite leading-tight mb-2">Mtro. Lorenzo Mauricio Meyer Falcón</h3>
-                    <p class="font-label-sm text-primary uppercase mb-4 font-semibold">Inteligencia Territorial</p>
-                    <p class="font-body-md text-[12px] text-graphite/70 mb-6 flex-grow">Especialista en análisis geoespacial y planeación urbana estratégica.</p>
-                    <a class="font-label-md text-primary font-bold hover:underline transition-all" href="equipo.html">Ver perfil &gt;</a>
+                <!-- Fluvio -->
+                <div class="bg-slate-50 border border-gray-200 p-6 rounded-xl flex flex-col items-center text-center hover:border-[#009FFE] transition-all group shadow-sm hover:shadow-md">
+                    <img alt="Economista Fluvio César Ruíz Alarcón" class="w-24 h-24 rounded-full object-cover mb-5 border-4 border-white shadow-md group-hover:border-[#009FFE] transition-colors bg-white" src="img/Equipo/perfil-fluvio-cesar-ruiz-alarcon.webp" onerror="this.src='img/logo.png'"/>
+                    <h3 class="text-[13px] font-black text-[#1d1d1b] mb-2 uppercase leading-snug">Economista Fluvio César Ruíz Alarcón</h3>
+                    <p class="text-[10px] text-[#009FFE] font-bold uppercase tracking-widest leading-relaxed">Director Técnico y de Estrategia de Suministro Técnica.</p>
                 </div>
-                <div class="bg-white border border-slate-200 p-6 flex flex-col items-center text-center hover:border-primary transition-colors group shadow-sm">
-                    <img alt="Dante Yamil San Pedro Jacobo" class="w-24 h-24 rounded-full object-cover mb-6 border-2 border-slate-100 group-hover:border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF5ioHJlgk-57sDR8j6bCJvKd4Zgwyzm-VtiVsIhKByGV8rmcvRlkkcJvG08kG7dNJp9QKmSx1qiMm6FXbLA9_Ngm-d8BWYZVZxt2MKJT0ST0ivtxN4iR6-D9At2UGg78CnP876yyrjjpo_jPaa46LQQAGA-5zZRMlZcWi48JVtGq-IRca8pKE5GPPu2ZmQ2SL5pZCDP_G-g9K8oqIqMkhmD2kXd72_uPAPFbhuks_feB4ce3596usR7Ks4aUyywfaR_NWhaPyjwF7"/>
-                    <h3 class="font-title-lg text-[16px] text-graphite leading-tight mb-2">Dante Yamil San Pedro Jacobo</h3>
-                    <p class="font-label-sm text-primary uppercase mb-4 font-semibold">Derecho Energético</p>
-                    <p class="font-body-md text-[12px] text-graphite/70 mb-6 flex-grow">Consultor jurídico especializado en el marco normativo del sector energético.</p>
-                    <a class="font-label-md text-primary font-bold hover:underline transition-all" href="equipo.html">Ver perfil &gt;</a>
+                <!-- Joel -->
+                <div class="bg-slate-50 border border-gray-200 p-6 rounded-xl flex flex-col items-center text-center hover:border-[#009FFE] transition-all group shadow-sm hover:shadow-md">
+                    <img alt="Administrador Joel Ayala Bracho" class="w-24 h-24 rounded-full object-cover mb-5 border-4 border-white shadow-md group-hover:border-[#009FFE] transition-colors bg-white" src="img/Equipo/perfil-joel-ayala.webp" onerror="this.src='img/logo.png'"/>
+                    <h3 class="text-[13px] font-black text-[#1d1d1b] mb-2 uppercase leading-snug">Administrador Joel Ayala Bracho</h3>
+                    <p class="text-[10px] text-[#009FFE] font-bold uppercase tracking-widest leading-relaxed">Gerente de Operaciones de Campo.</p>
                 </div>
-                <div class="bg-white border border-slate-200 p-6 flex flex-col items-center text-center hover:border-primary transition-colors group shadow-sm">
-                    <img alt="Leslie Staines Formoso" class="w-24 h-24 rounded-full object-cover mb-6 border-2 border-slate-100 group-hover:border-primary" src="img/Equipo/perfil-leslie-staines-formoso.webp"/>
-                    <h3 class="font-title-lg text-[16px] text-graphite leading-tight mb-2">Leslie Staines Formoso</h3>
-                    <p class="font-label-sm text-primary uppercase mb-4 font-semibold">Vinculación Institucional</p>
-                    <p class="font-body-md text-[12px] text-graphite/70 mb-6 flex-grow">Experta en relaciones públicas y coordinación de proyectos multisectoriales.</p>
-                    <a class="font-label-md text-primary font-bold hover:underline transition-all" href="equipo.html">Ver perfil &gt;</a>
+                <!-- Leslie -->
+                <div class="bg-slate-50 border border-gray-200 p-6 rounded-xl flex flex-col items-center text-center hover:border-[#009FFE] transition-all group shadow-sm hover:shadow-md">
+                    <img alt="Administradora Leslie Staines Formoso" class="w-24 h-24 rounded-full object-cover mb-5 border-4 border-white shadow-md group-hover:border-[#009FFE] transition-colors bg-white" src="img/Equipo/perfil-leslie-staines-formoso.webp" onerror="this.src='img/logo.png'"/>
+                    <h3 class="text-[13px] font-black text-[#1d1d1b] mb-2 uppercase leading-snug">Administradora Leslie Staines Formoso</h3>
+                    <p class="text-[10px] text-[#009FFE] font-bold uppercase tracking-widest leading-relaxed">Directora de Asuntos Públicos y Gestión de Permisos.</p>
                 </div>
-                <div class="bg-white border border-slate-200 p-6 flex flex-col items-center text-center hover:border-primary transition-colors group shadow-sm">
-                    <img alt="Joel Ayala Bracho" class="w-24 h-24 rounded-full object-cover mb-6 border-2 border-slate-100 group-hover:border-primary" src="img/Equipo/perfil-joel-ayala.webp"/>
-                    <h3 class="font-title-lg text-[16px] text-graphite leading-tight mb-2">Joel Ayala Bracho</h3>
-                    <p class="font-label-sm text-primary uppercase mb-4 font-semibold">Gestión Operativa</p>
-                    <p class="font-body-md text-[12px] text-graphite/70 mb-6 flex-grow">Especialista en optimización de procesos y administración de proyectos territoriales.</p>
-                    <a class="font-label-md text-primary font-bold hover:underline transition-all" href="equipo.html">Ver perfil &gt;</a>
+                <!-- Mauricio -->
+                <div class="bg-slate-50 border border-gray-200 p-6 rounded-xl flex flex-col items-center text-center hover:border-[#009FFE] transition-all group shadow-sm hover:shadow-md">
+                    <img alt="Administrador Mauricio Bárbara De Parres" class="w-24 h-24 rounded-full object-cover mb-5 border-4 border-white shadow-md group-hover:border-[#009FFE] transition-colors bg-white" src="img/Equipo/perfil-mauricio-barbara.webp" onerror="this.src='img/logo.png'"/>
+                    <h3 class="text-[13px] font-black text-[#1d1d1b] mb-2 uppercase leading-snug">Administrador Mauricio Bárbara De Parres</h3>
+                    <p class="text-[10px] text-[#009FFE] font-bold uppercase tracking-widest leading-relaxed">Director de Administración y Servicios Generales (COO).</p>
                 </div>
             </div>
-            <div class="flex justify-center pb-8">
-                <a class="bg-primary text-white font-label-md text-label-md px-10 py-4 flex items-center gap-2 hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20" href="equipo.html">
-                    Conoce a todo nuestro equipo
-                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            <div class="mt-14 text-center">
+                <a href="equipo.html" class="inline-flex items-center gap-2 font-bold text-[#009FFE] hover:text-[#0080b7] transition-colors border-b-2 border-transparent hover:border-[#0080b7] pb-1 uppercase tracking-widest text-sm">
+                    Conoce más sobre nuestro equipo estratégico
+                    <span class="material-symbols-outlined text-[20px]">chevron_right</span>
                 </a>
             </div>
-        </section>
-
-    </div><!-- /bg-white -->
-</main>
-
-<!-- ═══════════════════════ CLIENTS SECTION ═══════════════════════ -->
-<section class="py-16 border-y border-outline-variant">
-    <div class="px-6 md:px-10 max-w-7xl mx-auto">
-        <p class="text-center font-label-md text-label-md text-on-surface-variant mb-12 tracking-widest uppercase">Algunas empresas con las que trabajamos</p>
-        <div class="flex flex-wrap justify-center items-center gap-16 opacity-40 grayscale contrast-125">
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-5xl">cloud_done</span><span class="font-display-lg text-[32px] font-bold">Google</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-5xl">hub</span><span class="font-display-lg text-[32px] font-bold">Cisco</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-5xl">settings_input_antenna</span><span class="font-display-lg text-[32px] font-bold">Telefónica</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-5xl">account_balance</span><span class="font-display-lg text-[32px] font-bold">WorldBank</span></div>
         </div>
-    </div>
-</section>
+    </section>
+
+</main>
 
 <!-- ==================== FOOTER CORPORATIVO ==================== -->
 <footer class="bg-[#171717] border-t border-gray-800 pt-16 pb-8 text-gray-300">
