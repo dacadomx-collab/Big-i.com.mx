@@ -621,7 +621,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 role: "Director de Administración y Servicios Generales / COO",
                 badge: "Chief Operating Officer",
                 img: "img/Equipo/perfil-mauricio-barbara-de-parres-convertido-de-png.webp",
-                email: "Pendiente de actualización",
+                email: "mbarbara@big-i.com.mx",
                 phone: "Pendiente de actualización",
                 resumen_ejecutivo: "Responsable de la administración integral, los servicios generales y la escalabilidad operativa de la red de estaciones, garantizando la estandarización de procesos y optimización de recursos.",
                 formacion: "Pendiente de integrar conforme al documento KYC definitivo.",
@@ -732,7 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 role: "Director de Infraestructura Tecnológica, Conectividad y Sistemas Inteligentes de Monitoreo",
                 badge: "CEO",
                 img: "img/Equipo/perfil-jorge-estevez-abreu-convertido-de-png.webp",
-                email: "Pendiente de actualización",
+                email: "jestevez@big-i.com.mx",
                 phone: "Pendiente de actualización",
                 resumen_ejecutivo: "Especialista en desarrollo técnico y coordinación de proyectos de infraestructura. Cuenta con experiencia en supervisión de procesos, evaluación de requerimientos técnicos y seguimiento de proyectos orientados al cumplimiento de estándares operativos y de calidad.",
                 formacion: "Empresario y especialista en telecomunicaciones, infraestructura tecnológica y despliegue de redes de conectividad para proyectos estratégicos de gran escala.",
@@ -842,7 +842,45 @@ document.addEventListener('DOMContentLoaded', () => {
                     "Contingencias derivadas de incumplimientos normativos o administrativos.",
                     "Litigios civiles, mercantiles y corporativos que puedan afectar la continuidad de los proyectos."
                 ]
-            }
+            },
+            {
+            tag: "MBA / Econ.",
+            name: "Alfonso Martínez Meyer",
+            role: "Director de Factibilidad Territorial, Planeación Estratégica y Gestión de Proyectos.",
+            badge: "Director de Planeación Estratégica",
+            img: "img/Equipo/perfil-alfonso-martinez-meyer-convertido-de-png.webp",
+            email: "Pendiente de actualización",
+            phone: "Pendiente de actualización",
+            resumen_ejecutivo: "Profesional con experiencia en desarrollo organizacional, coordinación institucional y fortalecimiento de relaciones estratégicas. Ha colaborado en procesos de planeación, negociación y consolidación de alianzas orientadas al crecimiento sostenible de proyectos públicos y privados.",
+            formacion: "MBA y Economista con amplia experiencia en planeación estratégica, evaluación de proyectos, coordinación institucional y optimización operativa.",
+            experiencia_previa: [
+                "Profesional con experiencia en desarrollo organizacional, coordinación institucional y fortalecimiento de relaciones estratégicas.",
+                "Ha colaborado en procesos de planeación, negociación y consolidación de alianzas orientadas al crecimiento sostenible de proyectos públicos y privados."
+            ],
+            especialidades: [
+                { icon: "strategy", text: "Desarrollo Estratégico" },
+                { icon: "account_balance", text: "Gestión Institucional" },
+                { icon: "handshake", text: "Relaciones Corporativas" },
+                { icon: "hub", text: "Vinculación Estratégica" }
+            ],
+            trayectoria_kyc: [
+                { entity: "Planeación Estratégica", desc: "Especialista en diseño de estrategias de crecimiento, evaluación de oportunidades de inversión y desarrollo de modelos de negocio.", border: "border-[#009FFE]" },
+                { entity: "Gestión de Grandes Proyectos", desc: "Coordinó y supervisó más de 500 obras federales con valor superior a 20 mil millones de pesos en SEDATU.", border: "border-gray-300" },
+                { entity: "Evaluación de Factibilidad", desc: "Experiencia en estudios de mercado, viabilidad comercial y localización estratégica para proyectos de inversión.", border: "border-gray-300" },
+                { entity: "Auditoría y Cumplimiento", desc: "Coordinación institucional para atención de auditorías gubernamentales y solventación de observaciones de alto impacto.", border: "border-gray-300" },
+                { entity: "Desarrollo de Negocios", desc: "Experiencia internacional en expansión comercial, negociación estratégica y apertura de nuevos mercados.", border: "border-gray-300" }
+            ],
+            valor_estrategico: [
+                { icon: "analytics", title: "Viabilidad", desc: "Vincula análisis territorial con viabilidad financiera y comercial." },
+                { icon: "moving", title: "Decisiones", desc: "Convierte información geoespacial en decisiones de inversión." },
+                { icon: "domain", title: "Gestión", desc: "Fortalece la gestión institucional con organismos públicos y privados." }
+            ],
+            riesgo_mitigado: [
+                "Inversiones en ubicaciones no viables.",
+                "Desviaciones presupuestales.",
+                "Falta de alineación estratégica entre estudios técnicos y objetivos de negocio."
+            ]
+        }
         ];
 
         let activeMemberIndex = 0;
